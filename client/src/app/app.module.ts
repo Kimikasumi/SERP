@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MaterialModule } from './material';
 import { CardsComponent } from './components/cards/cards.component';
+import { SidebarComponent } from '../app/components/Producto/sidebar/sidebar.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    CardsComponent
+    CardsComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
