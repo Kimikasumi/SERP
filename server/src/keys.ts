@@ -4,7 +4,7 @@ export default{
         host: 'localhost',
         user: 'root',
         password: '101011',
-        database: 'RRHHDB',
+        database: 'SERPDB',
         port: 3306
     }
 }
