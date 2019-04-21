@@ -11,15 +11,11 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const database_1 = __importDefault(require("../database"));
+const database_1 = __importDefault(require("../../database"));
 class WorkersController {
     list(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            const x = 'SELECT nom_funcionario, nom_cargo,' +
-                'nom_modulo, correo, nom_genero, foto FROM FUNCIONARIO,' +
-                'CARGO, MODULO, GENERO WHERE FUNCIONARIO.cod_modulo = MODULO.cod_modulo ' +
-                'AND FUNCIONARIO.cod_cargo = CARGO.cod_cargo AND FUNCIONARIO.cod_genero = GENERO.cod_genero';
-            const consulta = yield database_1.default.query(x);
+            const consulta = yield database_1.default.query('SELECT * FROM FUNCIONARIO');
             res.json(consulta);
         });
     }
@@ -37,8 +33,6 @@ class WorkersController {
     ;
     create(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            console.log(req.body);
-            console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
             yield database_1.default.query('INSERT INTO FUNCIONARIO SET ?', [req.body]);
             res.json({ message: 'Funcionario Guardado' });
         });

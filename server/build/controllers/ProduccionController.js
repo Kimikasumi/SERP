@@ -12,26 +12,23 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const database_1 = __importDefault(require("../database"));
-class WorkersController {
+class ProduccionController {
     list(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            const x = 'SELECT nom_funcionario, nom_cargo,' +
-                'nom_modulo, correo, nom_genero, foto FROM FUNCIONARIO,' +
-                'CARGO, MODULO, GENERO WHERE FUNCIONARIO.cod_modulo = MODULO.cod_modulo ' +
-                'AND FUNCIONARIO.cod_cargo = CARGO.cod_cargo AND FUNCIONARIO.cod_genero = GENERO.cod_genero';
-            const consulta = yield database_1.default.query(x);
+            const consulta = yield database_1.default.query('SELECT * FROM PRODUCTO');
             res.json(consulta);
         });
     }
     ;
     getOne(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            const { cod_funcionario } = req.params;
-            const funcionario = yield database_1.default.query('SELECT * FROM FUNCIONARIO WHERE cod_funcionario=?', [cod_funcionario]);
-            if (funcionario.length > 0) {
-                return res.json(funcionario[0]);
+            const { cod_producto } = req.params;
+            console.log(req.params);
+            const producto = yield database_1.default.query('SELECT * FROM PRODUCTO WHERE cod_producto=?', [cod_producto]);
+            if (producto.length > 0) {
+                return res.json(producto[0]);
             }
-            return res.status(404).json({ text: 'No existe el funcionario' });
+            return res.status(404).json({ text: 'No existe el producto' });
         });
     }
     ;
@@ -39,7 +36,7 @@ class WorkersController {
         return __awaiter(this, void 0, void 0, function* () {
             console.log(req.body);
             console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
-            yield database_1.default.query('INSERT INTO FUNCIONARIO SET ?', [req.body]);
+            yield database_1.default.query('INSERT INTO PRODUCTO SET ?', [req.body]);
             res.json({ message: 'Funcionario Guardado' });
         });
     }
@@ -56,5 +53,5 @@ class WorkersController {
         res.json({ text: 'Actualizando Funcionario ' + req.params.cod_funcionario });
     }
 }
-const workersController = new WorkersController();
-exports.default = workersController;
+const produccioncontroller = new ProduccionController();
+exports.default = produccioncontroller;
