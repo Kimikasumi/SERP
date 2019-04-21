@@ -3,7 +3,11 @@ import db from '../database';
 class WorkersController{
 
     public async list (req:Request,res: Response): Promise<void>{
-        const consulta = await db.query('SELECT * FROM FUNCIONARIO');
+        const x = 'SELECT nom_funcionario, nom_cargo,'+
+        'nom_modulo, correo, nom_genero, foto FROM FUNCIONARIO,'+
+         'CARGO, MODULO, GENERO WHERE FUNCIONARIO.cod_modulo = MODULO.cod_modulo '+
+         'AND FUNCIONARIO.cod_cargo = CARGO.cod_cargo AND FUNCIONARIO.cod_genero = GENERO.cod_genero';
+        const consulta = await db.query(x);
         res.json(consulta);
     };
 

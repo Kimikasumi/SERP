@@ -1,11 +1,11 @@
 import { ChangeDetectorRef, Component, OnInit, OnDestroy } from '@angular/core';
 import { MediaMatcher } from '@angular/cdk/layout';
 @Component({
-  selector: 'app-sidebar-produccion',
+  selector: 'app-sidebar-rrhh',
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.css']
 })
-export class SidebarComponent implements OnDestroy {
+export class SidebarComponentRRHH implements OnDestroy {
   mobileQuery: MediaQueryList;
   private _mobileQueryListener: () => void;
 

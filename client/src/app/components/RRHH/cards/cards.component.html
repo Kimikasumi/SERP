@@ -1,0 +1,17 @@
+<div class="col-md-4" *ngFor="let funcionario of funcionarios">
+    <div class="card text-center">
+        <div class="card-header bg-dark text-white d-flex justify-content-between aling-items-center">
+            {{funcionario.nom_funcionario}} 
+            <button class="btn btn-danger">
+                <i class="far fa-trash-alt"></i>
+            </button>   
+        </div>
+        <img  [src]="funcionario.foto" class="card-img-top">
+        <div class="card-body">
+            <p>{{funcionario.correo}}</p>
+            <p>{{funcionario.nom_cargo}}</p>
+            <p>{{funcionario.nom_modulo}}</p>
+            <a href="" class="btn btn-info btn-block"></a>
+        </div>
+    </div>
+</div>

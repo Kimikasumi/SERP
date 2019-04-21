@@ -15,7 +15,11 @@ const database_1 = __importDefault(require("../database"));
 class WorkersController {
     list(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            const consulta = yield database_1.default.query('SELECT * FROM FUNCIONARIO');
+            const x = 'SELECT nom_funcionario, nom_cargo,' +
+                'nom_modulo, correo, nom_genero, foto FROM FUNCIONARIO,' +
+                'CARGO, MODULO, GENERO WHERE FUNCIONARIO.cod_modulo = MODULO.cod_modulo ' +
+                'AND FUNCIONARIO.cod_cargo = CARGO.cod_cargo AND FUNCIONARIO.cod_genero = GENERO.cod_genero';
+            const consulta = yield database_1.default.query(x);
             res.json(consulta);
         });
     }
