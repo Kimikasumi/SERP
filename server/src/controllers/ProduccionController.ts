@@ -1,25 +1,26 @@
 import {Request, Response} from 'express';
 import db from '../database';
-class WorkersController{
+class ProduccionController{
 
     public async list (req:Request,res: Response): Promise<void>{
-        const consulta = await db.query('SELECT * FROM FUNCIONARIO');
+        const consulta = await db.query('SELECT * FROM PRODUCTO');
         res.json(consulta);
     };
 
     public async getOne(req:Request,res: Response): Promise<any>{
-        const {cod_funcionario} = req.params;
-        const funcionario = await db.query('SELECT * FROM FUNCIONARIO WHERE cod_funcionario=?',[cod_funcionario]);
-        if(funcionario. length > 0){
-            return res.json(funcionario[0]);
+        const {cod_producto} = req.params;
+        console.log(req.params)
+        const producto = await db.query('SELECT * FROM PRODUCTO WHERE cod_producto=?',[cod_producto]);
+        if(producto.length > 0){
+            return res.json(producto[0]);
         }
-        return res.status(404).json({text: 'No existe el funcionario'});
+        return res.status(404).json({text: 'No existe el producto'});
     };
 
-    public async create(req:Request,res: Response): Promise<void>{
+    public async create(req:Request,res: Response){
         console.log(req.body)
         console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
-        await db.query('INSERT INTO FUNCIONARIO SET ?', [req.body]);
+        await db.query('INSERT INTO PRODUCTO SET ?', [req.body]);
         res.json({message: 'Funcionario Guardado'});
     }
 
@@ -36,5 +37,5 @@ class WorkersController{
     }
 }
 
-const workersController = new  WorkersController();
-export default workersController;
+const produccioncontroller = new  ProduccionController();
+export default produccioncontroller;
