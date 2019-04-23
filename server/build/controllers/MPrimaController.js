@@ -12,45 +12,45 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const database_1 = __importDefault(require("../database"));
-class ProduccionController {
+class MPrimaController {
     list(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            const consulta = yield database_1.default.query('SELECT * FROM PRODUCTO');
+            const consulta = yield database_1.default.query('SELECT * FROM MATERIA_PRIMA');
             res.json(consulta);
         });
     }
     ;
     getOne(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            const { cod_producto } = req.params;
+            const { cod_m_prima } = req.params;
             console.log(req.params);
-            const producto = yield database_1.default.query('SELECT * FROM PRODUCTO WHERE cod_producto=?', [cod_producto]);
-            if (producto.length > 0) {
-                return res.json(producto[0]);
+            const mPrima = yield database_1.default.query('SELECT * FROM MATERIA_PRIMA WHERE cod_m_prima=?', [cod_m_prima]);
+            if (mPrima.length > 0) {
+                return res.json(mPrima[0]);
             }
-            return res.status(404).json({ text: 'No existe el producto' });
+            return res.status(404).json({ text: 'No existe la materia prima' });
         });
     }
     ;
     create(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             console.log(req.body);
-            yield database_1.default.query('INSERT INTO PRODUCTO SET ?', [req.body]);
-            res.json({ message: 'Producto Guardado' });
+            yield database_1.default.query('INSERT INTO MATERIA_PRIMA SET ?', [req.body]);
+            res.json({ message: 'Materia Prima Guardada' });
         });
     }
     delete(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            const { cod_producto } = req.params;
-            yield database_1.default.query('DELETE FROM PRODUCTO WHERE cod_producto= ?', [cod_producto]);
-            res.json({ text: 'Borrando Producto ' + req.params.cod_producto });
+            const { cod_m_prima } = req.params;
+            yield database_1.default.query('DELETE FROM MATERIA_PRIMA WHERE cod_m_prima= ?', [cod_m_prima]);
+            res.json({ text: 'Borrando cod_m_prima ' + req.params.cod_m_prima });
         });
     }
     update(req, res) {
-        const { cod_producto } = req.params;
-        database_1.default.query('UPDATE PRODUCTO SET ? WHERE cod_producto = ?', [req.body, cod_producto]);
-        res.json({ text: 'Actualizando Producto ' + req.params.cod_producto });
+        const { cod_m_prima } = req.params;
+        database_1.default.query('UPDATE MATERIA_PRIMA SET ? WHERE cod_m_prima = ?', [req.body, cod_m_prima]);
+        res.json({ text: 'Actualizando Materia Prima ' + req.params.cod_m_prima });
     }
 }
-const produccioncontroller = new ProduccionController();
-exports.default = produccioncontroller;
+const mPrimacontroller = new MPrimaController();
+exports.default = mPrimacontroller;

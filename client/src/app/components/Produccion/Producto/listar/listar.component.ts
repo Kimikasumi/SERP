@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ProduccionService} from '../../../services/produccion.service';
+import {ProduccionService} from '../../../../services/produccion.service';
 
 @Component({
   selector: 'app-listar',
@@ -12,6 +12,10 @@ export class ListarComponent implements OnInit {
   constructor(private produccionService: ProduccionService) { }
   
   ngOnInit() {
+    this.darProductos();
+  }
+
+  darProductos(){
     this.produccionService.getProductos().subscribe(
       res => {
         console.log(res)
@@ -20,5 +24,18 @@ export class ListarComponent implements OnInit {
       err => console.log(err)
     )
   }
+
+  EliminarProducto(cod_producto: string){
+    console.log(cod_producto);
+    
+    this.produccionService.deleteProducto(cod_producto).subscribe(
+      res => {
+        console.log(res)
+        this.darProductos();
+      },
+      err => console.log(err)
+    )
+  }
+
 
 }

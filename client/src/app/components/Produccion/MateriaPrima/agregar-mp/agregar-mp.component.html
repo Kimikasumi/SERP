@@ -1,0 +1,29 @@
+<app-principal-mp></app-principal-mp>
+<div class="container ">
+  <div class="card">
+    <div class="card-heard">
+      <h3>Agregar Materia Prima</h3>
+    </div>
+    <div class="card-body">
+      <form action="">
+          <div class="form-group">
+              <label for="">Codigo:</label>
+              <input type="text" name="cod_m_prima" class="form-control" [(ngModel)]="mPrima.cod_m_prima">
+            </div>
+        <div class="form-group">
+          <label for="">Nombre:</label>
+          <input type="text" name="nom_m_prima" class="form-control" [(ngModel)]="mPrima.nom_m_prima">
+        </div>
+        <div class="form-group">
+          <label for="">Cantidad</label>
+          <input type="text" name="cantidadMP" class="form-control" [(ngModel)]="mPrima.cantidad">
+        </div>
+        <div class="form-group">
+          <label for="">Precio</label>
+          <input type="text" name="precioMP" class="form-control" [(ngModel)]="mPrima.precio">
+        </div>
+        <button (click)="editar ? actualizarMP() : GuardarMP()" class="btn btn-danger">Guardar</button>
+      </form>
+    </div>
+  </div>
+</div>
