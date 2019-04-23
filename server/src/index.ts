@@ -7,6 +7,8 @@ import workersRoutes from './routes/workersRoutes';
 import ProduccionRoutes from './routes/ProductoRoutes';
 
 import MPrimaRoutes from './routes/MPrimaRoutes';
+
+import retailersRoutes from './routes/retailersRoutes';
 class Server {
 
     public app: Application;
@@ -29,6 +31,7 @@ class Server {
         this.app.use('/Produccion',ProduccionRoutes);
         this.app.use('/MPrima',MPrimaRoutes);
         this.app.use('/workers',workersRoutes);
+        this.app.use('/retail',retailersRoutes);
     }
 
     start(): void {
