@@ -15,19 +15,14 @@
             <th scope="col">Acciones</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-
-          </tr>
-          <tr>
-
-          </tr>
-          <tr>
-
-          </tr>
-          <tr>
-            <td><button (click)="Editar()" class="btn btn-warning">Editar</button>
-            <button class="btn btn-danger">Eliminar</button></td>
+        <tbody >
+          <tr *ngFor="let prod of productos">
+            <td>{{prod.cod_producto}}</td>
+            <td>{{prod.nom_producto}}</td>
+            <td>{{prod.cantidad}}</td>
+            <td>{{prod.precio}}</td>
+            <td><button [routerLink]="['/produccion/editar', prod.cod_producto]" class="btn btn-warning">Editar</button>
+              <button (click)="EliminarProducto(prod.cod_producto)" class="btn btn-danger">Eliminar</button></td>
           </tr>
         </tbody>
       </table>

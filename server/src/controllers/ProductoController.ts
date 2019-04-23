@@ -19,21 +19,21 @@ class ProduccionController{
 
     public async create(req:Request,res: Response){
         console.log(req.body)
-        console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
         await db.query('INSERT INTO PRODUCTO SET ?', [req.body]);
-        res.json({message: 'Funcionario Guardado'});
+        res.json({message: 'Producto Guardado'});
     }
 
     public async delete(req:Request,res: Response): Promise<void>{
-        const {cod_funcionario} = req.params;
-        await db.query('DELETE FROM FUNCIONARIO WHERE cod_funcionario= ?', [cod_funcionario]);
-        res.json({text: 'Borrando Funcionario '+ req.params.cod_funcionario});
+        const {cod_producto} = req.params;
+        await db.query('DELETE FROM PRODUCTO WHERE cod_producto= ?', [cod_producto]);
+        res.json({text: 'Borrando Producto '+ req.params.cod_producto});
     }
     
     public update(req:Request,res: Response){
-        const {cod_funcionario} = req.params;
-        db.query('UPDATE FUNCIONARIO SET ? WHERE cod_funcionario = ?',[req.body, cod_funcionario]);
-        res.json({text: 'Actualizando Funcionario '+ req.params.cod_funcionario});
+        const {cod_producto} = req.params;
+        
+        db.query('UPDATE PRODUCTO SET ? WHERE cod_producto = ?',[req.body, cod_producto]);
+        res.json({text: 'Actualizando Producto '+ req.params.cod_producto});
     }
 }
 
