@@ -15,16 +15,21 @@ export class ProduccionService {
   getProductos(){
     return this.http.get(`${this.API_URI}/Produccion`);
   }
+
+  getProducto(cod_producto: string){
+    return this.http.get(`${this.API_URI}/Produccion/${cod_producto}`)
+  }
   
   deleteProducto(cod_producto: string){
     return this.http.delete(`${this.API_URI}/Produccion/${cod_producto}`);
+    
   }
 
   saveProducto(producto:Producto){
     return this.http.post(`${this.API_URI}/Produccion`,producto);
   }
 
-  updateProducto(cod_producto: string, updatedProducto: Producto): Observable<Producto>{
+  updateProducto(cod_producto: string|number, updatedProducto: Producto): Observable<Producto>{
     return this.http.put(`${this.API_URI}/Produccion/${cod_producto}`, updatedProducto);
   }
 }

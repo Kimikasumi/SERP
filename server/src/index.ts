@@ -4,7 +4,9 @@ import cors from 'cors'
 import indexRoutes from './routes/indexRoutes';
 import workersRoutes from './routes/workersRoutes';
 
-import ProduccionRoutes from './routes/ProduccionRoutes';
+import ProduccionRoutes from './routes/ProductoRoutes';
+
+import MPrimaRoutes from './routes/MPrimaRoutes';
 class Server {
 
     public app: Application;
@@ -25,6 +27,7 @@ class Server {
     routes(): void {
         this.app.use('/',indexRoutes);
         this.app.use('/Produccion',ProduccionRoutes);
+        this.app.use('/MPrima',MPrimaRoutes);
         this.app.use('/workers',workersRoutes);
     }
 

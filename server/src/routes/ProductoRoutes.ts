@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import ProduccionController from '../controllers/ProduccionController';
+import ProduccionController from '../controllers/ProductoController';
 class ProduccionRoutes {
 
     public router: Router = Router();
@@ -10,10 +10,10 @@ class ProduccionRoutes {
 
     config(): void {
         this.router.get('/', ProduccionController.list);
-        this.router.get('/:cod_funcionario', ProduccionController.getOne);
+        this.router.get('/:cod_producto', ProduccionController.getOne);
         this.router.post('/', ProduccionController.create);
-        this.router.delete('/:cod_funcionario', ProduccionController.delete);
-        this.router.put('/:cod_funcionario', ProduccionController.update)
+        this.router.delete('/:cod_producto', ProduccionController.delete);
+        this.router.put('/:cod_producto', ProduccionController.update)
     }
 }
 

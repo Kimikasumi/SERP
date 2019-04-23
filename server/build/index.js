@@ -8,7 +8,8 @@ const morgan_1 = __importDefault(require("morgan"));
 const cors_1 = __importDefault(require("cors"));
 const indexRoutes_1 = __importDefault(require("./routes/indexRoutes"));
 const workersRoutes_1 = __importDefault(require("./routes/workersRoutes"));
-const ProduccionRoutes_1 = __importDefault(require("./routes/ProduccionRoutes"));
+const ProductoRoutes_1 = __importDefault(require("./routes/ProductoRoutes"));
+const MPrimaRoutes_1 = __importDefault(require("./routes/MPrimaRoutes"));
 class Server {
     constructor() {
         this.app = express_1.default();
@@ -24,7 +25,8 @@ class Server {
     }
     routes() {
         this.app.use('/', indexRoutes_1.default);
-        this.app.use('/Produccion', ProduccionRoutes_1.default);
+        this.app.use('/Produccion', ProductoRoutes_1.default);
+        this.app.use('/MPrima', MPrimaRoutes_1.default);
         this.app.use('/workers', workersRoutes_1.default);
     }
     start() {
