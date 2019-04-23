@@ -20,6 +20,16 @@ class WorkersController {
                 'CARGO, MODULO, GENERO WHERE FUNCIONARIO.cod_modulo = MODULO.cod_modulo ' +
                 'AND FUNCIONARIO.cod_cargo = CARGO.cod_cargo AND FUNCIONARIO.cod_genero = GENERO.cod_genero';
             const consulta = yield database_1.default.query(x);
+            console.log('list');
+            res.json(consulta);
+        });
+    }
+    ;
+    listAll(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const x = 'SELECT * FROM FUNCIONARIO';
+            const consulta = yield database_1.default.query(x);
+            console.log('aaaaaaaaaaaaaaaaaaa');
             res.json(consulta);
         });
     }
@@ -38,7 +48,6 @@ class WorkersController {
     create(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             console.log(req.body);
-            console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
             yield database_1.default.query('INSERT INTO FUNCIONARIO SET ?', [req.body]);
             res.json({ message: 'Funcionario Guardado' });
         });
@@ -54,6 +63,20 @@ class WorkersController {
         const { cod_funcionario } = req.params;
         database_1.default.query('UPDATE FUNCIONARIO SET ? WHERE cod_funcionario = ?', [req.body, cod_funcionario]);
         res.json({ text: 'Actualizando Funcionario ' + req.params.cod_funcionario });
+    }
+    getCargos(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const consulta = yield database_1.default.query('SELECT * FROM CARGO');
+            console.log('CARGOS');
+            res.json(consulta);
+        });
+    }
+    getModulos(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const consulta = yield database_1.default.query('SELECT * FROM MODULO');
+            console.log('MODULOS');
+            res.json(consulta);
+        });
     }
 }
 const workersController = new WorkersController();

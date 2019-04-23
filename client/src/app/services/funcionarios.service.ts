@@ -12,22 +12,34 @@ export class FuncionariosService {
   constructor(private http: HttpClient) { }
 
   getFuncionarios(){
-    return this.http.get(`${this.API_URI}/workers`);
+    return this.http.get(`${this.API_URI}/workers/all`);
+  }
+
+  getFuncionariosAll(){
+    return this.http.get(`${this.API_URI}/workers/all`);
   }
 
   getFuncionario(cod_funcionario: string){
-    return this.http.get(`${this.API_URI}/workers/${cod_funcionario}`)
+    return this.http.get(`${this.API_URI}/workers/getOne/${cod_funcionario}`)
   }
 
   deleteFuncionario(cod_funcionario: string){
-    return this.http.delete(`${this.API_URI}/workers/${cod_funcionario}`);
+    return this.http.delete(`${this.API_URI}/workers/delete/${cod_funcionario}`);
   }
 
   saveFuncionario(funcionario:Funcionario){
-    return this.http.post(`${this.API_URI}/workers`,funcionario);
+    return this.http.post(`${this.API_URI}/workers/`,funcionario);
   }
 
-  updateFuncionario(cod_funcionario: string, updatedFuncionario: Funcionario): Observable<Funcionario>{
-    return this.http.put(`${this.API_URI}/workers/${cod_funcionario}`, updatedFuncionario);
+  updateFuncionario(cod_funcionario: string|number, updatedFuncionario: Funcionario): Observable<Funcionario>{
+    return this.http.put(`${this.API_URI}/workers/update/${cod_funcionario}`, updatedFuncionario);
+  }
+
+  getCargos(){
+    return this.http.get(`${this.API_URI}/workers/getCargos`);
+  }
+
+  getModulos(){
+    return this.http.get(`${this.API_URI}/workers/getModulos`);
   }
 }

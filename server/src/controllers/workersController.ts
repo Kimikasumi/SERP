@@ -7,7 +7,15 @@ class WorkersController{
         'nom_modulo, correo, nom_genero, foto FROM FUNCIONARIO,'+
          'CARGO, MODULO, GENERO WHERE FUNCIONARIO.cod_modulo = MODULO.cod_modulo '+
          'AND FUNCIONARIO.cod_cargo = CARGO.cod_cargo AND FUNCIONARIO.cod_genero = GENERO.cod_genero';
-        const consulta = await db.query(x);
+         const consulta = await db.query(x);
+        console.log('list');
+        res.json(consulta);
+    };
+
+    public async listAll (req:Request,res: Response): Promise<void>{
+        const x = 'SELECT * FROM FUNCIONARIO'
+         const consulta = await db.query(x);
+        console.log('aaaaaaaaaaaaaaaaaaa');
         res.json(consulta);
     };
 
@@ -22,7 +30,6 @@ class WorkersController{
 
     public async create(req:Request,res: Response): Promise<void>{
         console.log(req.body)
-        console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
         await db.query('INSERT INTO FUNCIONARIO SET ?', [req.body]);
         res.json({message: 'Funcionario Guardado'});
     }
@@ -37,6 +44,18 @@ class WorkersController{
         const {cod_funcionario} = req.params;
         db.query('UPDATE FUNCIONARIO SET ? WHERE cod_funcionario = ?',[req.body, cod_funcionario]);
         res.json({text: 'Actualizando Funcionario '+ req.params.cod_funcionario});
+    }
+
+    public async getCargos(req:Request,res: Response): Promise<void>{
+        const consulta = await db.query('SELECT * FROM CARGO');
+        console.log('CARGOS');
+        res.json(consulta);
+    }
+
+    public async getModulos(req:Request,res: Response): Promise<void>{
+        const consulta = await db.query('SELECT * FROM MODULO');
+        console.log('MODULOS');
+        res.json(consulta);
     }
 }
 
