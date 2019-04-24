@@ -1,18 +1,35 @@
-
 <div class="col-md-4" *ngFor="let funcionario of funcionarios">
     <br>
     <div class="card text-center">
         <div class="card-header bg-dark text-white d-flex justify-content-between aling-items-center">
-            {{funcionario.nom_funcionario}}
+            <h3 class="nombreF">{{funcionario.nom_funcionario}}</h3>
             <button class="btn btn-danger" (click)="deleteFuncionario(funcionario.cod_funcionario)">
                 <i class="far fa-trash-alt"></i>
             </button>
         </div>
         <img [src]="funcionario.foto" class="card-img-top">
         <div class="card-body">
-            <p>{{funcionario.correo}}</p>
-            <p>{{funcionario.nom_cargo}}</p>
-            <p>{{funcionario.nom_modulo}}</p>
+            <table>
+                <tr>
+                    <td class="icono">
+                        <p><i class="fas fa-briefcase"></i></p>
+                    </td>
+                    <td class="info">
+                        <p>{{funcionario.nom_modulo}}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="icono"><p><i class="fas fa-tasks"></i></p></td>
+                    <td class="info"><p>{{funcionario.nom_cargo}}</p></td>
+                </tr>
+                <tr>
+                    <td class="icono"><p><i class="fas fa-envelope"></i></p></td>
+                    <td class="info"><p>{{funcionario.correo}}</p></td>
+                </tr>
+
+            </table>
+
+
             <a class="btn btn-info btn-block" [routerLink]="['/workers/editar', funcionario.cod_funcionario]">Editar</a>
         </div>
     </div>

@@ -12,7 +12,7 @@ export class FuncionariosService {
   constructor(private http: HttpClient) { }
 
   getFuncionarios(){
-    return this.http.get(`${this.API_URI}/workers/all`);
+    return this.http.get(`${this.API_URI}/workers/listado`);
   }
 
   getFuncionariosAll(){

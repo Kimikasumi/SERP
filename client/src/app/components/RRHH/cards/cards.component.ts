@@ -17,10 +17,10 @@ export class CardsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getGames();
+    this.getFuncionarios();
   }
 
-  getGames() {
+  getFuncionarios() {
     this.funcionariosService.getFuncionarios().subscribe(
       res => {
         console.log(res)
@@ -35,7 +35,7 @@ export class CardsComponent implements OnInit {
     this.funcionariosService.deleteFuncionario(cod_funcionario).subscribe(
       res => {
         console.log(res);
-        this.getGames();
+        this.getFuncionarios();
       },
       err => console.log(err)
     )
