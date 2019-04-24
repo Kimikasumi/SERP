@@ -11,11 +11,11 @@ class AreaRoutes {
         this.config();
     }
     config(): void{
-        this.router.get('/', areaController.list);
-        this.router.get('/:id', areaController.getOne);
-        this.router.post('/', areaController.create);
-        this.router.put('/:id', areaController.update);
-        this.router.delete('/:id', areaController.delete);
+        this.router.get('/listadoA', areaController.list);
+        this.router.get('/ListadoOneA:id', areaController.getOne);
+        this.router.post('/createA', areaController.create);
+        this.router.put('/updateA:id', areaController.update);
+        this.router.delete('/deleteA:id', areaController.delete);
     }
 }
 const areaRoutes = new AreaRoutes();

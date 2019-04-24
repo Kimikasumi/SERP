@@ -31,6 +31,9 @@ import { PresupuestoFormComponent } from './components/Finanzas/presupuesto-form
 import { AreaFormComponent } from './components/Finanzas/area-form/area-form.component';
 import { EstadoFormComponent} from './components/Finanzas/estado-form/estado-form.component';
 
+import {PresupuestoService} from '.services/presupuesto.service';
+import {AreaService} from '.services/area.service'; 
+import {EstadoService} from '.services/estado.service'; 
 @NgModule({
   declarations: [
     AppComponent,

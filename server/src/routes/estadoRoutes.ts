@@ -11,11 +11,11 @@ class EstadoRoutes {
         this.config();
     }
     config(): void{
-        this.router.get('/', estadoController.list);
-        this.router.get('/:id', estadoController.getOne);
-        this.router.post('/', estadoController.create);
-        this.router.put('/:id', estadoController.update);
-        this.router.delete('/:id', estadoController.delete);
+        this.router.get('/listadoE', estadoController.list);
+        this.router.get('/ListadoOneE:id', estadoController.getOne);
+        this.router.post('/createE', estadoController.create);
+        this.router.put('/updateE:id', estadoController.update);
+        this.router.delete('/deleteE:id', estadoController.delete);
     }
 }
 const estadoRoutes = new EstadoRoutes();
