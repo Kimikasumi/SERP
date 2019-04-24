@@ -49,17 +49,17 @@ children:[
   {path: 'agregarMP', component: AgregarMPComponent},
   {path: 'principalMP', component: PrincipalMPComponent},
   {path: 'editarMP/:id', component: AgregarMPComponent}
-]},{
-  path: 'finanzas',
+]},
+
+{path: 'finanzas',
   children:[
-    {path: 'listado/presupuesto', component: PresupuestoListComponent},
-    {path: 'listado/estado', component: EstadoListComponent},
-    {path: 'listado/area', component: AreaListComponent},
-    {path: 'agregar/presupuesto', component: PresupuestoFormComponent},
-    {path: 'agregar/estado', component: EstadoFormComponent},
-    {path: 'agregar/area', component: AreaFormComponent}
-  ]
-}
+    {path: 'listadoPresupuesto', component: PresupuestoListComponent},
+    {path: 'listadoEstado', component: EstadoListComponent},
+    {path: 'listadoArea', component: AreaListComponent},
+    {path: 'agregarPresupuesto', component: PresupuestoFormComponent},
+    {path: 'agregarEstado', component: EstadoFormComponent},
+    {path: 'agregarArea', component: AreaFormComponent}
+  ]},
 
 ];
 
