@@ -12,11 +12,16 @@ import { PrincipalMPComponent } from './components/Produccion/principal-mp/princ
 import { FormFuncionarioComponent} from './components/RRHH/form-funcionario/form-funcionario.component'
 import {PrincipalRrhhComponent} from './components/RRHH/principal-rrhh/principal-rrhh.component'
 import { DashboardRrhhComponent } from './components/RRHH/dashboard-rrhh/dashboard-rrhh.component';
+import { LoginComponent } from './components/login/login.component';
 const routes: Routes = [
 {
   path: '',
-  redirectTo: '/produccion',
+  redirectTo: '/login',
   pathMatch: 'full'
+},
+{
+  path: 'login',
+  component: LoginComponent
 },
 {path: 'workers',
 children:[

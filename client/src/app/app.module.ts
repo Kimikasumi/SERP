@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { HttpClientJsonpModule, HttpClientModule } from '@angular/common/http'
-
+import { RecaptchaModule } from 'ng-recaptcha';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MaterialModule } from './material';
@@ -22,6 +22,7 @@ import { PrincipalRrhhComponent } from './components/RRHH/principal-rrhh/princip
 import { FormFuncionarioComponent} from './components/RRHH/form-funcionario/form-funcionario.component';
 import { NavbarRrhhComponent } from './components/RRHH/navbar-rrhh/navbar-rrhh.component';
 import { DashboardRrhhComponent } from './components/RRHH/dashboard-rrhh/dashboard-rrhh.component';
+import { LoginComponent } from './components/login/login.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +39,8 @@ import { DashboardRrhhComponent } from './components/RRHH/dashboard-rrhh/dashboa
     PrincipalRrhhComponent,
     FormFuncionarioComponent,
     NavbarRrhhComponent,
-    DashboardRrhhComponent
+    DashboardRrhhComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +48,8 @@ import { DashboardRrhhComponent } from './components/RRHH/dashboard-rrhh/dashboa
     BrowserAnimationsModule,
     MaterialModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RecaptchaModule.forRoot()
   ],
   providers: [FuncionariosService],
   bootstrap: [AppComponent]

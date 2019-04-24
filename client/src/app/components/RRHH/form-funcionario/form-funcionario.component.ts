@@ -67,12 +67,13 @@ export class FormFuncionarioComponent implements OnInit {
     delete this.funcionario.ausencias;
     delete this.funcionario.eficacia;
     console.log(this.funcionario);
-    if (this.funcionario.foto = '' && (this.funcionario.cod_genero = 1)) {
+    console.log("Foto "+this.funcionario.foto)
+    /*if (this.funcionario.foto = '' && (this.funcionario.cod_genero = 1)) {
       console.log('Entra')
       this.funcionario.foto = 'assets/perfilH.jpg'
     } else if (this.funcionario.foto = '' && (this.funcionario.cod_genero = 2)) {
       this.funcionario.foto = 'assets/perfilM.jpg'
-    }
+    }*/
     this.funcionariosService.saveFuncionario(this.funcionario).subscribe(
       res => {
         console.log(res)
