@@ -13,6 +13,14 @@ import { FormFuncionarioComponent} from './components/RRHH/form-funcionario/form
 import {PrincipalRrhhComponent} from './components/RRHH/principal-rrhh/principal-rrhh.component'
 import { DashboardRrhhComponent } from './components/RRHH/dashboard-rrhh/dashboard-rrhh.component';
 import { LoginComponent } from './components/login/login.component';
+import { PresupuestoListComponent } from './components/Finanzas/presupuesto-list/presupuesto-list.component';
+import { AreaListComponent } from './components/Finanzas/area-list/area-list.component';
+import { EstadoListComponent} from './components/Finanzas/estado-list/estado-list.component';
+import { PresupuestoFormComponent } from './components/Finanzas/presupuesto-form/presupuesto-form.component';
+import { AreaFormComponent } from './components/Finanzas/area-form/area-form.component';
+import { EstadoFormComponent} from './components/Finanzas/estado-form/estado-form.component';
+
+
 const routes: Routes = [
 {
   path: '',
@@ -41,7 +49,17 @@ children:[
   {path: 'agregarMP', component: AgregarMPComponent},
   {path: 'principalMP', component: PrincipalMPComponent},
   {path: 'editarMP/:id', component: AgregarMPComponent}
-]},
+]},{
+  path: 'finanzas',
+  children:[
+    {path: 'listado/presupuesto', component: PresupuestoListComponent},
+    {path: 'listado/estado', component: EstadoListComponent},
+    {path: 'listado/area', component: AreaListComponent},
+    {path: 'agregar/presupuesto', component: PresupuestoFormComponent},
+    {path: 'agregar/estado', component: EstadoFormComponent},
+    {path: 'agregar/area', component: AreaFormComponent}
+  ]
+}
 
 ];
 
