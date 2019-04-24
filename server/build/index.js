@@ -8,6 +8,9 @@ const morgan_1 = __importDefault(require("morgan"));
 const cors_1 = __importDefault(require("cors"));
 const indexRoutes_1 = __importDefault(require("./routes/indexRoutes"));
 const workersRoutes_1 = __importDefault(require("./routes/workersRoutes"));
+const presupuestoRoutes_1 = __importDefault(require("./routes/presupuestoRoutes"));
+const estadoRoutes_1 = __importDefault(require("./routes/estadoRoutes"));
+const areaRoutes_1 = __importDefault(require("./routes/areaRoutes"));
 const ProductoRoutes_1 = __importDefault(require("./routes/ProductoRoutes"));
 const MPrimaRoutes_1 = __importDefault(require("./routes/MPrimaRoutes"));
 const retailersRoutes_1 = __importDefault(require("./routes/retailersRoutes"));
@@ -30,6 +33,9 @@ class Server {
         this.app.use('/MPrima', MPrimaRoutes_1.default);
         this.app.use('/workers', workersRoutes_1.default);
         this.app.use('/retail', retailersRoutes_1.default);
+        this.app.use('/api/gestorPresupuestos', presupuestoRoutes_1.default);
+        this.app.use('/api/area', areaRoutes_1.default);
+        this.app.use('/api/estado', estadoRoutes_1.default);
     }
     start() {
         this.app.listen(this.app.get('port'), () => {

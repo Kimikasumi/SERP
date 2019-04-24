@@ -33,3 +33,27 @@ CREATE TABLE RETAIL(
 INSERT INTO RETAIL VALUES(1,'La paila',3,'Calle 15 # 23-35');
 INSERT INTO RETAIL VALUES(2,'San José',2,'Calle 89 # 84-21');
 INSERT INTO RETAIL VALUES(3,'Dekar',1,'Cra 80 # 12-10');
+
+
+create table estado_presupuesto(
+id int primary key,
+estado VARCHAR(50)
+);
+insert into estado_presupuesto values(1,'Realizado');
+insert into estado_presupuesto values(2,'En espera');
+create table area(
+id int primary key,
+nom_area varchar(50) 
+);
+insert into area values(1,'Ventas');
+insert into area values(1,'Marketing');
+
+CREATE TABLE PRESUPUESTOS(
+cod_presupuesto int PRIMARY KEY,
+area_destino int references area(id),
+estado_presupuesto int references estado_presupuesto(id),
+fecha_solicitud Date,
+dinero_solicitado int(100)
+);
+insert into PRESUPUESTOS values(1,1,1,sysdate,1000000);
+insert into PRESUPUESTOS values(1,2,2,sysdate,1200000);
