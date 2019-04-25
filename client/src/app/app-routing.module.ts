@@ -51,6 +51,16 @@ children:[
   {path: 'editarMP/:id', component: AgregarMPComponent}
 ]},
 
+{path: 'finanzas', 
+children:[
+  {path: 'listadoP', component: PresupuestoListComponent},
+  {path: 'listadoA', component: AreaListComponent},
+  {path: 'listadoE', component: EstadoListComponent},
+
+  {path: 'createP', component: PresupuestoFormComponent},
+  {path: 'createA', component: AreaFormComponent},
+  {path: 'createE', component: EstadoFormComponent}
+]},
 ];
 
 @NgModule({

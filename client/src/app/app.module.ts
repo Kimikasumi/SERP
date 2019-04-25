@@ -32,7 +32,6 @@ import { EstadoListComponent} from './components/Finanzas/estado-list/estado-lis
 import { PresupuestoFormComponent } from './components/Finanzas/presupuesto-form/presupuesto-form.component';
 import { AreaFormComponent } from './components/Finanzas/area-form/area-form.component';
 import { EstadoFormComponent} from './components/Finanzas/estado-form/estado-form.component';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,6 +50,9 @@ import { EstadoFormComponent} from './components/Finanzas/estado-form/estado-for
     NavbarRrhhComponent,
     DashboardRrhhComponent,
     LoginComponent,
+    AreaListComponent,
+    PresupuestoListComponent,
+    EstadoListComponent,
     PresupuestoFormComponent,
     AreaFormComponent,
     EstadoFormComponent

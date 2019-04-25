@@ -3,9 +3,9 @@ import morgan from 'morgan';
 import cors from 'cors'
 import indexRoutes from './routes/indexRoutes';
 import workersRoutes from './routes/workersRoutes';
+
+
 import presupuestoRoutes from './routes/presupuestoRoutes';
-import estadoRoutes from './routes/estadoRoutes';
-import areaRoutes from './routes/areaRoutes';
 
 import ProduccionRoutes from './routes/ProductoRoutes';
 
@@ -35,9 +35,8 @@ class Server {
         this.app.use('/MPrima',MPrimaRoutes);
         this.app.use('/workers',workersRoutes);
         this.app.use('/retail',retailersRoutes);
-        this.app.use('/api/gestorPresupuestos', presupuestoRoutes);
-        this.app.use('/api/area', areaRoutes);
-        this.app.use('/api/estado', estadoRoutes);
+
+        this.app.use('/presupuesto', presupuestoRoutes);
     }
 
     start(): void {

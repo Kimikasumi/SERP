@@ -11,7 +11,7 @@ class PresupuestoRoutes {
         this.config();
     }
     config(): void{
-        this.router.get('/listadoP, presupuestoController.list);
+        this.router.get('/listadoP', presupuestoController.list);
         this.router.get('/listadoOneP:id', presupuestoController.getOne);
         this.router.post('/createP:id', presupuestoController.create);
         this.router.put('/updateP:id', presupuestoController.update);
