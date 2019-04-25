@@ -28,6 +28,7 @@ import { PrincipalPvComponent } from './components/PV/principal-pv/principal-pv.
 import { ListarPvComponent } from './components/PV/listar-pv/listar-pv.component';
 import { AddPvComponent } from './components/PV/add-pv/add-pv.component';
 import { EditPvComponent } from './components/PV/edit-pv/edit-pv.component';
+import { DashboardPvComponent } from './components/PV/dashboard-pv/dashboard-pv.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,7 +51,8 @@ import { EditPvComponent } from './components/PV/edit-pv/edit-pv.component';
     PrincipalPvComponent,
     ListarPvComponent,
     AddPvComponent,
-    EditPvComponent
+    EditPvComponent,
+    DashboardPvComponent
   ],
   imports: [
     BrowserModule,
