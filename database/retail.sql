@@ -33,14 +33,3 @@ CREATE TABLE RETAIL(
 INSERT INTO RETAIL VALUES(1,'La paila',3,'Calle 15 # 23-35');
 INSERT INTO RETAIL VALUES(2,'San José',2,'Calle 89 # 84-21');
 INSERT INTO RETAIL VALUES(3,'Dekar',1,'Cra 80 # 12-10');
-
-
-CREATE TABLE PRESUPUESTOS(
-cod_presupuesto int PRIMARY KEY,
-area_destino varchar(50),
-estado_presupuesto varchar(50),
-fecha_solicitud Date,
-dinero_solicitado int(100)
-);
-insert into PRESUPUESTOS values(1,'Finanzas','Realizado',sysdate(),1000000);
-insert into PRESUPUESTOS values(1,'Ventas','Inactivo',sysdate(),1200000);

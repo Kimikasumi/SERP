@@ -17,7 +17,7 @@ export class EditFinanzasComponent implements OnInit {
   ngOnInit() {
     const params = this.activedRoute.snapshot.params;
     if (params.cod_presupuesto) {
-      this.presupuestoService.getPresupuesto(params.cod_presupuesto).subscribe(
+      this.presupuestoService.getPresupuestoOne(params.cod_presupuesto).subscribe(
         res => {
           console.log(res)
 

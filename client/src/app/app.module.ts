@@ -23,7 +23,11 @@ import { FormFuncionarioComponent} from './components/RRHH/form-funcionario/form
 import { NavbarRrhhComponent } from './components/RRHH/navbar-rrhh/navbar-rrhh.component';
 import { DashboardRrhhComponent } from './components/RRHH/dashboard-rrhh/dashboard-rrhh.component';
 import { LoginComponent } from './components/login/login.component';
-
+import { NavbarPvComponent } from './components/PV/navbar-pv/navbar-pv.component';
+import { PrincipalPvComponent } from './components/PV/principal-pv/principal-pv.component';
+import { ListarPvComponent } from './components/PV/listar-pv/listar-pv.component';
+import { AddPvComponent } from './components/PV/add-pv/add-pv.component';
+import { EditPvComponent } from './components/PV/edit-pv/edit-pv.component';
 import { NavbarFinanzasComponent } from './components/Finanzas/navbar-finanzas/navbar-finanzas.component';
 import { PrincipalFinanzasComponent } from './components/Finanzas/principal-finanzas/principal-finanzas.component';
 import { ListarFinanzasComponent } from './components/Finanzas/listar-finanzas/listar-finanzas.component';
@@ -52,7 +56,12 @@ import { EditFinanzasComponent } from './components/Finanzas/edit-finanzas/edit-
     PrincipalFinanzasComponent,
     ListarFinanzasComponent,
     AddPresupuestoComponent,
-    EditFinanzasComponent
+    EditFinanzasComponent,
+    NavbarPvComponent,
+    PrincipalPvComponent,
+    ListarPvComponent,
+    AddPvComponent,
+    EditPvComponent
 
   ],
   imports: [
