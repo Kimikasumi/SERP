@@ -22,4 +22,12 @@ export class RetailersService {
   deleteRetail(cod_retail: string) {
     return this.http.delete(`${this.API_URI}/retail/${cod_retail}`)
   }
+
+  saveRetail(sucursal: Sucursal) {
+    return this.http.post(`${this.API_URI}/retail/`,sucursal);
+  }
+
+  updateRetail(cod_retail: string|number, updatedRetail: Sucursal): Observable<Sucursal>{
+    return this.http.put(`${this.API_URI}/retail/${cod_retail}`,updatedRetail);
+  }
 }

@@ -55,8 +55,9 @@ const routes: Routes = [
     path: 'retail',
     children: [
       { path: 'principal', component: PrincipalPvComponent },
-      { path: 'listadoPV', component: ListarPvComponent},
-      { path: 'agregarPV', component: AddPvComponent }
+      { path: 'listadoPV', component: ListarPvComponent },
+      { path: 'agregarPV', component: AddPvComponent },
+      { path: 'editPV/:id', component: AddPvComponent }
     ]
   }
 
