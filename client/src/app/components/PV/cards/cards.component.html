@@ -1,0 +1,36 @@
+<div class="col-md-4" *ngFor="let retail of retailers">
+  <br>
+  <div class="card text-center">
+      <div class="card-header bg-dark text-white d-flex justify-content-between aling-items-center">
+          <h3 class="id">{{retail.cod_sucursal}}</h3>
+          <button class="btn btn-danger" (click)="deleteRetail(retail.cod_retail)">
+              <i class="far fa-trash-alt"></i>
+          </button>
+      </div>
+      <img [src]="retail.foto" class="card-img-top">
+      <div class="card-body">
+          <table>
+              <tr>
+                  <td class="icono">
+                      <p><i class="fas fa-briefcase"></i></p>
+                  </td>
+                  <td class="info">
+                      <p>{{retail.nom_sucursal}}</p>
+                  </td>
+              </tr>
+              <tr>
+                  <td class="icono"><p><i class="fas fa-tasks"></i></p></td>
+                  <td class="info"><p>{{retail.cod_ciudad}}</p></td>
+              </tr>
+              <tr>
+                  <td class="icono"><p><i class="fas fa-envelope"></i></p></td>
+                  <td class="info"><p>{{retail.direc}}</p></td>
+              </tr>
+
+          </table>
+
+
+          <a class="btn btn-info btn-block" [routerLink]="['/retail/', funcionario.cod_funcionario]">Editar</a>
+      </div>
+  </div>
+</div>
