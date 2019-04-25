@@ -29,4 +29,30 @@
 <div class="container">
   <button class="btn btn-info" [routerLink]="['/presupuesto/listadoP']">Listar Presupuestos</button>
   <button class="btn btn-info" [routerLink]="['/presupuesto/editarP'] " style="margin-left: 10px">Nuevo</button>
+  <div class="card-body">
+    <table class="table table-dark">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Area Destino</th>
+          <th scope="col">Estado Presupuesto</th>
+          <th scope="col">fecha</th>
+          <th scope="col">Dinero Solicitado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let rt of sucurs">
+          <td>{{presupuesto.cod_presupuesto}}</td>
+          <td>{{presupuesto.area_destino}}</td>
+          <td>{{presupuesto.estado_presupuesto}}</td>
+          <td>{{presupuesto.fecha}}</td>
+          <td>{{presupuesto.dinero_solicitado}}</td>
+          <td><button [routerLink]="['/retail/editPV', rt.cod_retail]" class="btn btn-warning">Editar</button>
+            <button (click)="eliminarPV(rt.cod_retail)" class="btn btn-danger">Eliminar</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
 </div>
+

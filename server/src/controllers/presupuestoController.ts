@@ -4,7 +4,7 @@ class PresupuestoController{
 
 public async list (req: Request,res: Response): Promise<void>{
     const presupuestos = await db.query('SELECT * FROM PRESUPUESTOS');
-    res.json('HOla mundo');
+    res.json(presupuestos);
 };
 public async getOne (req: Request,res: Response): Promise<any>{
     const { id } = req.params;

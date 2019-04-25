@@ -24,8 +24,9 @@ export class PresupuestoFormComponent implements OnInit {
   getPresupuestos() {
     this.presupuestoService.getPresupuesto().subscribe(
       res => {
-        console.log(res)
         this.presupuestos = res;
+
+        console.log(this.presupuestos)
       }
     )
   }

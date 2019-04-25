@@ -34,17 +34,10 @@ export class PresupuestoListComponent implements OnInit {
   }
 
   agregarNuevoPresupuesto() {
-    console.log(this.presupuesto);
-    /*if (this.funcionario.foto = '' && (this.funcionario.cod_genero = 1)) {
-      console.log('Entra')
-      this.funcionario.foto = 'assets/perfilH.jpg'
-    } else if (this.funcionario.foto = '' && (this.funcionario.cod_genero = 2)) {
-      this.funcionario.foto = 'assets/perfilM.jpg'
-    }*/
     this.presupuestoService.savePresupuesto(this.presupuesto).subscribe(
       res => {
-        console.log(res)
-        this.router.navigate(['/finanzas/editarP']);
+        console.log(res);
+        this.router.navigate(['/presupuesto/listadoP'])
       },
       err => console.log(err)
     )
