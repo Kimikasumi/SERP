@@ -12,22 +12,22 @@ export class PresupuestoService {
   constructor(private http: HttpClient) { }
 
   getPresupuesto(){
-    return this.http.get(`${this.API_URI}/finanzas`);
+    return this.http.get(`${this.API_URI}/presupuesto/listadoP`);
   }
 
   getPresupuestoOne(cod_presupuesto: string){
-    return this.http.get(`${this.API_URI}/finanzas/${cod_presupuesto}`)
+    return this.http.get(`${this.API_URI}/presupuesto/listadoP/${cod_presupuesto}`)
   }
 
   deletePresupuesto(cod_presupuesto: string){
-    return this.http.delete(`${this.API_URI}/finanzas/${cod_presupuesto}`);
+    return this.http.delete(`${this.API_URI}/presupuesto/listadoP/${cod_presupuesto}`);
   }
 
   savePresupuesto(presupuesto:Presupuesto){
-    return this.http.post(`${this.API_URI}/finanzas`,presupuesto);
+    return this.http.post(`${this.API_URI}/presupuesto/editarP`,presupuesto);
   }
 
-  updateEstado(cod_presupuesto: string|number, updatedPresupuesto: Presupuesto): Observable<Presupuesto>{
-    return this.http.put(`${this.API_URI}/finanzas/${cod_presupuesto}`, updatedPresupuesto);
+  updatePresupuesto(cod_presupuesto: string|number, updatedPresupuesto: Presupuesto): Observable<Presupuesto>{
+    return this.http.put(`${this.API_URI}/presupuesto/editaP/${cod_presupuesto}`, updatedPresupuesto);
   }
 }

@@ -14,11 +14,9 @@ import {PrincipalRrhhComponent} from './components/RRHH/principal-rrhh/principal
 import { DashboardRrhhComponent } from './components/RRHH/dashboard-rrhh/dashboard-rrhh.component';
 import { LoginComponent } from './components/login/login.component';
 import { PresupuestoListComponent } from './components/Finanzas/presupuesto-list/presupuesto-list.component';
-import { AreaListComponent } from './components/Finanzas/area-list/area-list.component';
-import { EstadoListComponent} from './components/Finanzas/estado-list/estado-list.component';
+
 import { PresupuestoFormComponent } from './components/Finanzas/presupuesto-form/presupuesto-form.component';
-import { AreaFormComponent } from './components/Finanzas/area-form/area-form.component';
-import { EstadoFormComponent} from './components/Finanzas/estado-form/estado-form.component';
+
 
 
 const routes: Routes = [
@@ -51,15 +49,10 @@ children:[
   {path: 'editarMP/:id', component: AgregarMPComponent}
 ]},
 
-{path: 'finanzas', 
+{path: 'presupuesto', 
 children:[
-  {path: 'listadoP', component: PresupuestoListComponent},
-  {path: 'listadoA', component: AreaListComponent},
-  {path: 'listadoE', component: EstadoListComponent},
-
-  {path: 'createP', component: PresupuestoFormComponent},
-  {path: 'createA', component: AreaFormComponent},
-  {path: 'createE', component: EstadoFormComponent}
+  {path: 'listadoP', component: PresupuestoFormComponent},
+  {path: 'editarP', component: PresupuestoListComponent}
 ]},
 ];
 

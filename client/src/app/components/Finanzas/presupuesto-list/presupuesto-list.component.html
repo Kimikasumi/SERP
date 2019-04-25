@@ -1,0 +1,62 @@
+<div><nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" [routerLink]="['/login']">S.E.R.P</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" [routerLink]="['/presupuesto']">DashBoard <span
+            class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" [routerLink]="['/presupuesto/listadoP']">Gestor de Presupuestos</a>
+        <button mat-icon-button>
+          <mat-icon aria-label="Example icon-button with a heart icon">person</mat-icon>
+        </button>
+        <button mat-icon-button>
+          <mat-icon aria-label="Example icon-button with a heart icon">settings_power</mat-icon>
+        </button>
+      </div>
+    </div>
+  </nav>
+  </div>
+  
+<div style="text-align:center">
+  <h1>
+    Presupuestos
+  </h1>
+  <img width="120" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+</div>
+<div class="container">
+  <button class="btn btn-info" [routerLink]="['/presupuesto/listadoP']">Listar Presupuestos</button>
+  <button class="btn btn-info" [routerLink]="['/presupuesto/editarP'] " style="margin-left: 10px">Nuevo</button>
+</div>
+
+
+<div class="container ">
+    <div class="card">
+      <div class="card-heard">
+        <h3>Agregar Presupuesto</h3>
+      </div>
+      <div class="card-body">
+        <form action="">
+            <div class="form-group">
+                <label for="">Codigo:</label>
+                <input type="text" name="cod_presupuesto" class="form-control" [(ngModel)]="presupuesto.cod_presupuesto">
+              </div>
+          <div class="form-group">
+            <label for="">area presupuesto:</label>
+            <input type="text" name="area_destino" class="form-control" [(ngModel)]="presupuesto.area_destino">
+          </div>
+          <div class="form-group">
+            <label for="">estado presupuesto</label>
+            <input type="text" name="estado_presupuesto" class="form-control" [(ngModel)]="presupuesto.estado_presupuesto">
+          </div>
+          <div class="form-group">
+            <label for="">dinero solicitado</label>
+            <input type="text" name="dinero_solicitud" class="form-control" [(ngModel)]="presupuesto.dinero_solicitud">
+          </div>
+          <button (click)="editar ? updatePresupuesto() : agregarNuevoPresupuesto()" class="btn btn-danger">Guardar</button>
+        </form>
+      </div>
+    </div>
+  </div>
