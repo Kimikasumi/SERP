@@ -7,9 +7,9 @@
         <form action="">
           <div class="form-group">
             <label for="">Estado del presupuesto:</label>
-            <input type="text" class="form-control">
+            <input type="text" name="nombre" class="form-control">
           </div>
-          <button (click)="editPF()" class="btn btn-danger">Guardar</button>
+          <button (click)="editPF($nombre)" class="btn btn-danger">Guardar</button>
         </form>
       </div>
     </div>

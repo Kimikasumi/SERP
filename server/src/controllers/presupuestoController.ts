@@ -15,7 +15,7 @@ public async getOne (req: Request,res: Response): Promise<any>{
     res.status(404).json({text: 'El presupuesto no existe'});
 };
 public async create(req: Request,res: Response): Promise<void>{
-    await db.query('INSERT INTO presupuestos set ?', [req.body]);
+    await db.query('INSERT INTO PRESUPUESTOS set ?', [req.body]);
     res.json({message: 'Presupuesto Creado'});
 }
 public async delete(req: Request,res: Response): Promise<void>{

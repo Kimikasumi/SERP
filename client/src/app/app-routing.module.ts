@@ -49,12 +49,12 @@ children:[
   {path: 'editarMP/:id', component: AgregarMPComponent}
 ]},
 {
-  path: 'presupuesto', pathMatch: 'prefix',
+  path: 'presupuesto',
   children: [
     { path: 'principal', component: PrincipalFinanzasComponent },
     { path: 'listadoP', component: ListarFinanzasComponent },
-    { path: 'agregarP', component: AddPresupuestoComponent },
-    { path: 'editP/:id', component: EditFinanzasComponent }
+    { path: 'createP', component: AddPresupuestoComponent },
+    { path: 'editP/:cod_presupuesto', component: EditFinanzasComponent }
   ]
 }
 ];

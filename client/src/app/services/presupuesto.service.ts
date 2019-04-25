@@ -20,14 +20,14 @@ export class PresupuestoService {
   }
 
   deletePresupuesto(cod_presupuesto: string){
-    return this.http.delete(`${this.API_URI}/presupuesto/listadoP/${cod_presupuesto}`);
+    return this.http.delete(`${this.API_URI}/presupuesto/deleteP/${cod_presupuesto}`);
   }
 
   savePresupuesto(presupuesto:Presupuesto){
-    return this.http.post(`${this.API_URI}/presupuesto/editarP`,presupuesto);
+    return this.http.post(`${this.API_URI}/presupuesto/createP`,presupuesto);
   }
 
   updatePresupuesto(cod_presupuesto: string|number, updatedPresupuesto: Presupuesto): Observable<Presupuesto>{
-    return this.http.put(`${this.API_URI}/presupuesto/editaP/${cod_presupuesto}`, updatedPresupuesto);
+    return this.http.put(`${this.API_URI}/presupuesto/editP/${cod_presupuesto}`, updatedPresupuesto);
   }
 }
