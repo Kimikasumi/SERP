@@ -13,11 +13,11 @@ import { FormFuncionarioComponent} from './components/RRHH/form-funcionario/form
 import {PrincipalRrhhComponent} from './components/RRHH/principal-rrhh/principal-rrhh.component'
 import { DashboardRrhhComponent } from './components/RRHH/dashboard-rrhh/dashboard-rrhh.component';
 import { LoginComponent } from './components/login/login.component';
-import { PresupuestoListComponent } from './components/Finanzas/presupuesto-list/presupuesto-list.component';
 
-import { PresupuestoFormComponent } from './components/Finanzas/presupuesto-form/presupuesto-form.component';
-
-
+import { PrincipalFinanzasComponent } from 'src/app/components/Finanzas/principal-finanzas/principal-finanzas.component';
+import { ListarFinanzasComponent } from 'src/app/components/Finanzas/listar-finanzas/listar-finanzas.component';
+import { AddPresupuestoComponent } from 'src/app/components/Finanzas/add-finanzas/add-finanzas.component';
+import { EditFinanzasComponent } from 'src/app/components/Finanzas/edit-finanzas/edit-finanzas.component';
 
 const routes: Routes = [
 {
@@ -48,12 +48,15 @@ children:[
   {path: 'principalMP', component: PrincipalMPComponent},
   {path: 'editarMP/:id', component: AgregarMPComponent}
 ]},
-
-{path: 'presupuesto', 
-children:[
-  {path: 'listadoP', component: PresupuestoFormComponent},
-  {path: 'editarP', component: PresupuestoListComponent}
-]},
+{
+  path: 'presupuesto', pathMatch: 'prefix',
+  children: [
+    { path: 'principal', component: PrincipalFinanzasComponent },
+    { path: 'listadoP', component: ListarFinanzasComponent },
+    { path: 'agregarP', component: AddPresupuestoComponent },
+    { path: 'editP/:id', component: EditFinanzasComponent }
+  ]
+}
 ];
 
 @NgModule({

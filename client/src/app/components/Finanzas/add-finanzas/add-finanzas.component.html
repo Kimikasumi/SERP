@@ -1,0 +1,29 @@
+<app-principal-finanzas></app-principal-finanzas>
+<div class="container ">
+  <div class="card">
+    <div class="card-heard">
+      <h3>Agregar presupuesto</h3>
+    </div>
+    <div class="card-body">
+      <form action="">
+        <div class="form-group">
+          <label for="">Codigo:</label>
+          <input type="text" name="cod_presupuesto" class="form-control" [(ngModel)]="presupuestos.cod_presupuesto">
+        </div>
+        <div class="form-group">
+          <label for="">Area destino:</label>
+          <input type="text" name="area_destino" class="form-control" [(ngModel)]="presupuestos.area_destino">
+        </div>
+        <div class="form-group">
+          <label for="">Estado del presupuesto</label>
+          <input type="text" name="estado_presupuesto" class="form-control" [(ngModel)]="presupuestos.estado_presupuesto">
+        </div>
+        <div class="form-group">
+          <label for="">Dinero Solicitado</label>
+          <input type="text" name="dinero_solicitado" class="form-control" [(ngModel)]="presupuestos.dinero_solicitado">
+        </div>
+        <button (click)="editar ? editPF() : createPF()" class="btn btn-danger">Guardar</button>
+      </form>
+    </div>
+  </div>
+</div>

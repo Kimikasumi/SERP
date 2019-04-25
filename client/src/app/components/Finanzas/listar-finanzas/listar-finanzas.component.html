@@ -1,0 +1,32 @@
+<app-principal-finanzas></app-principal-finanzas>
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <h3>Presupuestos</h3>
+    </div>
+    <div class="card-body">
+      <table class="table table-dark">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Area destino</th>
+            <th scope="col">estado presupuesto</th>
+            <th scope="col">fecha</th>
+            <th scope="col">dinero solicitado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let presupuesto of presupuestos">
+            <td>{{presupuesto.cod_presupuesto}}</td>
+            <td>{{presupuesto.area_destino}}</td>
+            <td>{{presupuesto.estado_presupuesto}}</td>
+            <td>{{presupuesto.fecha_solicitud}}</td>
+            <td>{{presupuesto.dinero_solicitado}}</td>
+            <td><button [routerLink]="['/presupuesto/editP/', presupuesto.cod_presupuesto]" class="btn btn-warning">Editar</button>
+              <button (click)="eliminarP(presupuesto.cod_presupuesto)" class="btn btn-danger">Eliminar</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

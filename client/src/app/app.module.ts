@@ -24,11 +24,11 @@ import { NavbarRrhhComponent } from './components/RRHH/navbar-rrhh/navbar-rrhh.c
 import { DashboardRrhhComponent } from './components/RRHH/dashboard-rrhh/dashboard-rrhh.component';
 import { LoginComponent } from './components/login/login.component';
 
-
- 
-import { PresupuestoListComponent } from './components/Finanzas/presupuesto-list/presupuesto-list.component';
-
-import { PresupuestoFormComponent } from './components/Finanzas/presupuesto-form/presupuesto-form.component';
+import { NavbarFinanzasComponent } from './components/Finanzas/navbar-finanzas/navbar-finanzas.component';
+import { PrincipalFinanzasComponent } from './components/Finanzas/principal-finanzas/principal-finanzas.component';
+import { ListarFinanzasComponent } from './components/Finanzas/listar-finanzas/listar-finanzas.component';
+import { AddPresupuestoComponent } from './components/Finanzas/add-finanzas/add-finanzas.component';
+import { EditFinanzasComponent } from './components/Finanzas/edit-finanzas/edit-finanzas.component';
 
 @NgModule({
   declarations: [
@@ -48,8 +48,11 @@ import { PresupuestoFormComponent } from './components/Finanzas/presupuesto-form
     NavbarRrhhComponent,
     DashboardRrhhComponent,
     LoginComponent,
-    PresupuestoListComponent,
-    PresupuestoFormComponent
+    NavbarFinanzasComponent,
+    PrincipalFinanzasComponent,
+    ListarFinanzasComponent,
+    AddPresupuestoComponent,
+    EditFinanzasComponent
 
   ],
   imports: [

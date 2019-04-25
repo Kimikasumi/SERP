@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PresupuestoListComponent } from './presupuesto-list.component';
+import { NavbarFinanzasComponent } from './navbar-finanzas.component';
 
-describe('PresupuestoListComponent', () => {
-  let component: PresupuestoListComponent;
-  let fixture: ComponentFixture<PresupuestoListComponent>;
+describe('NavbarFinanzasComponent', () => {
+  let component: NavbarFinanzasComponent;
+  let fixture: ComponentFixture<NavbarFinanzasComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PresupuestoListComponent ]
+      declarations: [ NavbarFinanzasComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PresupuestoListComponent);
+    fixture = TestBed.createComponent(NavbarFinanzasComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
