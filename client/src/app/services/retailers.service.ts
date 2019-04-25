@@ -12,6 +12,14 @@ export class RetailersService {
   constructor(private http: HttpClient) { }
   
   getSucursales() {
-    return this.http.get(`${this.API_URI}/retail/list`);
+    return this.http.get(`${this.API_URI}/retail`);
+  }
+
+  getOneSucursal(cod_retail: string) {
+    return this.http.get(`${this.API_URI}/retail/${cod_retail}`);
+  }
+
+  deleteRetail(cod_retail: string) {
+    return this.http.delete(`${this.API_URI}/retail/${cod_retail}`)
   }
 }

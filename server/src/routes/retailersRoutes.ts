@@ -11,7 +11,7 @@ class RetailersRoutes {
     }
 
     config(): void {
-        this.router.get('/list', retailersControllers.list);
+        this.router.get('/', retailersControllers.list);
         this.router.get('/:cod_retail', retailersControllers.getOne);
         this.router.post('/', retailersControllers.create);
         this.router.delete('/:cod_retail', retailersControllers.delete);
