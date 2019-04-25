@@ -15,6 +15,9 @@ import { DashboardRrhhComponent } from './components/RRHH/dashboard-rrhh/dashboa
 import { LoginComponent } from './components/login/login.component';
 
 import { PrincipalPvComponent } from './components/PV/principal-pv/principal-pv.component';
+import { ListarPvComponent } from './components/PV/listar-pv/listar-pv.component';
+import { AddPvComponent } from './components/PV/add-pv/add-pv.component';
+
 const routes: Routes = [
   {
     path: '',
@@ -51,8 +54,9 @@ const routes: Routes = [
   {
     path: 'retail',
     children: [
-      { path: 'principal', component: PrincipalPvComponent }
-      //{ path: 'listadoPV', component: }
+      { path: 'principal', component: PrincipalPvComponent },
+      { path: 'listadoPV', component: ListarPvComponent},
+      { path: 'agregarPV', component: AddPvComponent }
     ]
   }
 

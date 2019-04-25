@@ -26,6 +26,8 @@ import { LoginComponent } from './components/login/login.component';
 import { NavbarPvComponent } from './components/PV/navbar-pv/navbar-pv.component';
 import { PrincipalPvComponent } from './components/PV/principal-pv/principal-pv.component';
 import { ListarPvComponent } from './components/PV/listar-pv/listar-pv.component';
+import { AddPvComponent } from './components/PV/add-pv/add-pv.component';
+import { EditPvComponent } from './components/PV/edit-pv/edit-pv.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,7 +48,9 @@ import { ListarPvComponent } from './components/PV/listar-pv/listar-pv.component
     LoginComponent,
     NavbarPvComponent,
     PrincipalPvComponent,
-    ListarPvComponent
+    ListarPvComponent,
+    AddPvComponent,
+    EditPvComponent
   ],
   imports: [
     BrowserModule,
