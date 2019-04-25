@@ -1,3 +1,13 @@
-<p>
-  estado-list works!
-</p>
+<div class "col-md-4" ngFor="let estado of estados">
+<div class="card text-center">
+<div class="card-header">
+{{estado.nom_estado}}
+            <button class="btn btn-danger" (click)="deleteE(estado.id)">
+                <i class="far fa-trash-alt"></i>
+            </button>
+</div>
+<div class="card-body">
+
+</div>
+</div>
+</div>

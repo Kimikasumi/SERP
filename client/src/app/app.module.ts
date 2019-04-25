@@ -24,6 +24,8 @@ import { NavbarRrhhComponent } from './components/RRHH/navbar-rrhh/navbar-rrhh.c
 import { DashboardRrhhComponent } from './components/RRHH/dashboard-rrhh/dashboard-rrhh.component';
 import { LoginComponent } from './components/login/login.component';
 
+
+ 
 import { PresupuestoListComponent } from './components/Finanzas/presupuesto-list/presupuesto-list.component';
 import { AreaListComponent } from './components/Finanzas/area-list/area-list.component';
 import { EstadoListComponent} from './components/Finanzas/estado-list/estado-list.component';
@@ -31,9 +33,6 @@ import { PresupuestoFormComponent } from './components/Finanzas/presupuesto-form
 import { AreaFormComponent } from './components/Finanzas/area-form/area-form.component';
 import { EstadoFormComponent} from './components/Finanzas/estado-form/estado-form.component';
 
-import {PresupuestoService} from '.services/presupuesto.service';
-import {AreaService} from '.services/area.service'; 
-import {EstadoService} from '.services/estado.service'; 
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,9 +51,6 @@ import {EstadoService} from '.services/estado.service';
     NavbarRrhhComponent,
     DashboardRrhhComponent,
     LoginComponent,
-    PresupuestoListComponent,
-    AreaListComponent,
-    EstadoListComponent,
     PresupuestoFormComponent,
     AreaFormComponent,
     EstadoFormComponent

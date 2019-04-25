@@ -1,3 +1,17 @@
-<p>
-  presupuesto-list works!
-</p>
+<div class "col-md-4" ngFor="let presupuesto of presupuestos">
+<div class="card text-center">
+<div class="card-header">
+{{presupuesto.cod_presupuesto}}
+{{presupuesto.area_destino}}
+{{presupuesto.estado_presupuesto}}
+{{presupuesto.fecha_solicitud}}
+{{presupuesto.dinero_solicitado}}
+            <button class="btn btn-danger" (click)="deleteP(presupuesto.cod_presupuesto)">
+                <i class="far fa-trash-alt"></i>
+            </button>
+</div>
+<div class="card-body">
+
+</div>
+</div>
+</div>

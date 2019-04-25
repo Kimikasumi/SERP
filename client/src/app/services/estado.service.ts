@@ -12,22 +12,22 @@ export class EstadoService {
   constructor(private http: HttpClient) { }
 
   getEstado(){
-    return this.http.get(`${this.API_URI}/finanzas/listadoE`);
+    return this.http.get(`${this.API_URI}/finanzas`);
   }
 
   getEstadoOne(id: string){
-    return this.http.get(`${this.API_URI}/finanzas/listadoOneE/${id}`)
+    return this.http.get(`${this.API_URI}/finanzas/${id}`)
   }
 
   deleteEstado(id: string){
-    return this.http.delete(`${this.API_URI}/finanzas/deleteE/${id}`);
+    return this.http.delete(`${this.API_URI}/finanzas/${id}`);
   }
 
   saveEstado(estado:Estado){
-    return this.http.post(`${this.API_URI}/finanzas/createE`,estado);
+    return this.http.post(`${this.API_URI}/finanzas`,estado);
   }
 
   updateEstado(id: string|number, updatedEstado: Estado): Observable<Estado>{
-    return this.http.put(`${this.API_URI}/finanzas/updateE/${id}`, updatedEstado);
+    return this.http.put(`${this.API_URI}/finanzas/${id}`, updatedEstado);
   }
 }

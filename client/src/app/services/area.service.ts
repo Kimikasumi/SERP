@@ -12,22 +12,22 @@ export class AreaService {
   constructor(private http: HttpClient) { }
 
   getArea(){
-    return this.http.get(`${this.API_URI}/finanzas/listadoA`);
+    return this.http.get(`${this.API_URI}/finanzas`);
   }
 
   getAreaOne(id: string){
-    return this.http.get(`${this.API_URI}/finanzas/listadoOneA/${id}`)
+    return this.http.get(`${this.API_URI}/finanzas/${id}`)
   }
 
   deleteArea(id: string){
-    return this.http.delete(`${this.API_URI}/finanzas/deleteA/${id}`);
+    return this.http.delete(`${this.API_URI}/finanzas/${id}`);
   }
 
   saveArea(area:Area){
-    return this.http.post(`${this.API_URI}/finanzas/createA`,area);
+    return this.http.post(`${this.API_URI}/finanzas`,area);
   }
 
   updateArea(id: string|number, updatedArea: Area): Observable<Area>{
-    return this.http.put(`${this.API_URI}/finanzas/updateA/${id}`, updatedArea);
+    return this.http.put(`${this.API_URI}/finanzas/${id}`, updatedArea);
   }
 }
