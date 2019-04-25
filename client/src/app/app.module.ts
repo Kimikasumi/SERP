@@ -23,6 +23,9 @@ import { FormFuncionarioComponent} from './components/RRHH/form-funcionario/form
 import { NavbarRrhhComponent } from './components/RRHH/navbar-rrhh/navbar-rrhh.component';
 import { DashboardRrhhComponent } from './components/RRHH/dashboard-rrhh/dashboard-rrhh.component';
 import { LoginComponent } from './components/login/login.component';
+import { NavbarPvComponent } from './components/PV/navbar-pv/navbar-pv.component';
+import { PrincipalPvComponent } from './components/PV/principal-pv/principal-pv.component';
+import { ListarPvComponent } from './components/PV/listar-pv/listar-pv.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +43,10 @@ import { LoginComponent } from './components/login/login.component';
     FormFuncionarioComponent,
     NavbarRrhhComponent,
     DashboardRrhhComponent,
-    LoginComponent
+    LoginComponent,
+    NavbarPvComponent,
+    PrincipalPvComponent,
+    ListarPvComponent
   ],
   imports: [
     BrowserModule,

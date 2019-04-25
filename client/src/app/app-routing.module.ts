@@ -13,6 +13,8 @@ import { FormFuncionarioComponent } from './components/RRHH/form-funcionario/for
 import { PrincipalRrhhComponent } from './components/RRHH/principal-rrhh/principal-rrhh.component'
 import { DashboardRrhhComponent } from './components/RRHH/dashboard-rrhh/dashboard-rrhh.component';
 import { LoginComponent } from './components/login/login.component';
+
+import { PrincipalPvComponent } from './components/PV/principal-pv/principal-pv.component';
 const routes: Routes = [
   {
     path: '',
@@ -46,6 +48,13 @@ const routes: Routes = [
       { path: 'editarMP/:id', component: AgregarMPComponent }
     ]
   },
+  {
+    path: 'retail',
+    children: [
+      { path: 'principal', component: PrincipalPvComponent }
+      //{ path: 'listadoPV', component: }
+    ]
+  }
 
 ];
 
