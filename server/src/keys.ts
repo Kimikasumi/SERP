@@ -4,7 +4,7 @@ export default{
         host: 'localhost',
         user: 'root',
         password: '123456',
-        database: 'SERPDB',
-        port: 3306
+        database: 'SERPDB2',
+        port: 3307
     }
 }
