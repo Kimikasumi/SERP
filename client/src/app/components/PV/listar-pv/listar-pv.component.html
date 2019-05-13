@@ -17,12 +17,12 @@
         </thead>
         <tbody>
           <tr *ngFor="let rt of sucurs">
-            <td>{{rt.cod_retail}}</td>
-            <td>{{rt.nom_retail}}</td>
+            <td>{{rt.cod_sucursal}}</td>
+            <td>{{rt.nom_sucursal}}</td>
             <td>{{rt.cod_ciudad}}</td>
             <td>{{rt.direc}}</td>
-            <td><button [routerLink]="['/retail/editPV', rt.cod_retail]" class="btn btn-warning">Editar</button>
-              <button (click)="eliminarPV(rt.cod_retail)" class="btn btn-danger">Eliminar</button></td>
+            <td><button [routerLink]="['/retail/editPV', rt.cod_sucursal]" class="btn btn-warning">Editar</button>
+              <button (click)="eliminarPV(rt.cod_sucursal)" class="btn btn-danger">Eliminar</button></td>
           </tr>
         </tbody>
       </table>

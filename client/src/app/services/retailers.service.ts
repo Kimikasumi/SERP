@@ -15,19 +15,19 @@ export class RetailersService {
     return this.http.get(`${this.API_URI}/retail`);
   }
 
-  getOneSucursal(cod_retail: string) {
-    return this.http.get(`${this.API_URI}/retail/${cod_retail}`);
+  getOneSucursal(cod_sucursal: string) {
+    return this.http.get(`${this.API_URI}/retail/${cod_sucursal}`);
   }
 
-  deleteRetail(cod_retail: string) {
-    return this.http.delete(`${this.API_URI}/retail/${cod_retail}`)
+  deleteRetail(cod_sucursal: string) {
+    return this.http.delete(`${this.API_URI}/retail/${cod_sucursal}`)
   }
 
   saveRetail(sucursal: Sucursal) {
     return this.http.post(`${this.API_URI}/retail/`,sucursal);
   }
 
-  updateRetail(cod_retail: string|number, updatedRetail: Sucursal): Observable<Sucursal>{
-    return this.http.put(`${this.API_URI}/retail/${cod_retail}`,updatedRetail);
+  updateRetail(cod_sucursal: string|number, updatedRetail: Sucursal): Observable<Sucursal>{
+    return this.http.put(`${this.API_URI}/retail/${cod_sucursal}`,updatedRetail);
   }
 }

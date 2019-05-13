@@ -6,14 +6,14 @@ import { request } from 'https';
 class RetailersController {
 
     public async list(req: Request, res: Response) {
-        const retailers = await pool.query('SELECT * FROM SUCURSAL');
+        const retailers = await pool.query('SELECT * FROM sucursal');
         res.json(retailers);
     };
 
     public async getOne(req: Request, res: Response): Promise<any> {
-        const { cod_retail } = req.params;
-        const retailer = await pool.query('SELECT * FROM SUCURSAL WHERE cod_sucursal = ?',
-            [cod_retail]);
+        const { cod_sucursal } = req.params;
+        const retailer = await pool.query('SELECT * FROM sucursal WHERE cod_sucursal = ?',
+            [cod_sucursal]);
         if (retailer.length > 0) {
             return res.json(retailer[0]);
         }
@@ -21,22 +21,22 @@ class RetailersController {
     }
 
     public async create(req: Request, res: Response): Promise<void> {
-        await pool.query('INSERT INTO SUCURSAL set ?', [req.body]);
+        await pool.query('INSERT INTO sucursal set ?', [req.body]);
         console.log(req.body);
         res.json({ text: 'sucursal guardada' });
     }
 
     public async delete(req: Request, res: Response) {
-        const { cod_retail } = req.params;
-        await pool.query('DELETE FROM SUCURSAL WHERE cod_sucursal = ?',
-            [cod_retail]);
+        const { cod_sucursal } = req.params;
+        await pool.query('DELETE FROM sucursal WHERE cod_sucursal = ?',
+            [cod_sucursal]);
         res.json({ message: 'La sucursal se elimino' });
     }
 
     public async update(req: Request, res: Response) {
-        const { cod_retail } = req.params;
-        await pool.query('UPDATE SUCURSAL set ? WHERE cod_sucursal = ?',
-            [req.body,cod_retail]);
+        const { cod_sucursal } = req.params;
+        await pool.query('UPDATE sucursal set ? WHERE cod_sucursal = ?',
+            [req.body,cod_sucursal]);
         res.json({ message: 'La sucursal se ha actualizado' })
     }
 }

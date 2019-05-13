@@ -15,8 +15,8 @@ export class AddPvComponent implements OnInit {
   editar: boolean = false;
 
   sucur: Sucursal = {
-    cod_retail: 0,
-    nom_retail: '',
+    cod_sucursal: 0,
+    nom_sucursal: '',
     cod_ciudad: 0,
     direc: ''
   }
@@ -47,8 +47,8 @@ export class AddPvComponent implements OnInit {
   }
 
   editPV() {
-    console.log(this.sucur)
-    this.retailerService.updateRetail(this.sucur.cod_retail, this.sucur).subscribe(
+    console.log(this.sucur);
+    this.retailerService.updateRetail(this.sucur.cod_sucursal, this.sucur).subscribe(
       res => {
         console.log(res)
         this.router.navigate(['/retail/listadoPV'])

@@ -15,15 +15,15 @@ const database_1 = __importDefault(require("../database"));
 class RetailersController {
     list(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            const retailers = yield database_1.default.query('SELECT * FROM RETAIL');
+            const retailers = yield database_1.default.query('SELECT * FROM sucursal');
             res.json(retailers);
         });
     }
     ;
     getOne(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            const { cod_retail } = req.params;
-            const retailer = yield database_1.default.query('SELECT * FROM RETAIL WHERE cod_retail = ?', [cod_retail]);
+            const { cod_sucursal } = req.params;
+            const retailer = yield database_1.default.query('SELECT * FROM sucursal WHERE cod_sucursal = ?', [cod_sucursal]);
             if (retailer.length > 0) {
                 return res.json(retailer[0]);
             }
@@ -32,22 +32,22 @@ class RetailersController {
     }
     create(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            yield database_1.default.query('INSERT INTO RETAIL set ?', [req.body]);
+            yield database_1.default.query('INSERT INTO sucursal set ?', [req.body]);
             console.log(req.body);
             res.json({ text: 'sucursal guardada' });
         });
     }
     delete(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            const { cod_retail } = req.params;
-            yield database_1.default.query('DELETE FROM RETAIL WHERE cod_retail = ?', [cod_retail]);
+            const { cod_sucursal } = req.params;
+            yield database_1.default.query('DELETE FROM sucursal WHERE cod_sucursal = ?', [cod_sucursal]);
             res.json({ message: 'La sucursal se elimino' });
         });
     }
     update(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            const { cod_retail } = req.params;
-            yield database_1.default.query('UPDATE RETAIL set ? WHERE cod_retail = ?', [req.body, cod_retail]);
+            const { cod_sucursal } = req.params;
+            yield database_1.default.query('UPDATE sucursal set ? WHERE cod_sucursal = ?', [req.body, cod_sucursal]);
             res.json({ message: 'La sucursal se ha actualizado' });
         });
     }
