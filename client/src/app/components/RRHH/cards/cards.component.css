@@ -1,12 +1,16 @@
 .icono{
     width: 80px;
     text-align:center;
+    font-family: cursive;
 }
 
 .info{
     width: 300px;
     text-align:center;
+    font-family: cursive;
 }
 .nombreF{
     text-align:center;
+    font-family: cursive;
+    font-weight: 700;
 }

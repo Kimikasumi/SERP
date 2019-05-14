@@ -30,7 +30,7 @@ children:[
   {path: 'agregar', component: FormFuncionarioComponent},
   {path: 'listado', component: PrincipalRrhhComponent},
   {path: 'dashboard', component: DashboardRrhhComponent},
-  {path: 'editar/:cod_funcionario', component: FormFuncionarioComponent}
+  {path: 'editar/:cedula', component: FormFuncionarioComponent}
 ]},
 {path: 'produccion', 
 children:[
