@@ -1,0 +1,58 @@
+
+.floatingbutton-default{
+    background-color: #ffffff; 
+}
+
+.floatingbutton-theme-color{
+    background-color: $floatingPrimaryBgColor;
+    color: $floatingPrimaryColor;
+}
+
+.floatingbutton-green{
+    background-color: $floatingSuccessBgColor;
+    color: $floatingSuccessColor;
+}
+
+.floatingbutton-red{
+    background-color: $floatingDangerBgColor;
+    color: $floatingDangerColor;
+}
+
+.floatingbutton-yellow{
+    background-color: $floatingWarningBgColor;
+    color: $floatingWarningColor;
+}
+
+// Disabled
+
+.floatingbutton-default-disabled{
+    background-color: $floatingDefaultDisabledBgColor !important; 
+    color: $floatingDisabledColor;
+}
+
+
+.floatingbutton-theme-color-disabled{
+    background-color: $floatingDisabledBgColor;
+    color: $floatingDisabledColor;
+}
+
+
+.floatingbutton-green-disabled{
+    background-color: $floatingSuccessDisabledBgColor;
+    color: $floatingSuccessColor;
+}
+
+.floatingbutton-red-disabled{
+    background-color: $floatingDangerDisabledBgColor;
+    color: $floatingDangerColor;
+}
+
+.floatingbutton-yellow-disabled{
+    background-color:  $floatingWarningDisabledBgColor;
+    color: $floatingWarningColor;
+}
+
+// Focus
+.floatingbutton-circle:focus{
+outline: none;
+}

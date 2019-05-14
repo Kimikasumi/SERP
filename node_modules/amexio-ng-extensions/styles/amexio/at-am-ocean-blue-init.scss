@@ -1,0 +1,43 @@
+
+$appTransparency :rgba(255, 255, 255, 0.7);
+
+$themePrimaryColor: #1C2949;
+$themeSecondaryColor : #2CD2EC;
+$themeFontColor : white;
+$themeFontFamily: Roboto,Trebuchet MS,Arial,Helvetica,sans-serif;
+
+$appBackground :#1C2949;
+$appBackgroundImage : url('/assets/images/theme/bootstrap/cyan_bg.jpg');
+
+$appHeaderBGColor : white;
+$appHeaderFontColor : #02195F;
+$appHeaderMenuBGColor :$appHeaderBGColor;
+$appHeaderMenuFontColor :$appHeaderFontColor;
+$appHeaderHoverBGColor :none;
+$appHeaderHoverFontColor :#f10897;
+
+/* Component Specific Variables */
+
+$componentDataBGColor : $themePrimaryColor;
+$componentDataFontColor : $appHeaderFontColor;
+
+$componentDataBGColor : #f10897;
+$componentDataFontColor : $themePrimaryColor;
+
+$componentHoverBGColor : lighten($themePrimaryColor,50%);
+$componentHoverFontColor : $themeFontColor;
+
+$componentActiveBGColor : lighten($themePrimaryColor,40%);
+$componentActiveFontColor : $themeFontColor;
+
+$componentDisabledBGColor : rgb(160, 158, 158);
+$componentDisabledFontColor : $themeSecondaryColor;
+
+$componentBGColor : #1C2949;
+$componentFontColor : $themeFontColor;
+
+$componentHeaderBGColor : $themeSecondaryColor;
+$componentHeaderFontColor : $themePrimaryColor;
+
+$componentFooterBGColor :$themeSecondaryColor;
+$componentFooterFontColor : $themePrimaryColor;

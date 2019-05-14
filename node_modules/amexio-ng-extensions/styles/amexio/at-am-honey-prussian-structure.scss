@@ -1,0 +1,59 @@
+
+/*----------------------------------------------------------------------*/
+/*        Honey Prussian -Structure                                     */
+/*----------------------------------------------------------------------*/
+
+body {  
+  letter-spacing: 0.3px;
+  text-transform: capitalize;
+  margin: 0px;
+  padding: 0px;
+}
+
+.dropdown{
+  border: 2px solid $themeSecondaryColor;
+  border-radius: $borderRadius;
+  box-shadow: 0 1px 3px 0 $themeSecondaryColor;
+}
+
+.listbox{
+
+  .list{
+    border: 1px solid white;
+    .title {
+      float: left;
+      font-weight: bold;
+    }
+    .list-items{
+      border-bottom: 1px solid $themeSecondaryColor;
+    }
+  }
+
+}
+
+
+.card-container {
+
+  .card-header {
+    border-radius: $borderRadius;
+    font-weight: bold;
+    border:none;
+
+  }
+
+  .card-body{
+
+  }
+
+  .card-footer{
+    background: none;
+
+  }
+}
+
+ .topnav {
+
+  .navbar-logo-unit a{    
+    font-weight: bold;    
+  }
+}

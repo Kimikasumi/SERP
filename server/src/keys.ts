@@ -3,8 +3,8 @@ export default{
     database:{
         host: 'localhost',
         user: 'root',
-        password: '101011',
-        database: 'SERPDB',
+        password: '',
+        database: 'SERPDB2',
         port: 3306
     }
 }

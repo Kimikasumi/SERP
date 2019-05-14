@@ -15,13 +15,13 @@
           <input type="text" name="nom_producto" class="form-control" [(ngModel)]="producto.nom_producto">
         </div>
         <div class="form-group">
-          <label for="">Cantidad</label>
-          <input type="text" name="cantidad" class="form-control" [(ngModel)]="producto.cantidad">
+          <label for="">Precio:</label>
+          <input type="text" name="precio" class="form-control" [(ngModel)]="producto.precio_unitario">
         </div>
         <div class="form-group">
-          <label for="">Precio</label>
-          <input type="text" name="precio" class="form-control" [(ngModel)]="producto.precio">
-        </div>
+            <label for="">Cantidad:</label>
+            <input type="text" name="cantidad" class="form-control" [(ngModel)]="producto.cantidad">
+          </div>
         <button (click)="editar ? actualizarProducto() : Guardar()" class="btn btn-danger">Guardar</button>
       </form>
     </div>

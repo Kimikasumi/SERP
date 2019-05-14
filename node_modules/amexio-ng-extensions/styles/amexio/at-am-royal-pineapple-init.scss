@@ -1,0 +1,35 @@
+$appTransparency : rgba(0, 0, 0, 0.87);
+
+$themePrimaryColor: #FCF4A3; ;
+$themeSecondaryColor : #FEE12B;
+$themeFontColor : rgba(255,255,255,0.70);;
+$themeFontFamily: Roboto,Trebuchet MS,Arial,Helvetica,sans-serif;
+
+$appBackground :#292b2c;
+$appBackgroundImage : none;
+
+$appHeaderBGColor :$themePrimaryColor;
+$appHeaderFontColor : #1b1d22;
+$appHeaderMenuBGColor :$appHeaderBGColor;
+$appHeaderMenuFontColor :$appHeaderFontColor;
+$appHeaderHoverBGColor : rgba(255,253,208,0.4);;
+$appHeaderHoverFontColor : inherit;
+
+/* Component Specific Variables */
+$componentHoverBGColor :  rgba(255,253,208,0.4);
+$componentHoverFontColor : $appBackground;
+$componentActiveBGColor :#1b1d22;
+$componentActiveFontColor : $themeSecondaryColor;
+$componentDisabledBGColor : rgb(160, 158, 158);
+$componentDisabledFontColor : $themeSecondaryColor;
+
+$componentBGColor :#292b2c;
+$componentFontColor : $themeFontColor;
+
+$componentHeaderBGColor : linear-gradient(#40434D, #000000);
+$componentHeaderFontColor : $themeSecondaryColor;
+$componentFooterBGColor :linear-gradient(#40434D, #000000);
+$componentFooterFontColor : $themeSecondaryColor;
+
+$componentDataBGColor : $themePrimaryColor;
+$componentDataFontColor : $appHeaderFontColor;

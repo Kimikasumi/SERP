@@ -1,0 +1,42 @@
+
+.item-selector-action-panel{
+
+  .actionbar{
+
+    .actionbarinner{
+    .action{
+        background-color: $itemselectorActionBGColor;
+        color: $itemselectorActionColor;
+      }
+
+      .actiondisable{
+        background-color: $itemselectorActionDisableBGColor;
+      }
+    }
+  }
+}
+
+.itemselector-list-active{
+  background-color: $itemselectorListActiveBGColor;
+  //color : $itemselectorListActiveColor;
+}  
+.itemselector-list-active:focus{
+  background-color: $itemselectorListActiveBGColor;
+  outline: none;
+}  
+.itemselector-list:focus{
+    background-color: $itemselectorListHoverBGColor;
+    outline: none;
+    //color : $itemselectorListActiveBGColor;
+}
+.itemselector-list:hover{
+    background-color: $itemselectorListHoverBGColor;
+    color : $itemselectorListHoverFontColor;
+}
+
+
+
+
+
+  
+

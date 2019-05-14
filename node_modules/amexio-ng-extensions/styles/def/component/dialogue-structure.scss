@@ -1,0 +1,146 @@
+
+.root-window{
+  flex-direction: column;
+  position: fixed; /* Stay in place */
+  z-index: 3; /* Sit on top */
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.dialogue-sm{
+  flex-direction: column;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 18%; /* Location of the box */
+  width: 30%;
+  //min-height: 50%; /* Enable scroll if needed */
+  padding-left: 35%;
+  z-index: 3;
+  top: 0;
+  left: 0;
+}
+
+
+.dialogue-content{
+  margin: auto;
+  padding: 0px;
+  // border: $dialogueContentBorderSize solid $dialogueContentBorderColor;
+  width: 80%;
+  height: 80%;
+ // border-radius: .3rem;
+  //box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+}
+
+.dialogue-min{
+  padding-top: 70px;
+}
+
+.dialogue-content > * {
+  padding: 5px;
+}
+
+.dialogue-material-design{
+  display: flex;
+  //border-radius: .3rem;
+  font-size: 20px;
+  font-weight: 300;
+  text-transform: capitalize;
+  color: black;
+  padding: 10px;
+  border-bottom: 1px solid #eceeef;
+
+
+}
+
+
+.dialogue-header{
+  display: flex;
+  /* padding: 10px 24px;*/
+  // border-bottom: $dialogueBorderSize solid $dialogueBorderColor;
+  font-size: 20px;
+  font-weight: 300;
+  text-transform: capitalize;
+}
+
+.dialogue-middle{
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  padding-left: 16px;
+  padding-right: 16px;
+  min-height: 80% ;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.dialogue-material-design-footer {
+  display: flex;
+  border-top: 1px solid #eceeef;
+  padding: 5px;
+
+  .button-transparent {
+    border : none !important;
+    box-shadow: none !important;
+    font-size: 1rem;
+
+  }
+  .custom-btn .button-text{
+    font-size: 1rem;
+    color: blue;
+
+  }
+
+
+}
+.dialogue-footer{
+  display: flex;
+  border-top: $dialogueBorderSize solid $dialogueBorderColor;
+  .button-transparent {
+    border : none !important;
+    box-shadow: none !important;
+
+  }
+
+}
+
+.dialogue-message {
+  display: flex;
+  font-size: 20px;
+  font-weight: 300;
+  //text-transform: capitalize;
+  text-align: center;
+}
+
+.dialogue-icon {
+  float: left;
+  display: flex;
+  text-align: center;
+}
+.dialogue-table{
+  display: table;
+  width: 100%;
+}
+.dialogue-table .tablerow{
+  display: table-row;
+}
+
+.dialogue-material-design .dialogue-table .tablerow .tablecol{
+  display: table-cell;
+  vertical-align: middle;
+  color: black;
+}
+.dialogue-table .tablerow .tablecol{
+  display: table-cell;
+  vertical-align: middle;
+  color: white;
+}
+.icon-style {
+  font-size: 15px;
+}

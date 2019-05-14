@@ -1,0 +1,45 @@
+
+.input-control {
+  font-size: $inputFontSize;  
+  background-color: $inputControlBGColor;
+  color: $inputControlColor;
+  border-bottom: 1px solid rgba(0,0,0,.42);
+}
+
+::placeholder {
+  color: $inputBorderColor;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: $inputBorderColor;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+ // padding-left: 15px;
+  color: $inputBorderColor;
+}
+.input-control:focus {
+  border-bottom: 1px solid $borderColorFocus;
+}
+.input-control-success {
+  border-color:$success;
+}
+.input-control-error {
+  border-color:$error!important;
+}
+.input-control-feedback .success {
+  color: $success;;
+}
+.input-control-feedback .error {
+  color: $error;
+}
+.inputgroup .tooltiptext {
+  background-color: $inputTooltipBGColor;
+  color: $inputTooltipFontColor;
+}
+
+.input-control-disabled {
+  
+    // opacity: 0.55;
+    // cursor: not-allowed;
+    background-color:$inputDisabledBG;
+
+}

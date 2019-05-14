@@ -1,0 +1,13 @@
+
+.search{
+  background: #ededed url("search-icon.png") no-repeat 9px center;
+  border: solid 1px $searchBorderColor;
+  padding: 9px 10px 9px 32px;
+  outline: none;
+  transition: all .5s;
+  width: 55px;
+}
+
+.search:focus {
+  width: 150px;
+}

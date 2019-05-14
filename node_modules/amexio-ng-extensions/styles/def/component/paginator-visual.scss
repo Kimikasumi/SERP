@@ -1,0 +1,24 @@
+
+
+.paginator .paginator-pages .paginator-page{
+
+  color: $paginatorColor;
+}
+
+.paginator .paginator-pages .paginator-page:hover{
+  background-color: $paginatorHoverBGColor;
+  color: $paginatorHoverColor;
+}
+
+.paginator .paginator-pages .active{
+  background-color: $paginatorActiveBGColor;
+  color: $paginatorActiveColor;
+}
+.paginator-page:focus{
+  outline: none;
+  background-color: $paginatorHoverBGColor;
+}
+.paginator-pages:focus{
+  outline: none;
+  background-color: $paginatorHoverBGColor;
+}

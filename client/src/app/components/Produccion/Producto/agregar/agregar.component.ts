@@ -16,9 +16,8 @@ export class AgregarComponent implements OnInit {
   producto: Producto = {
   cod_producto: 0,
   nom_producto: '',
-  cantidad: 0,
   precio: 0,
-  cod_m_prima: 1
+  cantidad: 0
 }
 
   ngOnInit() {

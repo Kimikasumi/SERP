@@ -1,0 +1,30 @@
+import { EventEmitter } from '@angular/core';
+export declare class AmexioCalendarYearComponent {
+    rightfocusrowindex: number;
+    rightfocusinnerindex: number;
+    rightfocuscalindex: number;
+    isextremeright: boolean;
+    leftfocusrowindex: number;
+    leftfocusinnerindex: number;
+    leftfocuscalindex: number;
+    isextremeleft: boolean;
+    headers: any[];
+    calendaryData: any[];
+    onEventClicked: EventEmitter<any>;
+    onHeaderClicked: EventEmitter<any>;
+    onleftnavigate: EventEmitter<any>;
+    onrightnavigate: EventEmitter<any>;
+    ontopnavigate: EventEmitter<any>;
+    onbottomnavigate: EventEmitter<any>;
+    isdaypressed: boolean;
+    constructor();
+    eventClicked(event1: any, eventData: any): void;
+    monthClicked(event: any): void;
+    navigateright(day: any): void;
+    refactorednavigateright(calindex: number, calendardata: any, innerindex: number, calendarrow: any, rowindex: number): void;
+    navigateleft(day: any): void;
+    refactoredleftnavigate(rowindex: number, innerindex: number, calindex: number, calendarrow: any, calendardata: any): void;
+    navigatedown(day: any): void;
+    navigateup(day: any): void;
+    setExtremeFocus(): void;
+}

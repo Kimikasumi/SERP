@@ -1,0 +1,43 @@
+
+.dockbar {
+  background-color: $dockBarBGColor;
+  color : $dockBarColor;
+}
+.dockbar-content{
+  background-color: $dockBarContentBGColor;
+}
+/* Style the buttons inside the tab */
+.dockbar button {
+  background-color: $dockbarBtnBGColor;
+  color: $dockBarColor;
+}
+/* Change background color of buttons on hover */
+.dockbar button:hover {
+  background-color: $dockBarActiveBGColor;
+  color:$dockBarActiveColor;
+}
+/* Create an active/current "tab button" class */
+.dockbar button.active {
+  background-color: $dockBarActiveBGColor;
+  color:$dockBarActiveColor;
+}
+.dockbar-label-highlight {
+  color:$dockbarLabelHighlight;
+}
+.dockbar-item-close-bar{
+  color: $dockBarActiveBorderColor;
+}
+.dockbar-height::-webkit-scrollbar-track
+{
+  background-color: $dockbarScrollBGColor;
+}
+
+.dockbar-height::-webkit-scrollbar
+{
+  background-color:$dockbarScrollBGColor;
+}
+
+.dockbar-height::-webkit-scrollbar-thumb
+{
+  background-color: $dockbarScrollThumbBGColor;
+}

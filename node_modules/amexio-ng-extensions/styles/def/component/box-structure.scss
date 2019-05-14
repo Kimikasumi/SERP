@@ -1,0 +1,84 @@
+//.box-content {
+//    width: 100%;
+//}
+
+.border-topbar {
+    border-top: $boxBorderSize solid !important;
+}
+
+.border-bottombar {
+    border-bottom: $boxBorderSize solid !important;
+}
+
+.border-leftbar {
+    border-left: $boxBorderSize solid !important;
+}
+
+.border-rightbar {
+    border-right: $boxBorderSize solid !important;
+}
+
+.border-all {
+    border: $boxBorderSize solid !important;
+}
+
+.border-top-bottom {
+    border-top: $boxBorderSize solid !important;
+    border-bottom: $boxBorderSize solid !important;
+}
+
+.border-right-left {
+    border-right: $boxBorderSize solid !important;
+    border-left: $boxBorderSize solid !important;
+}
+
+.box-default {
+    border-color: $boxBorderColor
+}
+
+.padding {
+    padding: 8px 8px 8px 8px;
+}
+
+.border-red {
+    border-color: $boxBorderRed !important;
+}
+
+.border-blue {
+    border-color: $boxBorderBlue !important;
+}
+
+.border-green {
+    border-color: $boxBorderGreen !important;
+}
+
+.border-brown {
+    border-color: $boxBorderBrown !important;
+}
+
+.border-purple {
+    border-color: $boxBorderPurple !important;
+}
+
+.border-yellow {
+    border-color: $boxBorderYellow!important;
+}
+
+.box-close {
+    float: right;
+    padding-right: 4px;
+    height: 5px;
+}
+
+.border-dotted {
+    border-width: 1px;
+    border-style: dotted;
+}
+
+.border-theme-color {
+    border-color: $boxBorderThemeColor;
+}
+
+.box-transparent{
+    border-color: transparent;
+}
