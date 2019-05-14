@@ -19,20 +19,20 @@ export class FuncionariosService {
     return this.http.get(`${this.API_URI}/workers/all`);
   }
 
-  getFuncionario(cod_funcionario: string){
-    return this.http.get(`${this.API_URI}/workers/getOne/${cod_funcionario}`)
+  getFuncionario(cedula: string){
+    return this.http.get(`${this.API_URI}/workers/getOne/${cedula}`)
   }
 
-  deleteFuncionario(cod_funcionario: string){
-    return this.http.delete(`${this.API_URI}/workers/delete/${cod_funcionario}`);
+  deleteFuncionario(cedula: string){
+    return this.http.delete(`${this.API_URI}/workers/delete/${cedula}`);
   }
 
   saveFuncionario(funcionario:Funcionario){
     return this.http.post(`${this.API_URI}/workers/`,funcionario);
   }
 
-  updateFuncionario(cod_funcionario: string|number, updatedFuncionario: Funcionario): Observable<Funcionario>{
-    return this.http.put(`${this.API_URI}/workers/update/${cod_funcionario}`, updatedFuncionario);
+  updateFuncionario(cedula: string|number, updatedFuncionario: Funcionario): Observable<Funcionario>{
+    return this.http.put(`${this.API_URI}/workers/update/${cedula}`, updatedFuncionario);
   }
 
   getCargos(){
@@ -41,5 +41,9 @@ export class FuncionariosService {
 
   getModulos(){
     return this.http.get(`${this.API_URI}/workers/getModulos`);
+  }
+
+  getSucursales(){
+    return this.http.get(`${this.API_URI}/workers/getSucursales`);
   }
 }

@@ -23,6 +23,22 @@ import { FormFuncionarioComponent} from './components/RRHH/form-funcionario/form
 import { NavbarRrhhComponent } from './components/RRHH/navbar-rrhh/navbar-rrhh.component';
 import { DashboardRrhhComponent } from './components/RRHH/dashboard-rrhh/dashboard-rrhh.component';
 import { LoginComponent } from './components/login/login.component';
+import { MatDialogModule } from '@angular/material';
+import { ChartsModule} from 'ng2-charts';
+import { PieChartComponent } from './components/RRHH/pie-chart/pie-chart.component';
+import { FusionChartsModule } from 'angular-fusioncharts';
+import FusionCharts from 'fusioncharts/core';
+import Column2D from 'fusioncharts/viz/column2d';
+import { AmexioWidgetModule } from "amexio-ng-extensions"; // Import Amexio library
+//Dashboard,Charts & Maps are available as seperate module (not in AmexioWidgetModule)
+import {
+  AmexioChartsModule,
+  AmexioDashBoardModule,
+  AmexioEnterpriseModule,
+  AmexioMapModule
+} from "amexio-ng-extensions";
+
+FusionChartsModule.fcRoot(FusionCharts, Column2D);
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +56,10 @@ import { LoginComponent } from './components/login/login.component';
     FormFuncionarioComponent,
     NavbarRrhhComponent,
     DashboardRrhhComponent,
-    LoginComponent
+    LoginComponent,
+    PieChartComponent,
+
+
   ],
   imports: [
     BrowserModule,
@@ -49,6 +68,15 @@ import { LoginComponent } from './components/login/login.component';
     MaterialModule,
     FormsModule,
     HttpClientModule,
+    MatDialogModule,
+    ChartsModule,
+    FusionChartsModule,
+    AmexioWidgetModule,
+    FormsModule,
+    AmexioChartsModule,
+    AmexioDashBoardModule,
+    AmexioEnterpriseModule,
+    AmexioMapModule,
     RecaptchaModule.forRoot()
   ],
   providers: [FuncionariosService],

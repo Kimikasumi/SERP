@@ -1,0 +1,11 @@
+.navbar{
+    background-color: #236BE1;
+}
+[id="1"]{
+    color:black;
+    font-family: cursive;
+    font-weight: 900;
+}
+[id="2"]{
+    float: right;
+}

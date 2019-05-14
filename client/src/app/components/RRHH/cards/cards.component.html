@@ -3,7 +3,7 @@
     <div class="card text-center">
         <div class="card-header bg-dark text-white d-flex justify-content-between aling-items-center">
             <h3 class="nombreF">{{funcionario.nom_funcionario}}</h3>
-            <button class="btn btn-danger" (click)="deleteFuncionario(funcionario.cod_funcionario)">
+            <button class="btn btn-danger" (click)="deleteFuncionario(funcionario.cedula)">
                 <i class="far fa-trash-alt"></i>
             </button>
         </div>
@@ -12,25 +12,26 @@
             <table>
                 <tr>
                     <td class="icono">
-                        <p><i class="fas fa-briefcase"></i></p>
+                        <h6>Área</h6>
                     </td>
                     <td class="info">
                         <p>{{funcionario.nom_modulo}}</p>
                     </td>
                 </tr>
                 <tr>
-                    <td class="icono"><p><i class="fas fa-tasks"></i></p></td>
+                    <td class="icono"><h6>Cargo</h6></td>
                     <td class="info"><p>{{funcionario.nom_cargo}}</p></td>
                 </tr>
                 <tr>
-                    <td class="icono"><p><i class="fas fa-envelope"></i></p></td>
+                    <td class="icono"><h6>Correo</h6></td>
                     <td class="info"><p>{{funcionario.correo}}</p></td>
                 </tr>
 
             </table>
 
 
-            <a class="btn btn-info btn-block" [routerLink]="['/workers/editar', funcionario.cod_funcionario]">Editar</a>
+            <a class="btn btn-info btn-block" style="font-family: cursive;" [routerLink]="['/workers/editar', funcionario.cedula]">Editar</a>
+            
         </div>
     </div>
 </div>

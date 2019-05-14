@@ -1,6 +1,7 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
 import { FuncionariosService } from '../../../services/funcionarios.service';
 import { Funcionario } from 'src/app/models/Funcionario';
+import { MatDialog } from '@angular/material';
 @Component({
   selector: 'app-cards',
   templateUrl: './cards.component.html',
@@ -11,8 +12,7 @@ export class CardsComponent implements OnInit {
   @HostBinding('class') classes = 'row';
 
   funcionarios: any = [];
-
-  constructor(private funcionariosService: FuncionariosService) {
+  constructor(private funcionariosService: FuncionariosService, public dialog: MatDialog) {
 
   }
 
@@ -31,8 +31,8 @@ export class CardsComponent implements OnInit {
   }
 
 
-  deleteFuncionario(cod_funcionario: string) {
-    this.funcionariosService.deleteFuncionario(cod_funcionario).subscribe(
+  deleteFuncionario(cedula: string) {
+    this.funcionariosService.deleteFuncionario(cedula).subscribe(
       res => {
         console.log(res);
         this.getFuncionarios();
@@ -41,5 +41,13 @@ export class CardsComponent implements OnInit {
     )
   }
 
+  openDialog(): void {
+    const dialogRef = this.dialog.open( CardsComponent,{
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
+  }
 
 }

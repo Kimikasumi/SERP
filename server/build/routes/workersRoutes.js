@@ -13,12 +13,13 @@ class WorkersRoutes {
     config() {
         this.router.get('/listado', workersController_1.default.list);
         this.router.get('/all', workersController_1.default.listAll);
-        this.router.get('/getOne/:cod_funcionario', workersController_1.default.getOne);
+        this.router.get('/getOne/:cedula', workersController_1.default.getOne);
         this.router.post('/', workersController_1.default.create);
-        this.router.delete('/delete/:cod_funcionario', workersController_1.default.delete);
-        this.router.put('/update/:cod_funcionario', workersController_1.default.update);
+        this.router.delete('/delete/:cedula', workersController_1.default.delete);
+        this.router.put('/update/:cedula', workersController_1.default.update);
         this.router.get('/getCargos', workersController_1.default.getCargos);
         this.router.get('/getModulos', workersController_1.default.getModulos);
+        this.router.get('/getSucursales', workersController_1.default.getSucursales);
     }
 }
 const workersRoutes = new WorkersRoutes();

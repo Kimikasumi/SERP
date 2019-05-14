@@ -11,12 +11,13 @@ class WorkersRoutes {
     config(): void {
         this.router.get('/listado', workersController.list);
         this.router.get('/all', workersController.listAll);
-        this.router.get('/getOne/:cod_funcionario', workersController.getOne);
+        this.router.get('/getOne/:cedula', workersController.getOne);
         this.router.post('/', workersController.create);
-        this.router.delete('/delete/:cod_funcionario', workersController.delete);
-        this.router.put('/update/:cod_funcionario', workersController.update);
+        this.router.delete('/delete/:cedula', workersController.delete);
+        this.router.put('/update/:cedula', workersController.update);
         this.router.get('/getCargos', workersController.getCargos);
         this.router.get('/getModulos', workersController.getModulos);
+        this.router.get('/getSucursales', workersController.getSucursales);
     }
 }
 
