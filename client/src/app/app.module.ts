@@ -66,9 +66,9 @@ FusionChartsModule.fcRoot(FusionCharts, Column2D);
 
     AgregarSolicitudPComponent,
     ListarSolicitudPComponent,
-    PrincipalSolicitudPComponent
+    PrincipalSolicitudPComponent,
 
-    PieChartComponent,
+    PieChartComponent
 
 
 
