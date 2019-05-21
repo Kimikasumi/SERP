@@ -51,6 +51,13 @@ class RetailersController {
             res.json({ message: 'La sucursal se ha actualizado' });
         });
     }
+    solicitar(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            yield database_1.default.query('INSERT INTO solicitud_inv set ?', [req.body]);
+            console.log(req.body);
+            res.json({ text: 'Solicitud enviada' });
+        });
+    }
 }
 const retailersController = new RetailersController();
 exports.default = retailersController;

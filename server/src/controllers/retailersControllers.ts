@@ -39,6 +39,12 @@ class RetailersController {
             [req.body,cod_sucursal]);
         res.json({ message: 'La sucursal se ha actualizado' })
     }
+
+    public async solicitar(req: Request, res: Response): Promise<void> {
+        await pool.query('INSERT INTO solicitud_inv set ?',[req.body]);
+        console.log(req.body);
+        res.json({ text: 'Solicitud enviada' });
+    }
 }
 
 const retailersController = new RetailersController();

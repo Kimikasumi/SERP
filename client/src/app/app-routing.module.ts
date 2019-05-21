@@ -18,6 +18,7 @@ import { PrincipalPvComponent } from './components/PV/principal-pv/principal-pv.
 import { ListarPvComponent } from './components/PV/listar-pv/listar-pv.component';
 import { AddPvComponent } from './components/PV/add-pv/add-pv.component';
 import { DashboardPvComponent } from './components/PV/dashboard-pv/dashboard-pv.component';
+import { SolicitarInvPvComponent } from './components/PV/solicitar-inv-pv/solicitar-inv-pv.component';
 
 const routes: Routes = [
   {
@@ -59,7 +60,8 @@ const routes: Routes = [
       { path: 'listadoPV', component: ListarPvComponent },
       { path: 'agregarPV', component: AddPvComponent },
       { path: 'editPV/:id', component: AddPvComponent },
-      { path: 'dashboard', component: DashboardPvComponent }
+      { path: 'dashboard', component: DashboardPvComponent },
+      { path: 'solicitar', component: SolicitarInvPvComponent }
     ]
   }
 

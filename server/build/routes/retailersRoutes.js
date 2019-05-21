@@ -16,6 +16,7 @@ class RetailersRoutes {
         this.router.post('/', retailersControllers_1.default.create);
         this.router.delete('/:cod_sucursal', retailersControllers_1.default.delete);
         this.router.put('/:cod_sucursal', retailersControllers_1.default.update);
+        this.router.post('/solicitar', retailersControllers_1.default.solicitar);
     }
 }
 const retailersRoutes = new RetailersRoutes();

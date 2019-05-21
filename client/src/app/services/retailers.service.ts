@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http'
-import { Sucursal } from '../models/Sucursal'
+import { HttpClient } from '@angular/common/http';
+import { Sucursal } from '../models/Sucursal';
+import { SolicitudInv } from '../models/SolicitudInv';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -28,6 +29,10 @@ export class RetailersService {
   }
 
   updateRetail(cod_sucursal: string|number, updatedRetail: Sucursal): Observable<Sucursal>{
-    return this.http.put(`${this.API_URI}/retail/${cod_sucursal}`,updatedRetail);
+    return this.http.put(`${this.API_URI}/retail/${cod_sucursal}`, updatedRetail);
+  }
+
+  solicitarInv(solicitudInv: SolicitudInv) {
+    return this.http.post(`${this.API_URI}/retail/solicitar`, solicitudInv);
   }
 }
