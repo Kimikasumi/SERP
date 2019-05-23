@@ -20,6 +20,16 @@ class RetailersController {
         res.status(404).json({ text: 'sucursal no encontrada' });
     }
 
+    public async getPerProduct(req: Request, res: Response): Promise<any> {
+        const { cod_producto } = req.params;
+        const retailers = await pool.query('SELECT nom_sucursal, cod_ciudad, direc, cantidad FROM INVENTARIO, SUCURSAL, PRODUCTO where PRODUCTO.cod_producto = INVENTARIO.cod_producto and INVENTARIO.cod_sucursal = SUCURSAL.cod_sucursal and PRODUCTO.cod_producto = ?',
+            [cod_producto]);
+        if (retailers.length > 0) {
+            return res.json(retailers);
+        }
+        res.status(404).json({ text: 'sucursal no encontrada' });
+    }
+
     public async create(req: Request, res: Response): Promise<void> {
         await pool.query('INSERT INTO sucursal set ?', [req.body]);
         console.log(req.body);

@@ -31,6 +31,7 @@ import { EditPvComponent } from './components/PV/edit-pv/edit-pv.component';
 import { DashboardPvComponent } from './components/PV/dashboard-pv/dashboard-pv.component';
 import { SolicitarInvPvComponent } from './components/PV/solicitar-inv-pv/solicitar-inv-pv.component';
 import { ListarInvPvComponent } from './components/PV/listar-inv-pv/listar-inv-pv.component';
+import { SucursalesComponent } from './components/PV/sucursales/sucursales.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -56,7 +57,8 @@ import { ListarInvPvComponent } from './components/PV/listar-inv-pv/listar-inv-p
     EditPvComponent,
     DashboardPvComponent,
     SolicitarInvPvComponent,
-    ListarInvPvComponent
+    ListarInvPvComponent,
+    SucursalesComponent
   ],
   imports: [
     BrowserModule,

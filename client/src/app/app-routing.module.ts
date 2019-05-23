@@ -19,6 +19,8 @@ import { ListarPvComponent } from './components/PV/listar-pv/listar-pv.component
 import { AddPvComponent } from './components/PV/add-pv/add-pv.component';
 import { DashboardPvComponent } from './components/PV/dashboard-pv/dashboard-pv.component';
 import { SolicitarInvPvComponent } from './components/PV/solicitar-inv-pv/solicitar-inv-pv.component';
+import { ListarInvPvComponent } from './components/PV/listar-inv-pv/listar-inv-pv.component';
+import { SucursalesComponent } from './components/PV/sucursales/sucursales.component';
 
 const routes: Routes = [
   {
@@ -58,6 +60,8 @@ const routes: Routes = [
     children: [
       { path: 'principal', component: PrincipalPvComponent },
       { path: 'listadoPV', component: ListarPvComponent },
+      { path: 'listadoInvPv', component: ListarInvPvComponent},
+      { path: 'sucursales/:cod_producto', component: SucursalesComponent},
       { path: 'agregarPV', component: AddPvComponent },
       { path: 'editPV/:id', component: AddPvComponent },
       { path: 'dashboard', component: DashboardPvComponent },

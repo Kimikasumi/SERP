@@ -1,3 +1,27 @@
-<p>
-  listar-inv-pv works!
-</p>
+<app-principal-pv></app-principal-pv>
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <h3>Productos</h3>
+    </div>
+    <div class="card-body">
+      <table class="table table-dark">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Precio</th>
+            </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let rt of products">
+            <td>{{rt.cod_producto}}</td>
+            <td>{{rt.nom_producto}}</td>
+            <td>{{rt.precio}}</td>
+            <td><button [routerLink]="['/retail/sucursales', rt.cod_producto]" class="btn btn-warning">Mostrar en sucursales</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

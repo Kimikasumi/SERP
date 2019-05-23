@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProduccionService } from 'src/app/services/produccion.service';
 
 @Component({
   selector: 'app-listar-inv-pv',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListarInvPvComponent implements OnInit {
 
-  constructor() { }
+  products: any = []
+  constructor(private produccionService: ProduccionService) { }
 
   ngOnInit() {
+    this.mostrarProductos();
+  }
+
+  mostrarProductos() {
+    this.produccionService.getProductos().subscribe(
+      res => {
+        this.products = res;
+      },
+      err => console.log(err)
+    )
   }
 
 }
