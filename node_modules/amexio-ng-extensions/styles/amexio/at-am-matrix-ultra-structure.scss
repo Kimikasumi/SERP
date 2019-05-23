@@ -1,0 +1,26 @@
+
+/*----------------------------------------------------------------------*/
+/*        Matrix Ultra Structure        */
+/*----------------------------------------------------------------------*/
+
+
+.listbox .list{
+
+  .title {
+    float: left;
+    a {
+      text-transform: lowercase;
+    }
+  }
+}
+
+.listbox{
+
+  .header{
+    border-bottom: $borderSize solid $borderColor;
+  }
+
+  .list .list-items{
+    border-bottom: 1px solid #1b1d22;
+  }
+}

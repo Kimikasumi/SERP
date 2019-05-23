@@ -1,0 +1,115 @@
+
+.step-label-highlight {
+  color: $stepsLabelHighlight;
+  font-weight: bold;
+}
+.stepwizard-step p {
+  //margin-top: 0px;
+  color:$steppColor;
+}
+.step-block-icon-disable{
+  color : $stepsDisabledColor;
+}
+.stepwizard-row {
+  //display: table-row;
+}
+.stepwizard {
+  // display: table;
+  // width: 100%;
+  // position: relative;
+}
+.step-box-table-item:focus{
+  outline: none;
+  background-color: $stepsHoverBGColor !important;
+  color: $stepHoverFontColor;
+
+}
+.stepwizard-row:before {
+  // top: 14px;
+  // bottom: 0;
+  // position: absolute;
+  // content: " ";
+  // width: 100%;
+  // height: 1px;
+  background-color: $stepsBGColor;
+  //z-index: 0;
+}
+.stepwizard-step {
+  // display: table-cell;
+  // text-align: center;
+  // position: relative;
+}
+
+.btn-circle {
+  // text-align: center;
+  // vertical-align: middle;
+  font-size: $stepsFontSize;
+  // border-radius: 50%;
+
+  // display: inline-block;
+  // font-weight: 400;
+  // line-height: 1.25;
+
+  // white-space: nowrap;
+  // outline: none;
+  // user-select: none;
+  // border: 1px solid $borderColor;
+  // transition: all .2s ease-in-out;
+
+  // -webkit-user-select: none;
+  // -moz-user-select: none;
+  // -ms-user-select: none;
+
+}
+
+
+.step-box-sqaure{
+  // width: 100%;
+  // display: table;
+  // table-layout: fixed;
+}
+.step-box-table{
+  //display: table-row;
+}
+
+.step-box-table-item{
+  // width: 2px;
+  // display: table-cell;
+  background-color: $stepsBGColor;
+  // color: $stepsColor;
+  // text-align: center;
+  // vertical-align: middle;
+  // line-height: 15px;
+  // border: 1px solid $stepsBorderColor;
+  // font-weight: bolder;
+  // padding-top: 5px;
+  // cursor: pointer;
+}
+
+.step-box-table-item a{
+  color: $stepsColor;
+}
+
+.step-box-table-item.active{
+  background-color: $stepsActiveBGColor;
+  //cursor : not-allowed;
+}
+
+.step-box-table-item.disbaled{
+  background-color: $stepsDisabled;
+  color: $stepsDisabledColor;
+  //cursor : not-allowed;
+}
+//STEP INDEX INACTIVE
+.index-step-inactive{
+  background-color: $componentHoverBGColor;
+  color: $componentHoverFontColor;
+  // color : inherit;
+}
+
+//Step Box inactive hover effect
+.step-box-table-item-hover:hover{
+  background-color: $stepsHoverBGColor;
+  color: $stepHoverFontColor;
+  //cursor: pointer;
+}

@@ -1,0 +1,51 @@
+
+.breadcrum-rightshift-css {
+  background-color: $breadcrumbBackgroundColor;
+
+}
+
+.context-menu-list1 {
+      background-color: $breadcrumbContextMenuBGColor;
+      box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12); 
+}
+    
+.context-menu-list1 :hover {
+          background-color:$breadcrumbBGColor;
+}
+
+.breadcrumb-group:hover {
+  border: 1px solid $breadcrumbBGColor;
+  display: table !important;
+}
+
+
+.breadcrumb-group {
+  border-color: transparent;
+
+}
+
+.breadcrumb-group:hover {
+ 
+ border: 1px solid   $componentHoverFontColor;
+  background-color: $breadcrumbBGColor;
+  color: $breadcrumbColor;
+}
+
+
+.breadcrumb-group:hover .arrow-group-css{
+  border-left: 1px solid $componentHoverFontColor; 
+}
+
+
+.arrow-group-css:hover {
+  border-left: 1px solid $componentHoverFontColor;
+}
+
+.arrow-group-css {
+ 
+  border-left: 1px solid #f7f3f3;
+  
+}
+
+     
+       

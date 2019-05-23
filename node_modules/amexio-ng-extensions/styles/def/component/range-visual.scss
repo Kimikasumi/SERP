@@ -1,0 +1,46 @@
+
+.ui-slider .ui-slider-range {
+  font-size: $rangeSliderFontSize;
+}
+
+.ui-slider {
+  background:$sliderBGColor;
+}
+.ui-widget-content {
+  background:$sliderWidgetBGColor;
+  color: $sliderWidgetColor;
+}
+.ui-widget {
+  font-size: $sliderWidgetFontSize;
+}
+.ui-slider .ui-slider-range {
+  font-size: $rangeSliderFontSize;
+}
+.ui-slider .ui-slider-range {
+  font-size: $rangeSliderFontSize;
+  background: $sliderHoverColor;   /** use card header here **/
+}
+.ui-slider .ui-slider-handle {
+  background: $rangeSliderBGColor;
+  color: $rangeHeaderColor;
+ }
+ 
+
+.ui-widget-header {
+  background: $rangeWidgetBG1 0 0 repeat-x;
+  background: -moz-linear-gradient(top, $rangeWidgetBG1 0%, $rangeWidgetBG2 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $rangeWidgetBG1), color-stop(100%, $rangeWidgetBG2));
+  background: -webkit-linear-gradient(top, $rangeWidgetBG1 0%, $rangeWidgetBG2 100%);
+  background: -o-linear-gradient(top, $rangeWidgetBG1 0%, $rangeWidgetBG2 100%);
+  background: -ms-linear-gradient(top, $rangeWidgetBG1 0%, $rangeWidgetBG2 100%);
+  background: linear-gradient(to bottom, $rangeWidgetBG1 0%, $rangeWidgetBG2 100%);
+}
+.ui-widget-header {
+  background: $rangeWidgetBG1;
+  color: $rangeHeaderColor;
+  font-weight: $rangeHeaderFontWeight;
+}
+.focusOnSlider:focus{
+  outline: none;
+  border: 2px solid $sliderHoverColor;
+ }

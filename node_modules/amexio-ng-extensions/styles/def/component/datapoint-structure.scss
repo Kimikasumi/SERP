@@ -1,0 +1,28 @@
+
+.datapoints{
+
+  font-size: 125%;
+  /* Border */
+  border-radius: 0px;
+  border: $datapointBorderSize solid $datapointBorderColor;
+  padding: 0px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  .datapoints{
+    border: none;
+    box-shadow: none;
+  }
+
+  .datapoint-south{
+    border-radius: 0px;
+    padding: 5px;
+    margin: 1px;
+  }
+
+  .datapoint-west{
+    padding: 5px;
+  }
+
+  .datapoint-east{
+    padding: 5px;
+  }
+}

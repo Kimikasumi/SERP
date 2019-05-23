@@ -1,0 +1,36 @@
+$appTransparency :#601221;
+
+$themePrimaryColor: #D33134;
+$themeSecondaryColor : #8D021F;
+$themeFontColor : #043963;;
+$themeFontFamily: 'Shadows Into Light', cursive;
+
+$appBackground :#ffe578;
+$appBackgroundImage :  url('/assets/images/theme/bootstrap/red_bg.png');
+
+$appHeaderBGColor :$themePrimaryColor;
+$appHeaderFontColor : white;
+$appHeaderMenuBGColor :$appHeaderBGColor;
+$appHeaderMenuFontColor :$appHeaderFontColor;
+$appHeaderHoverBGColor : $themeSecondaryColor;;
+$appHeaderHoverFontColor : white;
+
+/* Component Specific Variables */
+$componentHoverBGColor : $themeSecondaryColor;
+$componentHoverFontColor :white;
+$componentActiveBGColor : $themeSecondaryColor;
+$componentActiveFontColor : white;
+$componentDisabledBGColor : rgb(160, 158, 158);
+$componentDisabledFontColor : $themeSecondaryColor;
+
+$componentBGColor : $appBackground;
+$componentFontColor : $themeFontColor;
+
+$componentHeaderBGColor : transparent;
+$componentHeaderFontColor : $themeSecondaryColor;
+
+$componentFooterBGColor :transparent;
+$componentFooterFontColor : $themeSecondaryColor;
+
+$componentDataBGColor : $themePrimaryColor;
+$componentDataFontColor : $appHeaderFontColor;

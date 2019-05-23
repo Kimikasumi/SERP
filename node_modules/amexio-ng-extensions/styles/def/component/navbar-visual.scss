@@ -1,0 +1,73 @@
+.topnav {
+    background-color: $navbarBGColor;
+    color: $navbarColor;
+}
+
+.top-nav-button {
+    background-color: inherit;
+    color: $navbarColor;
+}
+
+.topnav a {
+    color: $navbarColor
+}
+
+.topnav a label {
+    color: $navbarColor;
+}
+
+.topnavmainbarinneritems .nav-dropdown-content {
+    //display: none;
+    background-color: $navbarBGColor;
+    color: $navbarColor;
+}
+
+.topnavmainbarinneritems .nav-dropdown-content-transparent {
+    background-color: transparent !important;
+}
+
+// .topnavmainbarinneritems .nav-dropdown-content:hover {
+//     //display: none;
+//     background-color: $navbarHoverBG;
+//     color : $navbarHoverColor;
+// }
+.topnavmainbarinneritems-mobile .nav-dropdown-content {
+    background-color: $navbarActiveBG;
+    color: $navbarActiveColor;
+}
+
+.topnavmainbarinneritems .nav-dropdown-content a {
+    color: $navbarColor;
+}
+
+.topnavmainbarinneritems .nav-dropdown-content a:hover {
+    background-color: $navbarHoverBG;
+    color: $navbarHoverColor!important
+}
+
+.nav-dropdown:active {
+    background-color: $navbarActiveBG;
+    color: $navbarActiveColor;
+}
+
+.topnavmainbarinneritems-mobile .top-nav-input-control {
+    width: 100%;
+}
+
+.mobilebar {
+    color: $navbarColor;
+}
+
+.topnav input {
+    background-color: inherit;
+    color: inherit;
+}
+
+.nav-dropdown:hover .nav-dropdown-content .nav-menu-container {
+    background-color: $navbarComponentBGColor;
+    color: $navbarComponentColor;
+}
+
+.nav-dropdown:hover .nav-dropdown-content .nav-menu-container a {
+    color: $navbarComponentColor;
+}

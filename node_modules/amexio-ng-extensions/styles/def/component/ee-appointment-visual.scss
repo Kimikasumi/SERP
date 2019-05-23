@@ -1,0 +1,32 @@
+.weekdaycomponent {
+    display: block;
+    border: 1px solid #ced4da;
+    box-shadow: 0 1px 3px 0 #ced4da;
+}
+
+.availableweekday{
+    color: $themePrimaryColor;
+    background-color: $componentActiveBGColor;
+    cursor: pointer;
+}
+.availableweekday:focus{
+    outline: none;
+    color: $componentHeaderFontColor;
+    background: $componentHeaderBGColor;
+}
+
+.availableweekday:hover{
+    background-color:$componentHeaderBGColor;
+    color:$componentHeaderFontColor
+}
+
+.selectedDay{
+    background-color:$componentHeaderBGColor;
+    color:$componentHeaderFontColor
+}
+ 
+.notavailableweekday {
+    text-decoration: line-through;
+    cursor: not-allowed;
+    color: lightgray;
+}

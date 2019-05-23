@@ -9,6 +9,9 @@ import ProduccionRoutes from './routes/ProductoRoutes';
 import MPrimaRoutes from './routes/MPrimaRoutes';
 
 import retailersRoutes from './routes/retailersRoutes';
+import solicitudPRoutes from './routes/solicitudPRoutes';
+
+import usuarioRoutes from './routes/UsuarioRoutes'
 class Server {
 
     public app: Application;
@@ -32,6 +35,8 @@ class Server {
         this.app.use('/MPrima',MPrimaRoutes);
         this.app.use('/workers',workersRoutes);
         this.app.use('/retail',retailersRoutes);
+        this.app.use('/SolicitudP',solicitudPRoutes);
+        this.app.use('/Usuario',usuarioRoutes);
     }
 
     start(): void {

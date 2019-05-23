@@ -1,0 +1,35 @@
+$appTransparency : rgba(0, 0, 0, 0.87);
+
+$themePrimaryColor: #F2870C; ;
+$themeSecondaryColor : #603A63;
+$themeFontColor :$themeSecondaryColor;
+$themeFontFamily: 'Quicksand', sans-serif;
+
+$appBackground :rgba(55, 20, 2, 0.5);
+$appBackgroundImage : url('/assets/images/theme/bootstrap/DeepOrange-bg.jpg');
+
+$appHeaderBGColor :$themePrimaryColor;
+$appHeaderFontColor : white;
+$appHeaderMenuBGColor :$appHeaderBGColor;
+$appHeaderMenuFontColor :$appHeaderFontColor;
+$appHeaderHoverBGColor : rgba(255,253,208,0.4);;
+$appHeaderHoverFontColor : $themeFontColor;;
+
+/* Component Specific Variables */
+$componentHoverBGColor :  rgba(255,253,208,0.4);
+$componentHoverFontColor : $themeFontColor;
+$componentActiveBGColor :rgba(255,253,208,0.4);
+$componentActiveFontColor : $themeSecondaryColor;
+$componentDisabledBGColor : rgb(160, 158, 158);
+$componentDisabledFontColor : $themeSecondaryColor;
+
+$componentBGColor :white;
+$componentFontColor : $themeFontColor;
+
+$componentHeaderBGColor : linear-gradient(#40434D, #000000);
+$componentHeaderFontColor : white;
+$componentFooterBGColor :linear-gradient(#40434D, #000000);
+$componentFooterFontColor : white;
+
+$componentDataBGColor : $themePrimaryColor;
+$componentDataFontColor : $appHeaderFontColor;

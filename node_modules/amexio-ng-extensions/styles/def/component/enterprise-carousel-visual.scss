@@ -1,0 +1,60 @@
+
+.row__inner {  
+  font-size: 0;
+}
+.tile {
+  font-size: $tileFontSize;
+}
+
+.tile__details {
+  background: -webkit-linear-gradient(bottom, $eeTitleColor1 0%, $eeTitleColor2 100%);
+  background: linear-gradient(to top, $eeTitleColor1 0%, $eeTitleColor2 100%);
+}
+.tile__details:after,
+.tile__details:before {
+  display: $eeTitleDisplay;
+}
+.tile__details_v { 
+  font-size: $tileDetFontSize;  
+  background: -webkit-linear-gradient(bottom, $eeTitleColor1 0%, $eeTitleColor2 100%);
+  background: linear-gradient(to top, $eeTitleColor1 0%, $eeTitleColor2 100%);
+}
+.tile__details_v:after,
+.tile__details_v:before {
+    display: $eeTitleDisplay;
+}
+.tile__title {
+  color: $eeTitleColor;
+}
+.controls{
+  color:$controlColor;
+}
+.controls-v{
+  color:$controlColor;
+}
+.textonly{  
+  color: $textColor;
+  background-color: $textBGColor;
+}
+.match{
+  color: $matchColor;
+}
+.age{
+  color: $textColor;
+}
+.actionpanel{  
+  color: $actionColor;
+  background-color: $actionBGColor;
+}
+.section-header{  
+  color: $eeTitleColor; 
+}
+.playpanel .playbutton{
+  color: $eeTitleColor;
+}
+.playpanel .playbutton:hover{
+  color: $actionColor;
+}
+.selected{
+  color: $eeTitleColor;
+}

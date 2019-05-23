@@ -1,0 +1,35 @@
+
+$appTransparency :black;
+
+$themePrimaryColor: #417505;
+$themeSecondaryColor : #C4E800;
+$themeFontColor : black;
+$themeFontFamily: 'PT-Sans', sans-serif;
+
+$appBackground :#ECEFF1;
+$appBackgroundImage : none;
+
+$appHeaderBGColor : white;
+$appHeaderFontColor : $themePrimaryColor;
+$appHeaderMenuBGColor :$appHeaderBGColor;
+$appHeaderMenuFontColor :$appHeaderFontColor;
+$appHeaderHoverBGColor : none;
+$appHeaderHoverFontColor : $themeFontColor;;
+/* Component Specific Variables */
+$componentHoverBGColor : lighten($themeSecondaryColor,30%);
+$componentHoverFontColor : $themeFontColor;
+$componentActiveBGColor : lighten($themePrimaryColor,40%);
+$componentActiveFontColor : $themeFontColor;
+$componentDisabledBGColor : rgb(160, 158, 158);
+$componentDisabledFontColor : $themeSecondaryColor;
+
+$componentBGColor : white;
+$componentFontColor : $themeFontColor;
+
+$componentHeaderBGColor : $themePrimaryColor;
+$componentHeaderFontColor : white;
+$componentFooterBGColor : $themePrimaryColor;
+$componentFooterFontColor : white;
+
+$componentDataBGColor : $themePrimaryColor;
+$componentDataFontColor : $appHeaderFontColor;

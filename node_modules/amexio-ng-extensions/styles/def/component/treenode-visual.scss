@@ -1,0 +1,59 @@
+
+.treenode{
+  background-color: $treenodeBGColor;  
+}
+
+/*.treenode-content:hover{
+  background-color: $treeNodeHoverBGColor;
+  color: $treeNodeHoverColor
+}*/
+
+.tree-node-label-hover:hover{
+  background-color: $treeNodeHoverBGColor;
+  color: $treeNodeHoverColor
+}
+.tree-node-label:focus {
+  background-color: $treeNodeHoverBGColor;
+  color: $treeNodeHoverColor;
+  outline:none;
+}
+.treenode-label-active{
+  background-color: $treeNodeActiveBGColor;
+  color:$treeNodeActiveColor;
+}
+
+.tree-badge{
+  background-color:$componentHeaderBGColor;
+  color:$componentHeaderFontColor
+  }
+
+  .context-menu-list li:hover {
+    background-color: $treeNodeHoverBGColor;
+    color: $treeNodeHoverColor   }
+  
+  .context-menu-list-items-selected {
+    background-color: $treeNodeActiveBGColor !important;
+    color:$treeNodeActiveColor;
+   }
+  
+  // .context-menu-list {
+  //   border-color: $componentHeaderBGColor;
+  //   background-color: $componentHeaderFontColor; }
+  
+  .tree-node-label-selected {
+      background-color: $treeNodeActiveBGColor;
+      color: $treeNodeActiveColor; }
+  
+  .tree-node-label-not-selected {
+    
+   }
+  
+  .context-menu-separator{
+    border-bottom: 1px solid gray;
+  }
+
+  .horizontaltreeview-node-label:focus {
+    outline: none;
+    background-color: $treeNodeHoverBGColor;
+    color: $treeNodeHoverColor;
+  }

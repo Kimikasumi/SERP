@@ -1,0 +1,61 @@
+/*----------------------------------------------------------------------*/
+/*        Ocean blue -Visual        */
+/*----------------------------------------------------------------------*/
+
+.input-control {
+  background-color: #1b1d22;
+  color: white;
+}
+
+.listbox .list{
+    background-color: #02468D;
+  
+    .title {
+      font-size: 18px;
+      color: $componentDataBGColor;
+      a {
+        font-size: 16px;
+        color: $componentFontColor !important;
+      }
+    }
+  }
+  
+  .card-container {
+  
+    .card-header {
+      background-color: $themeSecondaryColor ;
+      background: linear-gradient(#80E6F5, #0CB5CF) ;
+    }
+  }
+  
+  .listbox{  
+    .listbox .list .title {
+      color: #E84C1A !important;
+    }
+  
+    .list .list-items{
+     background-color: $componentBGColor;
+    }
+  }
+  
+   .topnav {
+     background-color: $themeSecondaryColor ;
+     background: linear-gradient(#80E6F5, #0CB5CF) ;
+     color: $appHeaderFontColor;
+     font-size: 100%;
+   }
+   
+   .sidenav .headernode {
+    background-color: none;
+   }
+
+   
+.topnavmainbarinneritems .nav-dropdown-content { 
+  //display: none;
+  background-color: $themeSecondaryColor;
+  color : $appHeaderFontColor;
+}
+.topnavmainbarinneritems-mobile .nav-dropdown-content{
+  background-color: $themeSecondaryColor;
+  color : $appHeaderFontColor;
+}

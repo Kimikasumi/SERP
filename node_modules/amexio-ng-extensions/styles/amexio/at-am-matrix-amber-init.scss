@@ -1,0 +1,37 @@
+$appTransparency :rgb(153, 153, 153);
+
+$themePrimaryColor: #FFBF00 ;
+$themeSecondaryColor : #FFBF00;
+$themeFontColor : rgba(255,255,255,0.70);;
+$themeFontFamily: Roboto,Trebuchet MS,Arial,Helvetica,sans-serif;
+
+$appBackground :#000000;
+$appBackgroundImage : url('/assets/images/theme/bootstrap/matrix-bg.png');
+
+$appHeaderBGColor :#000000;
+$appHeaderFontColor :$themeSecondaryColor;
+$appHeaderMenuBGColor :$appHeaderBGColor;
+$appHeaderMenuFontColor :$appHeaderFontColor;
+$appHeaderHoverBGColor : rgba(255,191,0,0.4);;
+$appHeaderHoverFontColor : $themeFontColor;
+/* Component Specific Variables */
+
+$componentBGColor :#000000;
+$componentFontColor : $themeFontColor;
+
+$componentHoverBGColor :  rgba(255,191,0,0.4);
+$componentHoverFontColor : $themeSecondaryColor;
+$componentActiveBGColor : $componentBGColor;
+$componentActiveFontColor : $themeSecondaryColor;
+$componentDisabledBGColor : rgb(160, 158, 158);
+$componentDisabledFontColor : $themeSecondaryColor;
+
+
+$componentHeaderBGColor : rgba(255,191,0,0.4);
+$componentHeaderFontColor : $themeSecondaryColor;
+$componentFooterBGColor :rgba(255,191,0,0.4);
+$componentFooterFontColor : $themeSecondaryColor;
+
+$componentDataBGColor : $themePrimaryColor;
+$componentDataFontColor : $appHeaderFontColor;
+

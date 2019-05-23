@@ -3,7 +3,7 @@ import db from '../database';
 class WorkersController{
 
     public async list (req:Request,res: Response): Promise<void>{
-        const x = 'SELECT cod_funcionario, nom_funcionario, nom_cargo,'+
+        const x = 'SELECT cedula, nom_funcionario, nom_cargo,'+
         'nom_modulo, correo, nom_genero, foto FROM FUNCIONARIO,'+
          'CARGO, MODULO, GENERO WHERE FUNCIONARIO.cod_modulo = MODULO.cod_modulo '+
          'AND FUNCIONARIO.cod_cargo = CARGO.cod_cargo AND FUNCIONARIO.cod_genero = GENERO.cod_genero';
@@ -19,8 +19,8 @@ class WorkersController{
     };
 
     public async getOne(req:Request,res: Response): Promise<any>{
-        const {cod_funcionario} = req.params;
-        const funcionario = await db.query('SELECT * FROM FUNCIONARIO WHERE cod_funcionario=?',[cod_funcionario]);
+        const {cedula} = req.params;
+        const funcionario = await db.query('SELECT * FROM FUNCIONARIO WHERE cedula=?',[cedula]);
         if(funcionario. length > 0){
             return res.json(funcionario[0]);
         }
@@ -34,15 +34,15 @@ class WorkersController{
     }
 
     public async delete(req:Request,res: Response): Promise<void>{
-        const {cod_funcionario} = req.params;
-        await db.query('DELETE FROM FUNCIONARIO WHERE cod_funcionario= ?', [cod_funcionario]);
-        res.json({text: 'Borrando Funcionario '+ req.params.cod_funcionario});
+        const {cedula} = req.params;
+        await db.query('DELETE FROM FUNCIONARIO WHERE cedula= ?', [cedula]);
+        res.json({text: 'Borrando Funcionario '+ req.params.cedula});
     }
     
     public update(req:Request,res: Response){
-        const {cod_funcionario} = req.params;
-        db.query('UPDATE FUNCIONARIO SET ? WHERE cod_funcionario = ?',[req.body, cod_funcionario]);
-        res.json({text: 'Actualizando Funcionario '+ req.params.cod_funcionario});
+        const {cedula} = req.params;
+        db.query('UPDATE FUNCIONARIO SET ? WHERE cedula = ?',[req.body, cedula]);
+        res.json({text: 'Actualizando Funcionario '+ req.params.cedula});
     }
 
     public async getCargos(req:Request,res: Response): Promise<void>{
@@ -53,6 +53,11 @@ class WorkersController{
     public async getModulos(req:Request,res: Response): Promise<void>{
         const consulta = await db.query('SELECT * FROM MODULO');
         res.json(consulta);
+    }
+
+    public async getSucursales(req:Request,res:Response): Promise<void>{
+        const consulta = await db.query('SELECT * FROM SUCURSAL');
+        res.json(consulta)
     }
 }
 

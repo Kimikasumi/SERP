@@ -1,0 +1,63 @@
+/*----------------------------------------------------------------------*/
+/*        Limegreen -Structure      */
+/*----------------------------------------------------------------------*/
+
+
+.listbox{
+  background-image: url(/assets/images/theme/bootstrap/Header.png);
+  background-repeat: repeat-x;
+  background-color: $componentBGColor;
+
+  .list{
+    .title {
+      color: $themePrimaryColor !important;
+    }
+    .list-items{
+    }
+    .list-items:hover{
+      background-color: lighten($themePrimaryColor,70%);
+    }
+  }
+
+  .header{
+    background: none;
+    color: $themePrimaryColor;
+  }
+}
+
+
+.card-container {
+  background-image: url(/assets/images/theme/bootstrap/Header.png);
+  background-repeat: repeat-x;
+
+  .card-header {
+    font-size: 20px;
+    background: none;
+  }
+
+}
+
+
+.topnav {
+
+  color: $themePrimaryColor;
+  background-color: $themeSecondaryColor;
+  background: linear-gradient(#C4E800, #92CD00) !important;
+
+  .navbar-logo-unit a{
+    font-size: 24px;
+  //  font-weight: bold;
+  }
+}
+.datapoints .datapoint-south {
+  color: $componentBGColor;
+}
+.topnavmainbarinneritems .nav-dropdown-content { 
+  //display: none;
+  background-color: $themeSecondaryColor;
+  color : $navbarActiveBG;
+}
+.topnavmainbarinneritems-mobile .nav-dropdown-content{
+  background-color: $themeSecondaryColor;
+  color : $navbarActiveBG;
+}

@@ -1,0 +1,20 @@
+
+.rating i{
+  font-style: normal;
+}
+
+.star-icon {
+  color: $ratingStarColor;
+  font-size: $ratingStarFontSize;
+}
+.star-icon:before {
+  color: $ratingActiveColor;
+}
+.rating.disabled .star-icon:before {
+  color: $ratingDisabledColor;
+}
+@-moz-document url-prefix() { /* Firefox Hack */
+  .star-icon {
+    font-size: 50px;
+  }
+}

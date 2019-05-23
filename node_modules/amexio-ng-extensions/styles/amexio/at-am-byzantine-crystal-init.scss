@@ -1,0 +1,68 @@
+$appTransparency :#E84C1A;
+
+$themePrimaryColor: #E84C1A;
+$themeSecondaryColor : #70196F;
+$themeFontColor : #70196F;
+$themeFontFamily: Roboto,Trebuchet MS,Arial,Helvetica,sans-serif;
+
+$appBackground :#ECEFF1;
+$appBackgroundImage : url('/assets/images/theme/bootstrap/polygon_bg.jpg');
+
+$appHeaderBGColor : white;
+$appHeaderFontColor : $themePrimaryColor;
+$appHeaderMenuBGColor :$appHeaderBGColor;
+$appHeaderMenuFontColor :$appHeaderFontColor;
+$appHeaderHoverBGColor : lighten($themeSecondaryColor,60%);;
+$appHeaderHoverFontColor :  $themeSecondaryColor;;
+
+/* Component Specific Variables */
+$componentHoverBGColor : lighten($themeSecondaryColor,60%);
+$componentHoverFontColor : $themeSecondaryColor;
+$componentActiveBGColor : lighten($themeSecondaryColor,50%);
+$componentActiveFontColor : $themeSecondaryColor;
+$componentDisabledBGColor : rgb(160, 158, 158);
+$componentDisabledFontColor : $themeSecondaryColor;
+
+$componentBGColor : white;
+$componentFontColor : $themeFontColor;
+
+$componentHeaderBGColor : $themeSecondaryColor;
+$componentHeaderFontColor : white;
+$componentFooterBGColor :$themeSecondaryColor;
+$componentFooterFontColor : white;
+
+$componentDataBGColor : $themePrimaryColor;
+$componentDataFontColor : $appHeaderFontColor;
+
+/* Misc Variables */
+$borderSize2 : 2px;
+$borderSize3 : 3px;
+
+
+$borderRadius2 : 3px;
+$borderRadius3 : 5px;
+
+$borderSize : $borderSize3;
+$borderRadius : $borderRadius3;
+
+$scrollBGColor : #f5f5f5;
+$scrollThumbColor : $componentBGColor;
+
+$borderColor : $themeSecondaryColor;
+
+$primaryBGColor: $themeSecondaryColor;
+$secondaryBGColor: #ffffff;
+$successBGColor : #5cb85c;
+$dangerBGColor : #d9534f;
+$warningBGColor : #f0ad4e;
+
+$primaryColor: white;
+$secondaryColor:$componentFontColor;
+$successColor : white;
+$dangerColor : white;
+$warningColor : white;
+
+$success: $successBGColor;
+$error : $dangerBGColor;
+$focusColor : #5cb3fd;
+$borderColorFocus: $focusColor;

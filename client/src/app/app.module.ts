@@ -32,6 +32,28 @@ import { DashboardPvComponent } from './components/PV/dashboard-pv/dashboard-pv.
 import { SolicitarInvPvComponent } from './components/PV/solicitar-inv-pv/solicitar-inv-pv.component';
 import { ListarInvPvComponent } from './components/PV/listar-inv-pv/listar-inv-pv.component';
 import { SucursalesComponent } from './components/PV/sucursales/sucursales.component';
+
+import { AgregarSolicitudPComponent } from './components/Produccion/SolicitudP/agregar-solicitud-p/agregar-solicitud-p.component';
+import { ListarSolicitudPComponent } from './components/Produccion/SolicitudP/listar-solicitud-p/listar-solicitud-p.component';
+import { PrincipalSolicitudPComponent } from './components/Produccion/principal-solicitud-p/principal-solicitud-p.component';
+
+import { MatDialogModule } from '@angular/material';
+import { ChartsModule} from 'ng2-charts';
+import { PieChartComponent } from './components/RRHH/pie-chart/pie-chart.component';
+import { FusionChartsModule } from 'angular-fusioncharts';
+import FusionCharts from 'fusioncharts/core';
+import Column2D from 'fusioncharts/viz/column2d';
+import { AmexioWidgetModule } from "amexio-ng-extensions"; // Import Amexio library
+//Dashboard,Charts & Maps are available as seperate module (not in AmexioWidgetModule)
+import {
+  AmexioChartsModule,
+  AmexioDashBoardModule,
+  AmexioEnterpriseModule,
+  AmexioMapModule
+} from "amexio-ng-extensions";
+
+FusionChartsModule.fcRoot(FusionCharts, Column2D);
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,7 +80,14 @@ import { SucursalesComponent } from './components/PV/sucursales/sucursales.compo
     DashboardPvComponent,
     SolicitarInvPvComponent,
     ListarInvPvComponent,
-    SucursalesComponent
+    SucursalesComponent,
+    ListarInvPvComponent,
+
+    AgregarSolicitudPComponent,
+    ListarSolicitudPComponent,
+    PrincipalSolicitudPComponent,
+
+    PieChartComponent
   ],
   imports: [
     BrowserModule,
@@ -67,6 +96,15 @@ import { SucursalesComponent } from './components/PV/sucursales/sucursales.compo
     MaterialModule,
     FormsModule,
     HttpClientModule,
+    MatDialogModule,
+    ChartsModule,
+    FusionChartsModule,
+    AmexioWidgetModule,
+    FormsModule,
+    AmexioChartsModule,
+    AmexioDashBoardModule,
+    AmexioEnterpriseModule,
+    AmexioMapModule,
     RecaptchaModule.forRoot()
   ],
   providers: [FuncionariosService],

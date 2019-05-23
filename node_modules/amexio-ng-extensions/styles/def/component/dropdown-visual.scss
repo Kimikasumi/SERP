@@ -1,0 +1,24 @@
+
+.dropdown{
+  background-color: $componentBGColor;
+}
+
+.dropdown-list .list-items:hover{
+  color: $dropdownHoverColor;
+  background-color: $dropdownHoverBGColor;
+}
+
+.dropdown-list .list-items-active{
+  color: $dropdownActiveColor;
+  background-color: $dropdownActiveBGColor;
+}
+
+.drodown-caret-down{
+  color: $dropdownIconColor;
+}
+
+.list-items-selected{
+  background-color:$dropdownHoverBGColor;
+  color:$dropdownHoverColor;
+}
+

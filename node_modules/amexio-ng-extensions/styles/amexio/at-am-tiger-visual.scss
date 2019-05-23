@@ -1,0 +1,65 @@
+
+/*----------------------------------------------------------------------*/
+/*       Royal Tiger -Visual */
+/*----------------------------------------------------------------------*/
+
+.topnav {
+  background: linear-gradient(#F58338, #E84C1A);
+}
+
+.topnavmainbarinneritems .nav-dropdown-content { 
+  //display: none;
+  background: linear-gradient(#F58338, #E84C1A);
+  color : $appHeaderFontColor;
+}
+.topnavmainbarinneritems-mobile .nav-dropdown-content{
+  background: linear-gradient(#F58338, #E84C1A);
+  color : $appHeaderFontColor;
+}
+
+.input-control {
+  background-color: #1b1d22;
+  color: $themeFontColor;
+  
+}
+.listbox .list{
+    background-color:  $componentBGColor;
+  
+    .title {
+      font-size: 18px;
+      color: $themeFontColor;
+      a {
+        font-size: 16px;
+        color: $themeFontColor;
+      }
+    }
+  }
+  
+  .card-container {
+  
+    .card-header {
+      background: linear-gradient(#40434D, #000000);
+    }
+  }
+  
+  .listbox{
+  
+    .listbox .list .title {
+      color: $themeSecondaryColor !important;
+    }
+  
+  
+    .list .list-items{
+      background-color: $componentBGColor;
+    }
+  }
+
+  .item-selector-action-panel .actionbar .actionbarinner .action {
+    background-color: #40434D;
+  }
+
+  
+.datatable .datatable-header{
+  background-color:$themeSecondaryColor;
+  color: $componentBGColor;
+}

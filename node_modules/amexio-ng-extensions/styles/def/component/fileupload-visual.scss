@@ -1,0 +1,9 @@
+
+.upload-drop-zone {
+  color: $uploadDropZoneColor;
+  border-color: $uploadDropZoneColor;
+}
+.upload-drop-zone.drop {
+  color:$uploadDropZoneColorDrop;
+  border-color:$uploadDropZoneColorDrop;
+}

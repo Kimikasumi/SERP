@@ -1,0 +1,32 @@
+import { AfterContentChecked, AfterViewInit, OnInit, QueryList } from '@angular/core';
+import { FormBuilder, NgForm, NgModel } from '@angular/forms';
+import { IconLoaderService } from './../../services/icon/icon.service';
+export declare class StepWizardItemComponent implements OnInit, AfterContentChecked, AfterViewInit {
+    formBuilder: FormBuilder;
+    private iconService;
+    title: string;
+    icon: string;
+    active: boolean;
+    footerAlign: string;
+    onNextStep: any;
+    onPreviousStep: any;
+    form: NgForm;
+    models: QueryList<NgModel>;
+    index: number;
+    showPreviousButton: boolean;
+    showNextButton: boolean;
+    activeClass: string;
+    nextLabel: string;
+    previousIcon: string;
+    nextIcon: string;
+    isNextButtonDisable: boolean;
+    constructor(formBuilder: FormBuilder, iconService: IconLoaderService);
+    onPreviousClick(event: any): void;
+    onNextClick(event: any): void;
+    ngOnInit(): void;
+    ngAfterViewInit(): void;
+    ngAfterContentChecked(): void;
+    validateForm(): void;
+    registerFormComponent(): void;
+    isFieldPresentInParentAndChildBoth(innerModelArray: any[], name: string): boolean;
+}

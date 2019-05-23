@@ -1,0 +1,24 @@
+.toolbar{
+    // background-color: $toolbarHoverBGColor;
+}
+.toolbaritemseperatorleft{
+    border-left: 1px solid $toolbarSeperatorColor;
+}
+.toolbaritemseperatorright{
+    border-right: 1px solid $toolbarSeperatorColor;
+}
+.toolbar:focus{
+    background-color: $toolbarHoverBGColor;
+    color: $toolbarHoverFontColor;
+    outline: none;
+  }
+
+  .toolbar-item:focus{
+    background-color: $toolbarHoverBGColor;
+    color: $toolbarHoverFontColor;
+    outline: none;
+  }
+
+  .toolbar-header{
+      width: 100% !important;
+  }

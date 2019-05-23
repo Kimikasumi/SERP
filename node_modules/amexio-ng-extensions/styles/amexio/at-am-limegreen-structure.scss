@@ -1,0 +1,56 @@
+
+/*----------------------------------------------------------------------*/
+/*        Limegreen -Structure      */
+/*----------------------------------------------------------------------*/
+
+body {
+  font-family: 'PT-Sans', sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.3px;
+  text-transform: capitalize;
+}
+
+
+.listbox{
+  background-repeat: repeat-x;
+  padding: 0px 16px 16px 16px;
+
+  .list{
+    border: $borderSize solid $borderColor;
+    .title {
+    }
+    .list-items{
+      border-bottom: 1px solid $borderColor;
+    }
+  }
+}
+
+
+.card-container {
+  padding: 0px 16px 16px 16px;
+  border-color: $themePrimaryColor;
+  .card-header {
+    border-radius: $borderRadius;
+    font-weight: bold;
+    border:none;
+    color: $themePrimaryColor;
+  }
+
+  .card-body{
+    border: 2px solid #417505;
+  }
+
+  .card-footer{
+    border: $borderSize solid $borderColor;
+    border-top:none;
+  }
+}
+
+.topnav {
+   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+
+  .navbar-logo-unit a{
+    font-size: 24px;
+    font-weight: bold;
+  }
+}
