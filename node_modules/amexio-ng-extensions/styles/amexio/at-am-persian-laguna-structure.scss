@@ -1,0 +1,68 @@
+
+
+/*----------------------------------------------------------------------*/
+/*       Persian Laguna - Structure       */
+/*----------------------------------------------------------------------*/
+
+body {
+  font-family: 'Shadows Into Light', cursive;
+}
+
+.input-control{
+  border-radius: 5px;
+}
+
+.listbox {
+  .list{
+    border: none;
+
+    .title {
+      float: left;
+      a {
+        text-transform: lowercase;
+      }
+    }
+  }
+}
+
+.card-container {
+  border: none;
+  box-shadow: none;
+  .card-header {
+    font-weight: 700;
+    border: none;
+    border-right: $borderSize solid $cardBorderColor;
+    padding: 20px 24px 12px 56px;
+  }
+
+  .card-body{
+    border-left: $borderSize solid $cardBorderColor;
+    border-right: $borderSize solid $cardBorderColor;
+    border-bottom: $borderSize solid $cardBorderColor;
+  }
+
+  .card-footer{
+    border-top: none;
+    border: $borderSize solid $cardBorderColor;
+  }
+}
+
+.listbox{
+  border: none;
+
+  .header{
+    border: none;
+    border-right: $borderSize solid $cardBorderColor;
+    padding: 20px 24px 12px 56px;
+  }
+
+  .list{
+    border-left: $borderSize solid $cardBorderColor;
+    border-right: $borderSize solid $cardBorderColor;
+    border-bottom: $borderSize solid $cardBorderColor;
+  }
+
+  .list .list-items{
+    border-bottom: 1px solid #1b1d22;
+  }
+}

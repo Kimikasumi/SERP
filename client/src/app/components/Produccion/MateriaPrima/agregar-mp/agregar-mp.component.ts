@@ -17,8 +17,9 @@ export class AgregarMPComponent implements OnInit {
   mPrima: MPrima = {
     cod_m_prima: 0,
     nom_m_prima: '',
-    cantidad: 0,
-    precio: 0,
+    fecha_compra: new Date(),
+    precio_unitario: 0,
+    cantidad: 0
   }
 
   ngOnInit() {

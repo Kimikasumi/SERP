@@ -1,0 +1,85 @@
+
+/*----------------------------------------------------------------------*/
+/*        Honey Prussian -Visual                                     */
+/*----------------------------------------------------------------------*/
+body {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-size: 16px;
+}
+
+
+.listbox{
+  .list{
+    .title {
+      font-size: 16px;    
+      color: $themeFontColor !important;
+    }
+    .list-items{
+      background:$componentBGColor;
+      color: $componentFontColor !important;
+    }
+    
+    .list-items:hover{
+      background-color: $componentHoverBGColor;
+    }
+  }
+
+  .header{
+    background-color: $componentHeaderBGColor;
+    color: $themeSecondaryColor;
+  }
+}
+
+.listbox .list .title a {
+  color: $componentFontColor !important;
+}
+
+.card-container {
+  color : white;
+  .card-header {
+    font-size: 20px;
+    color : $themePrimaryColor;
+    background-color: $componentHeaderBGColor;
+  }
+
+  .card-body{
+  }
+
+  .card-footer{
+    background: $componentFooterBGColor;
+    
+  }
+}
+
+// /** NAVBAR **/
+ .topnav {
+   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+   color:$componentBGColor;
+   background-color: $appBackground;
+   background-image:linear-gradient(to right, #FFFFFF, #FEFEFE, rgba(1, 114, 184, 0.8), rgba(0, 33, 76, 0.7));
+
+  .navbar-logo-unit a{
+    font-size: 24px;
+    font-weight: bold;
+    color: $themeSecondaryColor;
+  }
+}
+.topnav{
+  color : $componentFontColor;
+}
+
+.sidenav{
+  background-image: linear-gradient(to bottom, #FFFFFF, #0EAFD5, #4AD4BD); 
+  color : $themeSecondaryColor!important;
+}
+.sidenav .headernode {
+  background: none !important;
+  color :inherit;
+}
+
+
+.datapoints .datapoint-south {
+  color : $componentBGColor;
+  background-color: $themePrimaryColor;
+}

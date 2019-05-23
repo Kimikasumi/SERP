@@ -1,0 +1,61 @@
+
+.progress {
+  position: relative;
+  background:$progressBGColor ;
+
+
+    .success{
+      background-color: $progressBGSuccess; 
+    }
+
+    .warning {
+      background-color: $progressBGWarning;
+    }
+
+    .danger{
+      background-color: $progressBGDanger;
+    }
+
+
+    .red{
+      background-color: $progressBGDangerImg1;
+    }
+
+    .stripped  {
+        background-size: 30px 30px;
+        background-image: linear-gradient(135deg, rgba(255, 255, 255, .15) 25%, 
+                                          transparent 25%,
+                                          transparent 50%,
+                                        rgba(255, 255, 255, .15) 50%, 
+                                        rgba(255, 255, 255, .15) 75%,transparent 75%, transparent); 
+        //animation: progressbar-animate-stripes 3s linear infinite; 
+      }
+      
+      // @keyframes progressbar-animate-stripes {
+      //    0% {background-position: 0 0;} 
+      //    100% {background-position: 60px 0;}
+      // }
+
+
+}
+.progress .success:focus{
+  border: 2px solid $progressHoverColor;
+  outline:none;
+}
+.progress .warning:focus{
+  border: 2px solid $progressHoverColor;
+  outline:none;
+}
+.progress .danger:focus{
+  border: 2px solid $progressHoverColor;
+  outline:none;
+}
+.progress .red:focus{
+  border: 2px solid $progressHoverColor;
+  outline:none;
+}
+.progress .stripped:focus{
+  border: 2px solid $progressHoverColor;
+  outline:none;
+}
+

@@ -1,0 +1,30 @@
+import { AfterContentInit, OnInit, QueryList } from '@angular/core';
+import { MapLoaderService } from '../map.loader.service';
+import { MapPropertiesComponent } from '../mapproperties/map.properties';
+export declare class GeoChartComponent implements AfterContentInit, OnInit {
+    private loader;
+    private options;
+    private geomapData;
+    private chart;
+    hasLoaded: boolean;
+    id: any;
+    width: string;
+    height: string;
+    showChart: boolean;
+    _data: any;
+    data: any;
+    countryname: boolean;
+    regioncode: string;
+    backgroundcolor: string;
+    unusedregioncolor: string;
+    chartAreaComp: QueryList<MapPropertiesComponent>;
+    chartAreaArray: MapPropertiesComponent[];
+    chartAreaComponent: MapPropertiesComponent;
+    private geochart;
+    constructor(loader: MapLoaderService);
+    drawChart(): void;
+    showChartExist(): void;
+    click(e: any): void;
+    ngAfterContentInit(): void;
+    ngOnInit(): void;
+}

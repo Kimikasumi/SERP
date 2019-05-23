@@ -4,10 +4,10 @@
   <br>
   <div style="text-align:center">
     <h1>
-      Funcionario
+      Registro Funcionarios
     </h1>
     <img width="120" alt="Angular Logo"
-      src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+      src="../../../../assets/Icono RRHH.png">
   </div>
   <div class="card">
     <div class="card-heard">
@@ -16,28 +16,13 @@
     <div class="card-body">
       <form action="">
         <div class="form-group">
+            <label for="">Cédula:</label>
+            <input type="text" class="form-control" [(ngModel)]="funcionario.cedula" name="cedula" ngDefaultControl>
+        </div>
+        <div class="form-group">
           <label for="">Nombre:</label>
           <input type="text" class="form-control" [(ngModel)]="funcionario.nom_funcionario" name="nom_funcionario"
             ngDefaultControl>
-        </div>
-        <div class="form-group">
-          <label for="">Cargo</label>
-          <select class="form-control" [(ngModel)]="funcionario.cod_cargo" name="cod_cargo" ngDefaultControl>
-            <option *ngFor="let cargo of selCargo" value="{{cargo.cod_cargo}}">{{cargo.nom_cargo}}</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="">Módulo</label>
-          <select class="form-control" [(ngModel)]="funcionario.cod_modulo" name="cod_modulo" ngDefaultControl>
-            <option *ngFor="let modulo of selModulo" value="{{modulo.cod_modulo}}">{{modulo.nom_modulo}}</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="">Género</label>
-          <select class="form-control" [(ngModel)]="funcionario.cod_genero" name="cod_genero" ngDefaultControl>
-            <option value="1">Masculino</option>
-            <option value="2">Femenino</option>
-          </select>
         </div>
         <div class="form-group">
           <label for="">Dirección:</label>
@@ -48,22 +33,57 @@
           <input type="text" class="form-control" [(ngModel)]="funcionario.telefono" name="telefono" ngDefaultControl>
         </div>
         <div class="form-group">
-          <label for="">Cédula:</label>
-          <input type="text" class="form-control" [(ngModel)]="funcionario.cedula" name="cedula" ngDefaultControl>
-        </div>
-        <div class="form-group">
           <label for="exampleInputEmail1">Correo:</label>
           <input type="email" class="form-control" id="exampleInputEmail1" [(ngModel)]="funcionario.correo"
             name="correo" ngDefaultControl>
         </div>
         <div class="form-group">
-          <label for="">Eficacia:</label>
-          <input type="text" class="form-control" [(ngModel)]="funcionario.eficacia" name="eficacia" ngDefaultControl>
+          <label for="">Puntaje Eficacia:</label>
+          <input type="range" class="form-control"  [(ngModel)]="funcionario.eficacia" name="eficacia" ngDefaultControl min="0"
+          max="10" step="1" list="tickmarks">
+          <datalist id="tickmarks">
+              <option value="0" label="0%">
+              <option value="1" label="0%">
+              <option value="2" label="0%">
+              <option value="3" label="0%">
+              <option value="4" label="0%">
+              <option value="5" label="50%">
+              <option value="6" label="0%">
+              <option value="7" label="0%">
+              <option value="8" label="0%">
+              <option value="9" label="0%">
+              <option value="10" label="100%">
+            </datalist>
         </div>
         <div class="form-group">
-          <label for="">Ausencias:</label>
-          <input type="text" class="form-control" [(ngModel)]="funcionario.ausencias" name="ausencias" ngDefaultControl>
+          <label for="">Cantidad Ausencias:</label>
+          <input type="number" class="form-control" [(ngModel)]="funcionario.ausencias" name="ausencias" ngDefaultControl>
         </div>
+        <div class="form-group">
+          <label for="">Género</label>
+          <select class="form-control" [(ngModel)]="funcionario.cod_genero" name="cod_genero" ngDefaultControl>
+            <option value="1">Masculino</option>
+            <option value="2">Femenino</option>
+          </select>
+        </div>
+        <div class="form-group">
+            <label for="">Cargo</label>
+            <select class="form-control" [(ngModel)]="funcionario.cod_cargo" name="cod_cargo" ngDefaultControl>
+              <option *ngFor="let cargo of selCargo" value="{{cargo.cod_cargo}}">{{cargo.nom_cargo}}</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="">Área</label>
+            <select class="form-control" [(ngModel)]="funcionario.cod_modulo" name="cod_modulo" ngDefaultControl>
+              <option *ngFor="let modulo of selModulo" value="{{modulo.cod_modulo}}">{{modulo.nom_modulo}}</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="">Sucursal</label>
+            <select class="form-control" [(ngModel)]="funcionario.cod_sucursal" name="cod_sucursal" ngDefaultControl>
+              <option *ngFor="let sucursal of selSucursal" value="{{sucursal.cod_sucursal}}">{{sucursal.nom_sucursal}} - {{sucursal.direc}}</option>
+            </select>
+          </div>
         <div class="form-group">
           <label for="">Foto:</label>
           <input type="text" class="form-control" [(ngModel)]="funcionario.foto" name="foto" ngDefaultControl>

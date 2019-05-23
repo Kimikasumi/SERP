@@ -1,0 +1,96 @@
+
+/*----------------------------------------------------------------------*/
+/*       Persian Laguna - Visual       */
+/*----------------------------------------------------------------------*/
+
+
+body {
+  background-color: #D33134;
+  color: #043963;
+  background-image: $appBackgroundImage;
+  font-size: 16px;
+  background-repeat: repeat-y;
+  background-attachment: fixed;
+  //font-family: 'Shadows Into Light', cursive;
+}
+
+.input-control {
+  background-color: rgba(66, 31, 38, 0.4);
+}
+
+.listbox {
+  .list{
+    background-color: $appBackground!important;
+    background: rgba(255, 255, 255, 0.6);    
+    .title {
+      font-size: 18px;
+      color: $datapointColor;
+      a {
+        font-size: 16px;
+        color: $componentFontColor;
+      }
+    }
+
+    .list-items:hover{
+      background-color: $componentHoverBGColor;
+    }
+
+  }
+}
+.card-container {
+  background-color: transparent;
+  background-image: url('/assets/images/theme/bootstrap/PageFold.png');
+  .card-header {
+    font-size: 20px;
+    background-color: transparent;
+    background-image: url('/assets/images/theme/bootstrap/PageFold.png');
+  }
+
+  .card-body{
+    background-color: $appBackground;
+  }
+
+  .card-footer{
+    background-color: $appBackground;
+  }
+}
+
+.listbox{
+
+  .listbox .list .title {
+    color: red !important;
+  }
+
+  .header{
+    background-color: transparent;
+    background-image: url('/assets/images/theme/bootstrap/PageFold.png');
+    color: $themeSecondaryColor !important;
+  }
+
+  .list{
+    background-color: $panelBGColor;
+  }
+
+  .list .list-items{
+    background-color: $appBackground!important;
+  }
+}
+
+.topnav {
+  font-size: 100%;
+  background-color: #d33134b;
+
+}
+
+.sidenav  {
+  background-image: $appBackgroundImage;
+  font-size: 16px;
+  background-repeat: repeat-y;
+  background-attachment: fixed;
+  color : $appHeaderFontColor;
+
+}
+.sidenav .headernode{
+  background: none;
+  color : $appHeaderFontColor;
+}

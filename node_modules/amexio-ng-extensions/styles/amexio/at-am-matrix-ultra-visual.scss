@@ -1,0 +1,63 @@
+
+/*----------------------------------------------------------------------*/
+/*        Matrix Ultra Visual        */
+/*----------------------------------------------------------------------*/
+.listbox .list{
+   
+  .title {
+    font-size: 18px;
+    color:$appHeaderFontColor !important;
+    a {
+      font-size: 16px;
+      color: $themeFontColor !important;
+    }
+  }
+}
+
+.listbox .header{
+  background-color: $themeSecondaryColor;
+  color:$componentBGColor;
+}
+
+.card-container {
+  .card-header{
+    background-color: $componentHeaderBGColor;     
+  }
+}
+
+.listbox{  
+  .listbox .list .title {
+    color:$appHeaderFontColor !important;
+  }
+  
+}
+.sidenav .activenode {
+   color:$appHeaderFontColor;
+}
+
+
+.datapoints .datapoint-south {
+background-color: $themeSecondaryColor;
+color: $componentBGColor;
+}
+
+.defaultcolor{
+color:$appHeaderFontColor;
+}
+
+.star-icon:before {
+color:$appHeaderFontColor;
+}
+
+.input-control {
+background-color: rgba(255, 111, 255, 0.4);
+color : $themeSecondaryColor;
+}
+
+.itemselector-list-active {
+color:$appHeaderFontColor;
+}
+
+.accordion-transparent {
+color:$appHeaderFontColor;
+}

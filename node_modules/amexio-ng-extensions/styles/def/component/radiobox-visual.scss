@@ -1,0 +1,10 @@
+
+/* When the checkbox is checked, add a blue background */
+.input-box-container input:checked ~ .input-box-radiobox-label {
+  background-color: $radioBGColor;
+}
+
+/* Style the input-box-container-label/indicator */
+.input-box-container .input-box-radiobox-label:after {
+  background-color : $radioLabelBGColor;
+}

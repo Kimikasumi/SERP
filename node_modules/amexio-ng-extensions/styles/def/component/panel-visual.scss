@@ -1,0 +1,51 @@
+
+.panel-accordion {
+  background-color: $panelAccBGColor;
+  color: $panelAccColor; 
+  font-size: $panelFontSize;
+}
+.panel-accordion:after {
+  color:$panelAfterColor;
+  font-weight: $panelFontWeight;
+
+}
+.panel-accordion .toolbar{
+  background-color: unset;
+  box-shadow : unset;
+  padding: 0px;
+}
+.panel-panel {
+  background-color: $panelBGColor;
+  color: $panelColor;
+  
+}
+.amexio-panel-header{
+  display: flex;
+ 
+}
+.amexio-panel-header > *{
+  padding-right:5px;
+}
+
+
+
+.panel-panel::-webkit-scrollbar-track
+{
+  background-color: $panelScrollBG;
+}
+
+.panel-panel::-webkit-scrollbar
+{
+  background-color: $panelScrollBG;
+}
+
+.panel-panel::-webkit-scrollbar-thumb
+{
+  background-color: $panelScrollThumbBG;
+}
+
+.panel-panel:focus{
+  background-color: $panelHoverBGColor;
+  color: $panelHoverFontColor;
+  
+}

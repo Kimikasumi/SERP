@@ -1,0 +1,66 @@
+
+/*----------------------------------------------------------------------*/
+/*        Royal Pineapple  -  Structure      */
+/*----------------------------------------------------------------------*/
+
+.input-control {
+  border-radius: 4px;
+  line-height: 2;
+  font-size: 14px;
+  border: 2px solid #666666;
+  border-radius: 4px!important;
+}
+
+.input-control-success {
+  border-color:$success;
+}
+
+.input-control-error {
+  border-color:$error;
+}
+
+
+.inputgroup label {
+  margin-bottom: 0rem;
+}
+
+
+.listbox .list{
+
+  .title {
+    float: left;
+    a {
+      text-transform: lowercase;
+    }
+  }
+}
+
+.card-container {
+  border-radius: 10px;
+  border: 2px solid $themeSecondaryColor;
+  
+  .card-header {
+    border-radius: 10px;
+  }
+  .card-footer{
+    border-radius: 10px;
+  }
+}
+
+.listbox{
+  border-radius: 10px;
+
+  .header{
+    border-radius: 10px;
+    border-bottom: $borderSize solid $themeSecondaryColor;
+  }
+
+  .list .list-items{
+    border-bottom: 1px solid #1b1d22;
+  }
+}
+
+.sidenav{
+  box-shadow: none;
+  border-right: 2px solid $themeSecondaryColor;
+}

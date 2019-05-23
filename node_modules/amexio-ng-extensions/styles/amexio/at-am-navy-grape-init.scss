@@ -1,0 +1,35 @@
+$appTransparency :#6F2DA8;
+
+$themePrimaryColor: #6F2DA8;
+$themeSecondaryColor : #000080;
+$themeFontColor : #000080;
+$themeFontFamily: Roboto,Trebuchet MS,Arial,Helvetica,sans-serif;
+
+$appBackground :#ECEFF1;
+$appBackgroundImage : url('/assets/images/theme/bootstrap/polygon_bg.jpg');
+
+$appHeaderBGColor : white;
+$appHeaderFontColor : $themePrimaryColor;
+$appHeaderMenuBGColor :$appHeaderBGColor;
+$appHeaderMenuFontColor :$appHeaderFontColor;
+$appHeaderHoverBGColor : lighten($themeSecondaryColor,70%);
+$appHeaderHoverFontColor : $themeSecondaryColor;;
+
+/* Component Specific Variables */
+$componentHoverBGColor : lighten($themeSecondaryColor,70%);
+$componentHoverFontColor : $themeSecondaryColor;
+$componentActiveBGColor : lighten($themeSecondaryColor,50%);
+$componentActiveFontColor : $themeSecondaryColor;
+$componentDisabledBGColor : rgb(160, 158, 158);
+$componentDisabledFontColor : $themeSecondaryColor;
+
+$componentBGColor : white;
+$componentFontColor : $themeFontColor;
+
+$componentHeaderBGColor : $themeSecondaryColor;
+$componentHeaderFontColor : white;
+$componentFooterBGColor :$themeSecondaryColor;
+$componentFooterFontColor : white;
+
+$componentDataBGColor : $themePrimaryColor;
+$componentDataFontColor : $appHeaderFontColor;

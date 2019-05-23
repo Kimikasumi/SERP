@@ -1,0 +1,37 @@
+import { ChangeDetectorRef, ElementRef, OnInit, Renderer2 } from '@angular/core';
+import { ListBaseDatepickerComponent } from '../../base/list.base.datepicker.component';
+export declare class AmexioFloatingGroupButtonComponent extends ListBaseDatepickerComponent<string> implements OnInit {
+    private elementref;
+    private cdf;
+    verticalposition: string;
+    horizontalposition: string;
+    top: string;
+    size: string;
+    bottom: string;
+    left: string;
+    right: string;
+    icon: string;
+    type: string;
+    disabled: string;
+    relative: boolean;
+    floatinggroupposition: string;
+    data: any[];
+    onClick: any;
+    floatinggroupxposition: string;
+    floatinggroupyposition: string;
+    positionclass: string;
+    togglefloatinggroup: boolean;
+    ispressed: boolean;
+    color: string;
+    datacount: number;
+    constructor(elementref: ElementRef, cdf: ChangeDetectorRef, renderer: Renderer2);
+    ngOnInit(): void;
+    addCssToBtnGroup(): void;
+    buttonClick(clickEvent: any): void;
+    floatingBtnGroupTopPostion(clickEvent: any): void;
+    toggleVisibility(): void;
+    onFloatingButtonClick(event: any): void;
+    onButtonClick(node: any, clickEvent: any): void;
+    arrowDown(ref: any): void;
+    arrowUp(ref: any): void;
+}

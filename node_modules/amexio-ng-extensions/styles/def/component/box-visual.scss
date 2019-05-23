@@ -1,0 +1,48 @@
+
+.bg-highlight {
+  color : $boxFontColor;
+  background-color:#ffeb3b;
+}
+
+.bg-red{
+color : $boxFontColor;
+  background-color:$boxBGRed;
+}
+
+.bg-green{
+  color : $boxFontColor;
+  background-color:$boxBGGreen;
+}
+
+.bg-yellow{
+  color : $boxFontColor;
+  background-color:$boxBGYellow;
+}
+
+.bg-blue{
+  color : $themeFontColor;
+  background-color:$boxBGBlue;
+}
+
+.bg-purple{
+  color : $themeFontColor;
+  background-color:$boxBGPurple;
+}
+
+.bg-brown{
+  color : $themeFontColor;
+  background-color:$boxBGBrown;
+}
+
+.box-default{
+  background-color : $boxBackgroundColor;
+}
+
+.bg-theme-color{
+  color : $boxThemeColor;
+  background-color:$boxThemeBGColor;
+}
+
+.box-transparent{
+  background-color : transparent;
+}

@@ -1,0 +1,47 @@
+
+.root-window{
+  background:$dialogueBG;
+}
+.dialogue-content{
+  background-color: $dialogueContentBG;
+}
+
+.dialogue-material-design{
+  background-color: white;
+  color: black;
+}
+.dialogue-header{
+  background: $dialogueHeaderBG;
+  color: $dialogueHeaderColor;
+}
+.dialogue-table:focus{
+  outline:none;
+  background-color: $dialogueHovColor;
+  color: $dialogueHovFontColor;
+}
+.tablecol:focus{
+  outline: none;
+  background-color: $dialogueHovColor;
+  color: $dialogueHovFontColor;
+}
+.dialogue-message:focus{
+  outline: none;
+  background-color: $dialogueHovColor;
+  color: $dialogueHovFontColor;
+}
+
+.dialogue-footer{
+  background-color: $cardFooterBGColor;
+  color: $cardFooterColor;
+}
+
+
+.dialogue-success {
+  color: $dialogueSuccessColor;
+}
+.dialogue-danger {
+  color: $dialogueDangerColor;
+}
+.dialogue-warning {
+  color: $dialogueWarningColor;
+}

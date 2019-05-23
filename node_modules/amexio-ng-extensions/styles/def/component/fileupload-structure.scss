@@ -1,0 +1,60 @@
+.upload-drop-zone {
+  border-style: dashed;
+  line-height: 200px;
+  text-align: center
+}
+/**SPECIAL SETTING REQUIRED FOR FIREFOX***/
+
+input:required {
+  box-shadow:none;
+}
+
+textarea:required{
+  box-shadow:none;
+}
+
+.image-title{
+  display: none;
+}
+
+.file-upload-box{
+  //position: fixed;
+  list-style-type: none;
+  float:left;
+  z-index: 1;
+  width: 100%;
+}
+
+.file-upload-name{
+  padding : 20;
+  margin: 5px;
+}
+
+.file-upload-size{
+  padding-left : 70px;
+  float:right;
+  margin: 5px;
+}
+
+.file-close {
+  padding: 5px;
+}
+
+.file-upload-box li{
+  display:inherit;
+}
+
+.file-upload-info {
+  border: 1px solid lightgray;
+  margin-top: 3px
+}
+.uploaded-file-name {
+  padding-left: 2%;
+  font-size: small;
+}
+.close-icon {
+  float: right;
+  padding-right: 2%;
+  font-size: 12px!important;
+  cursor: pointer
+}

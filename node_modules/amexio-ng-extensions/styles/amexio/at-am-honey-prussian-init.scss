@@ -1,0 +1,34 @@
+$appTransparency :#00C4FF;
+
+$themePrimaryColor: #F3C22A;
+$themeSecondaryColor : #02468D;
+$themeFontColor : white;
+$themeFontFamily: 'Quicksand', sans-serif;
+
+$appBackground :  rgba(0, 43, 87, 0.7);
+$appBackgroundImage : url('/assets/images/theme/bootstrap/Pyramid-bg.png');
+
+$appHeaderBGColor : rgba(0, 43, 87, 0.7);
+$appHeaderFontColor : $themePrimaryColor;
+$appHeaderMenuBGColor :$appHeaderBGColor;
+$appHeaderMenuFontColor :$appHeaderFontColor;
+$appHeaderHoverBGColor : none;
+$appHeaderHoverFontColor :  #1FBCD2;
+/* Component Specific Variables */
+$componentHoverBGColor : lighten($themeSecondaryColor,20%);
+$componentHoverFontColor : $appHeaderBGColor;
+$componentActiveBGColor : lighten($themeSecondaryColor,30%);
+$componentActiveFontColor : $appHeaderBGColor;
+$componentDisabledBGColor : rgb(160, 158, 158);
+$componentDisabledFontColor : $themeSecondaryColor;
+
+$componentBGColor : rgba(0, 43, 87, 0.7);
+$componentFontColor : #1FBCD2;
+
+$componentHeaderBGColor : none;
+$componentHeaderFontColor : $themePrimaryColor;
+$componentFooterBGColor :none;
+$componentFooterFontColor : $themePrimaryColor;
+
+$componentDataBGColor : $themePrimaryColor;
+$componentDataFontColor : $appHeaderFontColor;

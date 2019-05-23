@@ -1,0 +1,102 @@
+
+.datatabletitle{
+  font-size: $datatableTitleFontSize;
+  margin: .1em 0 .35em;
+}
+
+.datatable {
+  display: table;
+  //border: $datatableBorderSize solid $datatableBorderColor;
+  border-collapse: collapse;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+  border: 0px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.datatable-checkbox-width {
+  width: 5%;
+}
+
+.datatable-height {
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+}
+
+.datatable-height::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+.datatable-height::-webkit-scrollbar
+{
+  width: 6px;
+}
+
+.datatable .title {
+  margin: .5em 0 .75em;
+}
+
+
+.datatable .datatable-header{
+  display: table-header-group;
+  text-align: left;
+  font-size: larger;
+  cursor: pointer;
+}
+
+.datatable .datatable-col{
+  vertical-align: middle;
+}
+
+
+.datatable .datatable-row{
+  //border: $datatableBorderSize solid $datatableBorderColor;
+  border-bottom: $datatableBorderSize solid $datatableBorderColor;
+  display: table-row;
+  height: 50px;
+}
+
+
+.datatable .datatable-row:hover{
+  cursor: pointer;
+}
+
+
+.datatable .datatable-col{
+  display: table-cell;
+  padding: .625em;
+  text-align: left;
+  overflow-wrap: break-word;
+
+}
+
+.footer{
+  margin: .1em 0 .35em;
+  cursor: pointer;
+  text-align: center;
+}
+
+.col-group {
+  text-align: left!important;
+}
+
+.datatable-filter-icon {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  display: block;
+  width: 38px;
+  height: 38px;
+  line-height: 38px;
+  text-align: center;
+}
+
+.iconPaddingStyle {
+  padding-right: 5px;
+}
+
+

@@ -15,7 +15,7 @@ const database_1 = __importDefault(require("../database"));
 class WorkersController {
     list(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            const x = 'SELECT cod_funcionario, nom_funcionario, nom_cargo,' +
+            const x = 'SELECT cedula, nom_funcionario, nom_cargo,' +
                 'nom_modulo, correo, nom_genero, foto FROM FUNCIONARIO,' +
                 'CARGO, MODULO, GENERO WHERE FUNCIONARIO.cod_modulo = MODULO.cod_modulo ' +
                 'AND FUNCIONARIO.cod_cargo = CARGO.cod_cargo AND FUNCIONARIO.cod_genero = GENERO.cod_genero';
@@ -35,8 +35,8 @@ class WorkersController {
     ;
     getOne(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            const { cod_funcionario } = req.params;
-            const funcionario = yield database_1.default.query('SELECT * FROM FUNCIONARIO WHERE cod_funcionario=?', [cod_funcionario]);
+            const { cedula } = req.params;
+            const funcionario = yield database_1.default.query('SELECT * FROM FUNCIONARIO WHERE cedula=?', [cedula]);
             if (funcionario.length > 0) {
                 return res.json(funcionario[0]);
             }
@@ -53,15 +53,15 @@ class WorkersController {
     }
     delete(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            const { cod_funcionario } = req.params;
-            yield database_1.default.query('DELETE FROM FUNCIONARIO WHERE cod_funcionario= ?', [cod_funcionario]);
-            res.json({ text: 'Borrando Funcionario ' + req.params.cod_funcionario });
+            const { cedula } = req.params;
+            yield database_1.default.query('DELETE FROM FUNCIONARIO WHERE cedula= ?', [cedula]);
+            res.json({ text: 'Borrando Funcionario ' + req.params.cedula });
         });
     }
     update(req, res) {
-        const { cod_funcionario } = req.params;
-        database_1.default.query('UPDATE FUNCIONARIO SET ? WHERE cod_funcionario = ?', [req.body, cod_funcionario]);
-        res.json({ text: 'Actualizando Funcionario ' + req.params.cod_funcionario });
+        const { cedula } = req.params;
+        database_1.default.query('UPDATE FUNCIONARIO SET ? WHERE cedula = ?', [req.body, cedula]);
+        res.json({ text: 'Actualizando Funcionario ' + req.params.cedula });
     }
     getCargos(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -72,6 +72,12 @@ class WorkersController {
     getModulos(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             const consulta = yield database_1.default.query('SELECT * FROM MODULO');
+            res.json(consulta);
+        });
+    }
+    getSucursales(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const consulta = yield database_1.default.query('SELECT * FROM SUCURSAL');
             res.json(consulta);
         });
     }

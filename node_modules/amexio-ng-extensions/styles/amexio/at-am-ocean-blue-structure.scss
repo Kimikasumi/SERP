@@ -1,0 +1,40 @@
+/*----------------------------------------------------------------------*/
+/*        Ocean blue -Strcture        */
+/*----------------------------------------------------------------------*/
+
+.input-control {
+  border-radius: 4px;
+  line-height: 2;
+  font-size: 14px;
+  border: none;
+  border-bottom: 2px solid $borderColor;
+  border-radius: 4px!important;
+}
+
+.listbox .list{
+  
+  .title {
+    float: left;
+    a {
+      
+      text-transform: lowercase;
+    }
+  }
+}
+
+.listbox{
+
+  .header{
+    border-bottom: $borderSize solid $borderColor;
+  }
+
+  .list .list-items{
+    border-bottom: 1px solid #1b1d22;
+  }
+}
+
+ .topnav {
+   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+   border-bottom: solid 3px #2CD2EC;
+   font-size: 100%;
+ }
