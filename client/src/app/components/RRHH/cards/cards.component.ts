@@ -1,6 +1,6 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
 import { FuncionariosService } from '../../../services/funcionarios.service';
-import { Funcionario } from 'src/app/models/Funcionario';
+import { Funcionario, Funcionario2 } from 'src/app/models/Funcionario';
 import { MatDialog } from '@angular/material';
 @Component({
   selector: 'app-cards',
@@ -8,6 +8,23 @@ import { MatDialog } from '@angular/material';
   styleUrls: ['./cards.component.css']
 })
 export class CardsComponent implements OnInit {
+  pageActual: number = 1;
+  selModulo: any = [];
+  funcionario: Funcionario = {
+    cedula: 0,
+    nom_funcionario: '',
+    nom_cargo: '',
+    nom_modulo: '',
+    nom_genero: '',
+    direccion: '',
+    telefono: '',
+    nom_sucursal: '',
+    fecha_ingreso: new Date(),
+    correo: '',
+    eficacia: 10,
+    ausencias: 0,
+    foto: ''
+    }
 
   @HostBinding('class') classes = 'row';
 
@@ -18,6 +35,13 @@ export class CardsComponent implements OnInit {
 
   ngOnInit() {
     this.getFuncionarios();
+    this.funcionariosService.getModulos().subscribe(
+      res => {
+        console.log(res)
+        this.selModulo = res;
+      },
+      err => console.log(err)
+    )
   }
 
   getFuncionarios() {
@@ -48,6 +72,18 @@ export class CardsComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
     });
+  }
+
+  onSelect(nom_modulo){
+    let query = null;
+    query = this.funcionariosService.filtroModulos(nom_modulo).subscribe(
+      res =>{
+        console.log("Nombre: "+nom_modulo)
+        console.log("Llamado " +res)
+        this.funcionarios = res;
+      },
+      err => console.log(err)
+    )
   }
 
 }

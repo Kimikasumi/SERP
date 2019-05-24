@@ -3,9 +3,11 @@
 }
 [id="1"]{
     color:black;
-    font-family: cursive;
     font-weight: 900;
 }
 [id="2"]{
     float: right;
+}
+.but{
+    align-self: right;
 }

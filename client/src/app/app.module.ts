@@ -1,3 +1,4 @@
+    
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -23,14 +24,32 @@ import { FormFuncionarioComponent} from './components/RRHH/form-funcionario/form
 import { NavbarRrhhComponent } from './components/RRHH/navbar-rrhh/navbar-rrhh.component';
 import { DashboardRrhhComponent } from './components/RRHH/dashboard-rrhh/dashboard-rrhh.component';
 import { LoginComponent } from './components/login/login.component';
+import { NavbarPvComponent } from './components/PV/navbar-pv/navbar-pv.component';
+import { PrincipalPvComponent } from './components/PV/principal-pv/principal-pv.component';
+import { ListarPvComponent } from './components/PV/listar-pv/listar-pv.component';
+import { AddPvComponent } from './components/PV/add-pv/add-pv.component';
+import { EditPvComponent } from './components/PV/edit-pv/edit-pv.component';
+import { DashboardPvComponent } from './components/PV/dashboard-pv/dashboard-pv.component';
+import { SolicitarInvPvComponent } from './components/PV/solicitar-inv-pv/solicitar-inv-pv.component';
+import { ListarInvPvComponent } from './components/PV/listar-inv-pv/listar-inv-pv.component';
+import { SucursalesComponent } from './components/PV/sucursales/sucursales.component';
 
 import { AgregarSolicitudPComponent } from './components/Produccion/SolicitudP/agregar-solicitud-p/agregar-solicitud-p.component';
 import { ListarSolicitudPComponent } from './components/Produccion/SolicitudP/listar-solicitud-p/listar-solicitud-p.component';
 import { PrincipalSolicitudPComponent } from './components/Produccion/principal-solicitud-p/principal-solicitud-p.component';
+import { AbsentismoComponent } from '../app/components/RRHH/absentismo/absentismo.component';
 
 import { MatDialogModule } from '@angular/material';
 
-import { PieChartComponent } from './components/RRHH/pie-chart/pie-chart.component';
+
+
+
+
+import { ChartsModule} from 'ng2-charts';
+import { FporArea } from './components/RRHH/FporArea/FporArea.component';
+import { FusionChartsModule } from 'angular-fusioncharts';
+import FusionCharts from 'fusioncharts/core';
+import Column2D from 'fusioncharts/viz/column2d';
 
 import { AmexioWidgetModule } from "amexio-ng-extensions"; // Import Amexio library
 //Dashboard,Charts & Maps are available as seperate module (not in AmexioWidgetModule)
@@ -40,9 +59,16 @@ import {
   AmexioEnterpriseModule,
   AmexioMapModule
 } from "amexio-ng-extensions";
+
 import { DashBoardProdComponent } from './components/Produccion/dash-board-prod/dash-board-prod.component';
 import { ListarSRecibidasComponent } from './components/Produccion/SolicitudP/listar-srecibidas/listar-srecibidas.component';
 
+
+
+import { NgxGaugeModule } from 'ngx-gauge';
+import { AlcanceOComponent } from '../app/components/RRHH/alcance-o/alcance-o.component';
+import {NgxPaginationModule} from 'ngx-pagination';
+FusionChartsModule.fcRoot(FusionCharts, Column2D);
 
 
 @NgModule({
@@ -63,20 +89,28 @@ import { ListarSRecibidasComponent } from './components/Produccion/SolicitudP/li
     NavbarRrhhComponent,
     DashboardRrhhComponent,
     LoginComponent,
-
+    AbsentismoComponent,
     AgregarSolicitudPComponent,
     ListarSolicitudPComponent,
     PrincipalSolicitudPComponent,
-
-    PieChartComponent,
-
+    FporArea,
+    AlcanceOComponent,
+    NavbarPvComponent,
+    PrincipalPvComponent,
+    ListarPvComponent,
+    AddPvComponent,
+    EditPvComponent,
+    DashboardPvComponent,
+    SolicitarInvPvComponent,
+    ListarInvPvComponent,
+    SucursalesComponent,
+    ListarInvPvComponent,
+    AgregarSolicitudPComponent,
+    ListarSolicitudPComponent,
+    PrincipalSolicitudPComponent,
     DashBoardProdComponent,
-
-    ListarSRecibidasComponent
-
-    
-
-
+    ListarSRecibidasComponent,
+    PrincipalSolicitudPComponent
 
   ],
   imports: [
@@ -93,6 +127,8 @@ import { ListarSRecibidasComponent } from './components/Produccion/SolicitudP/li
     AmexioDashBoardModule,
     AmexioEnterpriseModule,
     AmexioMapModule,
+    NgxGaugeModule,
+    NgxPaginationModule,
     RecaptchaModule.forRoot()
   ],
   providers: [FuncionariosService],

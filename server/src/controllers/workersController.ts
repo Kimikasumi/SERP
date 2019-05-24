@@ -46,7 +46,7 @@ class WorkersController{
     }
 
     public async getCargos(req:Request,res: Response): Promise<void>{
-        const consulta = await db.query('SELECT * FROM CARGO');
+        const consulta = await db.query('SELECT cod_cargo, nom_cargo FROM CARGO where cod_cargo<>1 AND cod_cargo<>2');
         res.json(consulta);
     }
 
@@ -58,6 +58,40 @@ class WorkersController{
     public async getSucursales(req:Request,res:Response): Promise<void>{
         const consulta = await db.query('SELECT * FROM SUCURSAL');
         res.json(consulta)
+    }
+
+    public async getFporModulos(req:Request,res:Response): Promise<any>{
+        const {cod_modulo} = req.params;
+        const cantidad = await db.query('SELECT nom_modulo as modulo,count(nom_funcionario) as cantidad FROM FUNCIONARIO, MODULO WHERE MODULO.cod_modulo=? AND FUNCIONARIO.cod_modulo=?',[cod_modulo,cod_modulo]);
+        if(cantidad. length > 0){
+            return res.json(cantidad);
+        }
+        return res.status(404).json({text: 'No hay registros'});
+    }
+
+    public async getTotalF(req:Request,res:Response): Promise<any>{
+        var consulta = await db.query('SELECT count(nom_funcionario) as total FROM FUNCIONARIO');
+        return res.json(consulta);
+        
+    }
+
+    public async getAusencias(req:Request,res:Response): Promise<any>{
+        var consulta = await db.query('SELECT sum(ausencias) as sumatoria FROM FUNCIONARIO');
+        return res.json(consulta);
+    }
+
+    public async getEficacia(req:Request,res:Response): Promise<any>{
+        var consulta = await db.query('SELECT sum(eficacia) as sumatoria FROM FUNCIONARIO');
+        return res.json(consulta);
+    }
+    public async filtroModulos(req:Request,res:Response): Promise<any>{
+        const {nom_modulo} = req.params;
+        const x = 'SELECT cedula, nom_funcionario, nom_cargo,'+
+        'nom_modulo, correo, nom_genero, foto FROM FUNCIONARIO,'+
+         'CARGO, MODULO, GENERO WHERE FUNCIONARIO.cod_modulo = MODULO.cod_modulo '+
+         'AND FUNCIONARIO.cod_cargo = CARGO.cod_cargo AND FUNCIONARIO.cod_genero = GENERO.cod_genero AND MODULO.nom_modulo = ?';
+         const consulta = await db.query(x,[nom_modulo]);
+         return res.json(consulta);
     }
 }
 
