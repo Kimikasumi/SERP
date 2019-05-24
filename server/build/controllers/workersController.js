@@ -65,7 +65,7 @@ class WorkersController {
     }
     getCargos(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            const consulta = yield database_1.default.query('SELECT * FROM CARGO');
+            const consulta = yield database_1.default.query('SELECT cod_cargo, nom_cargo FROM CARGO where cod_cargo<>1 AND cod_cargo<>2');
             res.json(consulta);
         });
     }
@@ -79,6 +79,45 @@ class WorkersController {
         return __awaiter(this, void 0, void 0, function* () {
             const consulta = yield database_1.default.query('SELECT * FROM SUCURSAL');
             res.json(consulta);
+        });
+    }
+    getFporModulos(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const { cod_modulo } = req.params;
+            const cantidad = yield database_1.default.query('SELECT nom_modulo as modulo,count(nom_funcionario) as cantidad FROM FUNCIONARIO, MODULO WHERE MODULO.cod_modulo=? AND FUNCIONARIO.cod_modulo=?', [cod_modulo, cod_modulo]);
+            if (cantidad.length > 0) {
+                return res.json(cantidad);
+            }
+            return res.status(404).json({ text: 'No hay registros' });
+        });
+    }
+    getTotalF(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            var consulta = yield database_1.default.query('SELECT count(nom_funcionario) as total FROM FUNCIONARIO');
+            return res.json(consulta);
+        });
+    }
+    getAusencias(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            var consulta = yield database_1.default.query('SELECT sum(ausencias) as sumatoria FROM FUNCIONARIO');
+            return res.json(consulta);
+        });
+    }
+    getEficacia(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            var consulta = yield database_1.default.query('SELECT sum(eficacia) as sumatoria FROM FUNCIONARIO');
+            return res.json(consulta);
+        });
+    }
+    filtroModulos(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const { nom_modulo } = req.params;
+            const x = 'SELECT cedula, nom_funcionario, nom_cargo,' +
+                'nom_modulo, correo, nom_genero, foto FROM FUNCIONARIO,' +
+                'CARGO, MODULO, GENERO WHERE FUNCIONARIO.cod_modulo = MODULO.cod_modulo ' +
+                'AND FUNCIONARIO.cod_cargo = CARGO.cod_cargo AND FUNCIONARIO.cod_genero = GENERO.cod_genero AND MODULO.nom_modulo = ?';
+            const consulta = yield database_1.default.query(x, [nom_modulo]);
+            return res.json(consulta);
         });
     }
 }

@@ -18,6 +18,11 @@ class WorkersRoutes {
         this.router.get('/getCargos', workersController.getCargos);
         this.router.get('/getModulos', workersController.getModulos);
         this.router.get('/getSucursales', workersController.getSucursales);
+        this.router.get('/getFporModulos/:cod_modulo', workersController.getFporModulos);
+        this.router.get('/getTotalF', workersController.getTotalF);
+        this.router.get('/getAusencias', workersController.getAusencias);
+        this.router.get('/getEficacia', workersController.getEficacia);
+        this.router.get('/filtroModulos/:nom_modulo', workersController.filtroModulos);
     }
 }
 

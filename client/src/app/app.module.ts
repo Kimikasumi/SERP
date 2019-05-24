@@ -1,3 +1,4 @@
+    
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -27,10 +28,11 @@ import { LoginComponent } from './components/login/login.component';
 import { AgregarSolicitudPComponent } from './components/Produccion/SolicitudP/agregar-solicitud-p/agregar-solicitud-p.component';
 import { ListarSolicitudPComponent } from './components/Produccion/SolicitudP/listar-solicitud-p/listar-solicitud-p.component';
 import { PrincipalSolicitudPComponent } from './components/Produccion/principal-solicitud-p/principal-solicitud-p.component';
+import { AbsentismoComponent } from '../app/components/RRHH/absentismo/absentismo.component';
 
 import { MatDialogModule } from '@angular/material';
 import { ChartsModule} from 'ng2-charts';
-import { PieChartComponent } from './components/RRHH/pie-chart/pie-chart.component';
+import { FporArea } from './components/RRHH/FporArea/FporArea.component';
 import { FusionChartsModule } from 'angular-fusioncharts';
 import FusionCharts from 'fusioncharts/core';
 import Column2D from 'fusioncharts/viz/column2d';
@@ -42,7 +44,9 @@ import {
   AmexioEnterpriseModule,
   AmexioMapModule
 } from "amexio-ng-extensions";
-
+import { NgxGaugeModule } from 'ngx-gauge';
+import { AlcanceOComponent } from '../app/components/RRHH/alcance-o/alcance-o.component';
+import {NgxPaginationModule} from 'ngx-pagination';
 FusionChartsModule.fcRoot(FusionCharts, Column2D);
 
 @NgModule({
@@ -63,15 +67,12 @@ FusionChartsModule.fcRoot(FusionCharts, Column2D);
     NavbarRrhhComponent,
     DashboardRrhhComponent,
     LoginComponent,
-
+    AbsentismoComponent,
     AgregarSolicitudPComponent,
     ListarSolicitudPComponent,
-    PrincipalSolicitudPComponent
-
-    PieChartComponent,
-
-
-
+    PrincipalSolicitudPComponent,
+    FporArea,
+    AlcanceOComponent
   ],
   imports: [
     BrowserModule,
@@ -89,6 +90,8 @@ FusionChartsModule.fcRoot(FusionCharts, Column2D);
     AmexioDashBoardModule,
     AmexioEnterpriseModule,
     AmexioMapModule,
+    NgxGaugeModule,
+    NgxPaginationModule,
     RecaptchaModule.forRoot()
   ],
   providers: [FuncionariosService],

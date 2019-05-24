@@ -1,0 +1,13 @@
+<script src="vendor/angular/angular.min.js"></script> 
+<script src="vendor/angularjs-gauge/dist/angularjs-gauge.min.js"></script> 
+<p id="1">
+  TASA ABSENTISMO LABORAL
+</p>
+<ngx-gauge [type]="gaugeType" 
+           [value]="gaugeValue" 
+           [label]="gaugeLabel"  
+           [append]="gaugeAppendText"
+           [thresholds]="thresholdConfig"
+           [animate]=false
+           [duration]=2000>
+</ngx-gauge>
