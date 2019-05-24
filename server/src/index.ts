@@ -3,13 +3,14 @@ import morgan from 'morgan';
 import cors from 'cors'
 import indexRoutes from './routes/indexRoutes';
 import workersRoutes from './routes/workersRoutes';
-
+import solicitudInventarioRoutes from './routes/solicitudInventarioRoutes'
 import ProduccionRoutes from './routes/ProductoRoutes';
 
 import MPrimaRoutes from './routes/MPrimaRoutes';
 
 import retailersRoutes from './routes/retailersRoutes';
 import solicitudPRoutes from './routes/solicitudPRoutes';
+
 class Server {
 
     public app: Application;
@@ -34,6 +35,7 @@ class Server {
         this.app.use('/workers',workersRoutes);
         this.app.use('/retail',retailersRoutes);
         this.app.use('/SolicitudP',solicitudPRoutes);
+        this.app.use('/SolicitudInventario', solicitudInventarioRoutes);
     }
 
     start(): void {

@@ -15,6 +15,7 @@ import { DashboardRrhhComponent } from './components/RRHH/dashboard-rrhh/dashboa
 import { LoginComponent } from './components/login/login.component';
 import { AgregarSolicitudPComponent } from './components/Produccion/SolicitudP/agregar-solicitud-p/agregar-solicitud-p.component';
 import { ListarSolicitudPComponent } from './components/Produccion/SolicitudP/listar-solicitud-p/listar-solicitud-p.component';
+import {ListarSRecibidasComponent} from './components/Produccion/SolicitudP/listar-srecibidas/listar-srecibidas.component';
 const routes: Routes = [
 {
   path: '',
@@ -46,7 +47,8 @@ children:[
 
   {path: 'agregarSolicitudP', component: AgregarSolicitudPComponent},
   {path: 'listarSolicitudP', component: ListarSolicitudPComponent},
-  {path: 'editarSolicitudP/:id', component: AgregarMPComponent}
+  {path: 'editarSolicitudP/:id', component: AgregarMPComponent},
+  {path: 'listarSRecibidas', component:ListarSRecibidasComponent }
 
 ]},
 

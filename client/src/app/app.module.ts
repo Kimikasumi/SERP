@@ -29,11 +29,9 @@ import { ListarSolicitudPComponent } from './components/Produccion/SolicitudP/li
 import { PrincipalSolicitudPComponent } from './components/Produccion/principal-solicitud-p/principal-solicitud-p.component';
 
 import { MatDialogModule } from '@angular/material';
-import { ChartsModule} from 'ng2-charts';
+
 import { PieChartComponent } from './components/RRHH/pie-chart/pie-chart.component';
-import { FusionChartsModule } from 'angular-fusioncharts';
-import FusionCharts from 'fusioncharts/core';
-import Column2D from 'fusioncharts/viz/column2d';
+
 import { AmexioWidgetModule } from "amexio-ng-extensions"; // Import Amexio library
 //Dashboard,Charts & Maps are available as seperate module (not in AmexioWidgetModule)
 import {
@@ -42,8 +40,10 @@ import {
   AmexioEnterpriseModule,
   AmexioMapModule
 } from "amexio-ng-extensions";
+import { DashBoardProdComponent } from './components/Produccion/dash-board-prod/dash-board-prod.component';
+import { ListarSRecibidasComponent } from './components/Produccion/SolicitudP/listar-srecibidas/listar-srecibidas.component';
 
-FusionChartsModule.fcRoot(FusionCharts, Column2D);
+
 
 @NgModule({
   declarations: [
@@ -66,9 +66,15 @@ FusionChartsModule.fcRoot(FusionCharts, Column2D);
 
     AgregarSolicitudPComponent,
     ListarSolicitudPComponent,
-    PrincipalSolicitudPComponent
+    PrincipalSolicitudPComponent,
 
     PieChartComponent,
+
+    DashBoardProdComponent,
+
+    ListarSRecibidasComponent
+
+    
 
 
 
@@ -81,8 +87,6 @@ FusionChartsModule.fcRoot(FusionCharts, Column2D);
     FormsModule,
     HttpClientModule,
     MatDialogModule,
-    ChartsModule,
-    FusionChartsModule,
     AmexioWidgetModule,
     FormsModule,
     AmexioChartsModule,
