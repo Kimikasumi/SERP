@@ -24,6 +24,15 @@ import { FormFuncionarioComponent} from './components/RRHH/form-funcionario/form
 import { NavbarRrhhComponent } from './components/RRHH/navbar-rrhh/navbar-rrhh.component';
 import { DashboardRrhhComponent } from './components/RRHH/dashboard-rrhh/dashboard-rrhh.component';
 import { LoginComponent } from './components/login/login.component';
+import { NavbarPvComponent } from './components/PV/navbar-pv/navbar-pv.component';
+import { PrincipalPvComponent } from './components/PV/principal-pv/principal-pv.component';
+import { ListarPvComponent } from './components/PV/listar-pv/listar-pv.component';
+import { AddPvComponent } from './components/PV/add-pv/add-pv.component';
+import { EditPvComponent } from './components/PV/edit-pv/edit-pv.component';
+import { DashboardPvComponent } from './components/PV/dashboard-pv/dashboard-pv.component';
+import { SolicitarInvPvComponent } from './components/PV/solicitar-inv-pv/solicitar-inv-pv.component';
+import { ListarInvPvComponent } from './components/PV/listar-inv-pv/listar-inv-pv.component';
+import { SucursalesComponent } from './components/PV/sucursales/sucursales.component';
 
 import { AgregarSolicitudPComponent } from './components/Produccion/SolicitudP/agregar-solicitud-p/agregar-solicitud-p.component';
 import { ListarSolicitudPComponent } from './components/Produccion/SolicitudP/listar-solicitud-p/listar-solicitud-p.component';
@@ -72,7 +81,20 @@ FusionChartsModule.fcRoot(FusionCharts, Column2D);
     ListarSolicitudPComponent,
     PrincipalSolicitudPComponent,
     FporArea,
-    AlcanceOComponent
+    AlcanceOComponent,
+    NavbarPvComponent,
+    PrincipalPvComponent,
+    ListarPvComponent,
+    AddPvComponent,
+    EditPvComponent,
+    DashboardPvComponent,
+    SolicitarInvPvComponent,
+    ListarInvPvComponent,
+    SucursalesComponent,
+    ListarInvPvComponent,
+    AgregarSolicitudPComponent,
+    ListarSolicitudPComponent,
+    PrincipalSolicitudPComponent
   ],
   imports: [
     BrowserModule,

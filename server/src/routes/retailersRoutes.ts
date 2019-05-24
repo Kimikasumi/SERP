@@ -4,7 +4,7 @@ import retailersControllers from '../controllers/retailersControllers';
 
 class RetailersRoutes {
 
-    public router: Router = Router();
+    public router: Router = Router();   
 
     constructor() {
         this.config();
@@ -12,10 +12,12 @@ class RetailersRoutes {
 
     config(): void {
         this.router.get('/', retailersControllers.list);
-        this.router.get('/:cod_retail', retailersControllers.getOne);
+        this.router.get('/:cod_sucursal', retailersControllers.getOne);
+        this.router.get('/product/:cod_producto', retailersControllers.getPerProduct);
         this.router.post('/', retailersControllers.create);
-        this.router.delete('/:cod_retail', retailersControllers.delete);
-        this.router.put('/:cod_retail', retailersControllers.update);
+        this.router.delete('/:cod_sucursal', retailersControllers.delete);
+        this.router.put('/:cod_sucursal', retailersControllers.update);
+        this.router.post('/solicitar',retailersControllers.solicitar);
     }
 }
 

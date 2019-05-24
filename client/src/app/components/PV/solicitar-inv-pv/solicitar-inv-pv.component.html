@@ -1,0 +1,29 @@
+<app-principal-pv></app-principal-pv>
+<div class="container ">
+  <div class="card">
+    <div class="card-heard">
+      <h3>Solicitar Productos</h3>
+    </div>
+    <div class="card-body">
+      <form action="">
+        <div class="form-group">
+          <label for="">Codigo:</label>
+          <input type="text" name="cod_solicitud" class="form-control" [(ngModel)]="solici.cod_solicitud">
+        </div>
+        <div class="form-group">
+          <label for="">Sucursal:</label>
+          <input type="text" name="cod_sucursal" class="form-control" [(ngModel)]="solici.cod_sucursal">
+        </div>
+        <div class="form-group">
+          <label for="">Producto</label>
+          <input type="text" name="cod_producto" class="form-control" [(ngModel)]="solici.cod_producto">
+        </div>
+        <div class="form-group">
+          <label for="">Cantidad</label>
+          <input type="text" name="Cantidad" class="form-control" [(ngModel)]="solici.cantidad">
+        </div>
+        <button (click)="createSolici()" class="btn btn-danger">Guardar</button>
+      </form>
+    </div>
+  </div>
+</div>

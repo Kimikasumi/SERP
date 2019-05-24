@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-navbar-rrhh',
   templateUrl: './navbar-rrhh.component.html',
@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarRrhhComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
+  logout(){
+    localStorage.removeItem('user')
+    this.navigate()
+  }
+  navigate() {    
+    this.router.navigateByUrl('/login');
+  }
 }
