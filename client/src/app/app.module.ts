@@ -40,11 +40,17 @@ import { PrincipalSolicitudPComponent } from './components/Produccion/principal-
 import { AbsentismoComponent } from '../app/components/RRHH/absentismo/absentismo.component';
 
 import { MatDialogModule } from '@angular/material';
+
+
+
+
+
 import { ChartsModule} from 'ng2-charts';
 import { FporArea } from './components/RRHH/FporArea/FporArea.component';
 import { FusionChartsModule } from 'angular-fusioncharts';
 import FusionCharts from 'fusioncharts/core';
 import Column2D from 'fusioncharts/viz/column2d';
+
 import { AmexioWidgetModule } from "amexio-ng-extensions"; // Import Amexio library
 //Dashboard,Charts & Maps are available as seperate module (not in AmexioWidgetModule)
 import {
@@ -53,10 +59,17 @@ import {
   AmexioEnterpriseModule,
   AmexioMapModule
 } from "amexio-ng-extensions";
+
+import { DashBoardProdComponent } from './components/Produccion/dash-board-prod/dash-board-prod.component';
+import { ListarSRecibidasComponent } from './components/Produccion/SolicitudP/listar-srecibidas/listar-srecibidas.component';
+
+
+
 import { NgxGaugeModule } from 'ngx-gauge';
 import { AlcanceOComponent } from '../app/components/RRHH/alcance-o/alcance-o.component';
 import {NgxPaginationModule} from 'ngx-pagination';
 FusionChartsModule.fcRoot(FusionCharts, Column2D);
+
 
 @NgModule({
   declarations: [
@@ -94,7 +107,11 @@ FusionChartsModule.fcRoot(FusionCharts, Column2D);
     ListarInvPvComponent,
     AgregarSolicitudPComponent,
     ListarSolicitudPComponent,
+    PrincipalSolicitudPComponent,
+    DashBoardProdComponent,
+    ListarSRecibidasComponent,
     PrincipalSolicitudPComponent
+
   ],
   imports: [
     BrowserModule,
@@ -104,8 +121,6 @@ FusionChartsModule.fcRoot(FusionCharts, Column2D);
     FormsModule,
     HttpClientModule,
     MatDialogModule,
-    ChartsModule,
-    FusionChartsModule,
     AmexioWidgetModule,
     FormsModule,
     AmexioChartsModule,

@@ -1,0 +1,38 @@
+<app-principal-produccion></app-principal-produccion>
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <h3>Productos</h3>
+    </div>
+    <div class="card-body">
+        <div class="table-wrapper-scroll-y my-custom-scrollbar">
+        <table class="table table-bordered table-striped mb-0">
+        <thead>
+          <tr>
+            <th scope="col">Numero de Solicitud</th>
+            <th scope="col">Nombre Sucursal</th>
+            <th scope="col">Nombre Producto</th>
+            <th scope="col">cantidad</th>
+            <th scope="col">Estado</th>
+            <th scope="col">ACCION</th>
+            <th scope="col">ACCION</th>
+
+          </tr>
+        </thead>
+        <tbody >
+          <tr *ngFor="let solicitud of solicitudesFiltradas">
+            <td>{{solicitud.cod_solicitud}}</td>
+            <td>{{solicitud.nom_sucursal}}</td>
+            <td>{{solicitud.nom_producto}}</td>
+            <td>{{solicitud.cantidad}}</td>
+            <td>{{solicitud.nom_estado_solicitud}}</td>
+            <td><button class=" btn btn-danger" (click)=denegarSolicitudRecibida(solicitud.cod_solicitud)>DENEGAR</button></td>
+            <td><button class=" btn btn-danger" (click)=aceptarSolicitudRecibida(solicitud.cod_solicitud)>ACEPTAR</button></td>
+           
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+  </div>
+</div>

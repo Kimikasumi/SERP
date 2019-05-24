@@ -8,6 +8,7 @@ const morgan_1 = __importDefault(require("morgan"));
 const cors_1 = __importDefault(require("cors"));
 const indexRoutes_1 = __importDefault(require("./routes/indexRoutes"));
 const workersRoutes_1 = __importDefault(require("./routes/workersRoutes"));
+const solicitudInventarioRoutes_1 = __importDefault(require("./routes/solicitudInventarioRoutes"));
 const ProductoRoutes_1 = __importDefault(require("./routes/ProductoRoutes"));
 const MPrimaRoutes_1 = __importDefault(require("./routes/MPrimaRoutes"));
 const retailersRoutes_1 = __importDefault(require("./routes/retailersRoutes"));
@@ -33,6 +34,7 @@ class Server {
         this.app.use('/workers', workersRoutes_1.default);
         this.app.use('/retail', retailersRoutes_1.default);
         this.app.use('/SolicitudP', solicitudPRoutes_1.default);
+        this.app.use('/SolicitudInventario', solicitudInventarioRoutes_1.default);
         this.app.use('/Usuario', UsuarioRoutes_1.default);
     }
     start() {

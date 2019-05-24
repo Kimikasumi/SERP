@@ -24,33 +24,40 @@ import { SucursalesComponent } from './components/PV/sucursales/sucursales.compo
 
 import { AgregarSolicitudPComponent } from './components/Produccion/SolicitudP/agregar-solicitud-p/agregar-solicitud-p.component';
 import { ListarSolicitudPComponent } from './components/Produccion/SolicitudP/listar-solicitud-p/listar-solicitud-p.component';
-
+import {ListarSRecibidasComponent} from './components/Produccion/SolicitudP/listar-srecibidas/listar-srecibidas.component';
 const routes: Routes = [
-  {
-    path: '',
-    redirectTo: '/login',
-    pathMatch: 'full'
-  },
-  {
-    path: 'login',
-    component: LoginComponent
-  },
-  {
-    path: 'workers',
-    children: [
-      { path: 'agregar', component: FormFuncionarioComponent },
-      { path: 'listado', component: PrincipalRrhhComponent },
-      { path: 'dashboard', component: DashboardRrhhComponent },
-      { path: 'update/:cedula', component: FormFuncionarioComponent }
-    ]
-  },
-  {
-    path: 'produccion',
-    children: [
-      { path: 'listar', component: ListarComponent },
-      { path: 'agregar', component: AgregarComponent },
-      { path: 'principal', component: PrincipalProduccionComponent },
-      { path: 'editar/:id', component: AgregarComponent },
+{
+  path: '',
+  redirectTo: '/login',
+  pathMatch: 'full'
+},
+{
+  path: 'login',
+  component: LoginComponent
+},
+{path: 'workers',
+children:[
+  {path: 'agregar', component: FormFuncionarioComponent},
+  {path: 'listado', component: PrincipalRrhhComponent},
+  {path: 'dashboard', component: DashboardRrhhComponent},
+  {path: 'editar/:cedula', component: FormFuncionarioComponent}
+]},
+{path: 'produccion', 
+children:[
+  {path: 'listar', component: ListarComponent},
+  {path: 'agregar', component: AgregarComponent},
+  {path: 'principal', component: PrincipalProduccionComponent},
+  {path: 'editar/:id', component: AgregarComponent},
+
+  {path: 'listarMP', component: ListarMPComponent},
+  {path: 'agregarMP', component: AgregarMPComponent},
+  {path: 'principalMP', component: PrincipalMPComponent},
+  {path: 'editarMP/:id', component: AgregarMPComponent},
+
+  {path: 'agregarSolicitudP', component: AgregarSolicitudPComponent},
+  {path: 'listarSolicitudP', component: ListarSolicitudPComponent},
+  {path: 'editarSolicitudP/:id', component: AgregarMPComponent},
+  {path: 'listarSRecibidas', component:ListarSRecibidasComponent },
 
       { path: 'listarMP', component: ListarMPComponent },
       { path: 'agregarMP', component: AgregarMPComponent },
