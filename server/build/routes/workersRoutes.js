@@ -20,6 +20,11 @@ class WorkersRoutes {
         this.router.get('/getCargos', workersController_1.default.getCargos);
         this.router.get('/getModulos', workersController_1.default.getModulos);
         this.router.get('/getSucursales', workersController_1.default.getSucursales);
+        this.router.get('/getFporModulos/:cod_modulo', workersController_1.default.getFporModulos);
+        this.router.get('/getTotalF', workersController_1.default.getTotalF);
+        this.router.get('/getAusencias', workersController_1.default.getAusencias);
+        this.router.get('/getEficacia', workersController_1.default.getEficacia);
+        this.router.get('/filtroModulos/:nom_modulo', workersController_1.default.filtroModulos);
     }
 }
 const workersRoutes = new WorkersRoutes();

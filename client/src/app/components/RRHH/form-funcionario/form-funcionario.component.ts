@@ -89,6 +89,7 @@ export class FormFuncionarioComponent implements OnInit {
   }
 
   updateFuncionario(){
+    console.log("EDITAR")
     delete this.funcionario.fecha_ingreso;
     this.funcionariosService.updateFuncionario(this.funcionario.cedula, this.funcionario).subscribe(
       res =>{

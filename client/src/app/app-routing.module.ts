@@ -41,7 +41,7 @@ const routes: Routes = [
       { path: 'agregar', component: FormFuncionarioComponent },
       { path: 'listado', component: PrincipalRrhhComponent },
       { path: 'dashboard', component: DashboardRrhhComponent },
-      { path: 'editar/:cod_funcionario', component: FormFuncionarioComponent }
+      { path: 'update/:cedula', component: FormFuncionarioComponent }
     ]
   },
   {

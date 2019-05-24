@@ -1,4 +1,5 @@
-<div class="col-md-3" *ngFor="let funcionario of funcionarios">
+
+<div class="col-md-3" *ngFor="let funcionario of funcionarios | paginate: {itemsPerPage: 12, currentPage: pageActual}">
     <br>
     <div class="card text-center">
         <div class="card-header bg-dark text-white d-flex justify-content-between aling-items-center">
@@ -28,10 +29,10 @@
                 </tr>
 
             </table>
-
-
-            <a class="btn btn-info btn-block" style="font-family: cursive;" [routerLink]="['/workers/editar', funcionario.cedula]">Editar</a>
+            <a class="btn btn-info btn-block" style="font-family: cursive;" [routerLink]="['/workers/update', funcionario.cedula]">Editar</a>
             
         </div>
     </div>
 </div>
+
+<pagination-controls (pageChange)="pageActual = $event"></pagination-controls>
