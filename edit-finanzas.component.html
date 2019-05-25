@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="card">
+      <div class="card-heard">
+        <h3>Editar Presupuesto</h3>
+      </div>
+      <div class="card-body">
+        <form action="">
+          <div class="form-group">
+            
+            <label for="">Estado del presupuesto:</label><br>
+            <select name="cod_estado" [(ngModel)]="presupuestos.cod_estado">
+                <option value="2">Aceptado</option>
+                <option value="3">Rechazado</option>
+              </select>
+          </div>
+          <button (click)="editPF()" class="btn btn-danger">Guardar</button>
+        </form>
+      </div>
+    </div>
+  </div>
