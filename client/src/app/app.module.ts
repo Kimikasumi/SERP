@@ -74,6 +74,10 @@ import { ListarSRecibidasComponent } from './components/Produccion/SolicitudP/li
 import { NgxGaugeModule } from 'ngx-gauge';
 import { AlcanceOComponent } from '../app/components/RRHH/alcance-o/alcance-o.component';
 import {NgxPaginationModule} from 'ngx-pagination';
+import { SolicitudesFinanzasComponent } from './components/Finanzas/solicitudes-finanzas/solicitudes-finanzas.component';
+import { DashboardFinanzasComponent } from './components/Finanzas/dashboard-finanzas/dashboard-finanzas.component';
+import { PresupuestoAreasFinanzasComponent } from './components/Finanzas/presupuesto-areas-finanzas/presupuesto-areas-finanzas.component';
+import { PresupuestoTotalFinanzasComponent } from './components/Finanzas/presupuesto-total-finanzas/presupuesto-total-finanzas.component';
 FusionChartsModule.fcRoot(FusionCharts, Column2D);
 
 
@@ -121,7 +125,11 @@ FusionChartsModule.fcRoot(FusionCharts, Column2D);
     ListarFinanzasComponent,
     AddPresupuestoComponent,
     EditFinanzasComponent,
-    NavbarFinanzasComponent
+    NavbarFinanzasComponent,
+    SolicitudesFinanzasComponent,
+    DashboardFinanzasComponent,
+    PresupuestoAreasFinanzasComponent,
+    PresupuestoTotalFinanzasComponent
   ],
   imports: [
     BrowserModule,

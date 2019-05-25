@@ -30,4 +30,16 @@ export class PresupuestoService {
   updatePresupuesto(cod_presupuesto: string|number, updatedPresupuesto: Presupuesto): Observable<Presupuesto>{
     return this.http.put(`${this.API_URI}/presupuesto/updateP/${cod_presupuesto}`, updatedPresupuesto);
   }
+
+  getSolicitudes() {
+    return this.http.get(`${this.API_URI}/presupuesto/getSolicitudes`)
+  }
+
+  getPresupuestoAreas() {
+    return this.http.get(`${this.API_URI}/presupuesto/getPresupuestoAreas`)
+  }
+
+  getPresupuestoTotal() {
+    return this.http.get(`${this.API_URI}/presupuesto/getPresupuestoTotal`)
+  }
 }

@@ -30,6 +30,7 @@ import { PrincipalFinanzasComponent } from './components/Finanzas/principal-fina
 import { ListarFinanzasComponent } from './components/Finanzas/listar-finanzas/listar-finanzas.component'
 import { AddPresupuestoComponent } from './components/Finanzas/add-finanzas/add-finanzas.component'
 import { EditFinanzasComponent } from './components/Finanzas/edit-finanzas/edit-finanzas.component'
+import { DashboardFinanzasComponent } from './components/Finanzas/dashboard-finanzas/dashboard-finanzas.component';
 
 const routes: Routes = [
 {
@@ -94,7 +95,8 @@ children:[
       { path: 'principal', component: PrincipalFinanzasComponent },
       { path: 'listadoP', component: ListarFinanzasComponent },
       { path: 'createP', component: AddPresupuestoComponent },
-      { path: 'updateP/:cod_solicitud_presupuesto', component: EditFinanzasComponent }
+      { path: 'updateP/:cod_solicitud_presupuesto', component: EditFinanzasComponent },
+      { path: 'dashboard', component: DashboardFinanzasComponent}
     ]
   }
 ];
