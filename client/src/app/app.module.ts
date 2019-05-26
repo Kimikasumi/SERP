@@ -39,6 +39,12 @@ import { ListarSolicitudPComponent } from './components/Produccion/SolicitudP/li
 import { PrincipalSolicitudPComponent } from './components/Produccion/principal-solicitud-p/principal-solicitud-p.component';
 import { AbsentismoComponent } from '../app/components/RRHH/absentismo/absentismo.component';
 
+import { PrincipalFinanzasComponent } from './components/Finanzas/principal-finanzas/principal-finanzas.component'
+import { ListarFinanzasComponent } from './components/Finanzas/listar-finanzas/listar-finanzas.component'
+import { AddPresupuestoComponent } from './components/Finanzas/add-finanzas/add-finanzas.component'
+import { EditFinanzasComponent } from './components/Finanzas/edit-finanzas/edit-finanzas.component'
+import { NavbarFinanzasComponent } from './components/Finanzas/navbar-finanzas/navbar-finanzas.component'
+
 import { MatDialogModule } from '@angular/material';
 
 
@@ -70,6 +76,10 @@ import { ListarSRecibidasComponent } from './components/Produccion/SolicitudP/li
 import { NgxGaugeModule } from 'ngx-gauge';
 import { AlcanceOComponent } from '../app/components/RRHH/alcance-o/alcance-o.component';
 import {NgxPaginationModule} from 'ngx-pagination';
+import { SolicitudesFinanzasComponent } from './components/Finanzas/solicitudes-finanzas/solicitudes-finanzas.component';
+import { DashboardFinanzasComponent } from './components/Finanzas/dashboard-finanzas/dashboard-finanzas.component';
+import { PresupuestoAreasFinanzasComponent } from './components/Finanzas/presupuesto-areas-finanzas/presupuesto-areas-finanzas.component';
+import { PresupuestoTotalFinanzasComponent } from './components/Finanzas/presupuesto-total-finanzas/presupuesto-total-finanzas.component';
 FusionChartsModule.fcRoot(FusionCharts, Column2D);
 
 
@@ -116,8 +126,16 @@ FusionChartsModule.fcRoot(FusionCharts, Column2D);
     PrincipalSolicitudPComponent,
     DashBoardProdComponent,
     ListarSRecibidasComponent,
-    PrincipalSolicitudPComponent
-
+    PrincipalSolicitudPComponent,
+    PrincipalFinanzasComponent, 
+    ListarFinanzasComponent,
+    AddPresupuestoComponent,
+    EditFinanzasComponent,
+    NavbarFinanzasComponent,
+    SolicitudesFinanzasComponent,
+    DashboardFinanzasComponent,
+    PresupuestoAreasFinanzasComponent,
+    PresupuestoTotalFinanzasComponent
   ],
   imports: [
     BrowserModule,

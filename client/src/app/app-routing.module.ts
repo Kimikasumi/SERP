@@ -25,6 +25,13 @@ import { SucursalesComponent } from './components/PV/sucursales/sucursales.compo
 import { AgregarSolicitudPComponent } from './components/Produccion/SolicitudP/agregar-solicitud-p/agregar-solicitud-p.component';
 import { ListarSolicitudPComponent } from './components/Produccion/SolicitudP/listar-solicitud-p/listar-solicitud-p.component';
 import {ListarSRecibidasComponent} from './components/Produccion/SolicitudP/listar-srecibidas/listar-srecibidas.component';
+
+import { PrincipalFinanzasComponent } from './components/Finanzas/principal-finanzas/principal-finanzas.component'
+import { ListarFinanzasComponent } from './components/Finanzas/listar-finanzas/listar-finanzas.component'
+import { AddPresupuestoComponent } from './components/Finanzas/add-finanzas/add-finanzas.component'
+import { EditFinanzasComponent } from './components/Finanzas/edit-finanzas/edit-finanzas.component'
+import { DashboardFinanzasComponent } from './components/Finanzas/dashboard-finanzas/dashboard-finanzas.component';
+
 const routes: Routes = [
 {
   path: '',
@@ -80,6 +87,16 @@ children:[
       { path: 'editPV/:id', component: AddPvComponent },
       { path: 'dashboard', component: DashboardPvComponent },
       { path: 'solicitar', component: SolicitarInvPvComponent }
+    ]
+  },
+  {
+    path: 'presupuesto',
+    children: [
+      { path: 'principal', component: PrincipalFinanzasComponent },
+      { path: 'listadoP', component: ListarFinanzasComponent },
+      { path: 'createP', component: AddPresupuestoComponent },
+      { path: 'updateP/:cod_solicitud_presupuesto', component: EditFinanzasComponent },
+      { path: 'dashboard', component: DashboardFinanzasComponent}
     ]
   }
 ];
