@@ -22,7 +22,6 @@ export class FormFuncionarioComponent implements OnInit {
   direccion: '',
   telefono: '',
   cod_sucursal: 0,
-  fecha_ingreso: new Date(),
   correo: '',
   eficacia: 10,
   ausencias: 0,
@@ -37,7 +36,6 @@ export class FormFuncionarioComponent implements OnInit {
     if (params.cedula) {
       this.funcionariosService.getFuncionario(params.cedula).subscribe(
         res => {
-          console.log(res);
           this.funcionario = res;
           this.edit = true;
         },
@@ -46,21 +44,18 @@ export class FormFuncionarioComponent implements OnInit {
     }
     this.funcionariosService.getCargos().subscribe(
       res => {
-        console.log(res)
         this.selCargo = res;
       },
       err => console.log(err)
     )
     this.funcionariosService.getModulos().subscribe(
       res => {
-        console.log(res)
         this.selModulo = res;
       },
       err => console.log(err)
     )
     this.funcionariosService.getSucursales().subscribe(
       res=>{
-        console.log(res)
         this.selSucursal = res;
       },
       err=> console.log(err)
@@ -68,10 +63,8 @@ export class FormFuncionarioComponent implements OnInit {
   }
 
   agregarNuevoFuncionario() {
-    delete this.funcionario.fecha_ingreso;
     delete this.funcionario.ausencias;
     delete this.funcionario.eficacia;
-    console.log(this.funcionario);
     console.log("Foto "+this.funcionario.foto)
     /*if (this.funcionario.foto = '' && (this.funcionario.cod_genero = 1)) {
       console.log('Entra')
@@ -82,6 +75,7 @@ export class FormFuncionarioComponent implements OnInit {
     this.funcionariosService.saveFuncionario(this.funcionario).subscribe(
       res => {
         console.log(res)
+        alert("Funcionario Agregado Satisfactoriamente");
         this.router.navigate(['/workers/listado']);
       },
       err => console.log(err)
@@ -89,11 +83,9 @@ export class FormFuncionarioComponent implements OnInit {
   }
 
   updateFuncionario(){
-    console.log("EDITAR")
-    delete this.funcionario.fecha_ingreso;
     this.funcionariosService.updateFuncionario(this.funcionario.cedula, this.funcionario).subscribe(
       res =>{
-        console.log(res);
+        alert("Funcionario Editado Satisfactoriamente");
         this.router.navigate(['/workers/listado']);
       },
       err => console.log(err)

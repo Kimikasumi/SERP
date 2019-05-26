@@ -27,6 +27,14 @@
                     <td class="icono"><h6>Correo</h6></td>
                     <td class="info"><p>{{funcionario.correo}}</p></td>
                 </tr>
+                <tr>
+                    <td class="icono"><h6>Dirección</h6></td>
+                    <td class="info"><p>{{funcionario.direccion}}</p></td>
+                </tr>
+                <tr>
+                    <td class="icono"><h6>Teléfono</h6></td>
+                    <td class="info"><p>{{funcionario.telefono}}</p></td>
+                </tr>
 
             </table>
             <a class="btn btn-info btn-block" style="font-family: cursive;" [routerLink]="['/workers/update', funcionario.cedula]">Editar</a>

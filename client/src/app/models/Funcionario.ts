@@ -8,7 +8,6 @@ export interface Funcionario {
     direccion?: string;
     telefono?: string;
     nom_sucursal?: string;
-    fecha_ingreso?: Date;
     correo?: string;
     eficacia?: number;
     ausencias?: number;
@@ -25,7 +24,6 @@ export interface Funcionario2 {
     direccion?: string;
     telefono?: string;
     cod_sucursal?: number;
-    fecha_ingreso?: Date;
     correo?: string;
     eficacia?: number;
     ausencias?: number;

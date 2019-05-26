@@ -4,7 +4,7 @@ class WorkersController{
 
     public async list (req:Request,res: Response): Promise<void>{
         const x = 'SELECT cedula, nom_funcionario, nom_cargo,'+
-        'nom_modulo, correo, nom_genero, foto FROM FUNCIONARIO,'+
+        'nom_modulo, correo, nom_genero, foto, direccion, telefono FROM FUNCIONARIO,'+
          'CARGO, MODULO, GENERO WHERE FUNCIONARIO.cod_modulo = MODULO.cod_modulo '+
          'AND FUNCIONARIO.cod_cargo = CARGO.cod_cargo AND FUNCIONARIO.cod_genero = GENERO.cod_genero';
          const consulta = await db.query(x);

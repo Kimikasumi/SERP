@@ -19,7 +19,6 @@ export class CardsComponent implements OnInit {
     direccion: '',
     telefono: '',
     nom_sucursal: '',
-    fecha_ingreso: new Date(),
     correo: '',
     eficacia: 10,
     ausencias: 0,
