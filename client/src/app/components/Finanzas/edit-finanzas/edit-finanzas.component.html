@@ -7,7 +7,9 @@
         <form action="">
           <div class="form-group">
             <label for="">Estado del presupuesto:</label>
-            <input type="text" name="cod_estado" class="form-control" [(ngModel)]="presupuestos.cod_estado">
+            <select class="form-control" [(ngModel)]="presupuestos.cod_estado" name="cod_estado" ngDefaultControl>
+              <option *ngFor="let estado of estados" value="{{estado.cod_estado_solicitud}}">{{estado.nom_estado_solicitud}}</option>
+            </select>
           </div>
           <button (click)="editPF()" class="btn btn-danger">Guardar</button>
         </form>

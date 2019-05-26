@@ -7,12 +7,10 @@
     <div class="card-body">
       <form action="">
         <div class="form-group">
-          <label for="">Codigo:</label>
-          <input type="text" name="cod_solicitud_presupuesto" class="form-control" [(ngModel)]="presupuestos.cod_solicitud_presupuesto">
-        </div>
-        <div class="form-group">
           <label for="">Repeticion Semanal:</label>
-          <input type="text" name="cod_repeticion_semanal" class="form-control" [(ngModel)]="presupuestos.cod_repeticion_semanal">
+          <select class="form-control" [(ngModel)]="presupuestos.cod_repeticion_semanal" name="cod_repeticion_semanal" ngDefaultControl>
+            <option *ngFor="let repeticion of repeticiones" value="{{repeticion.cod_repeticion_semanal}}">{{repeticion.nom_repeticion_semanal}}</option>
+          </select>
         </div>
         <div class="form-group">
           <label for="">Descripcion de la solicitud</label>
@@ -20,19 +18,17 @@
         </div>
         <div class="form-group">
           <label for="">Valor</label>
-          <input type="text" name="valor_presupuesto" class="form-control" [(ngModel)]="presupuestos.valor_presupuesto">
+          <input type="number" name="valor_presupuesto" class="form-control" [(ngModel)]="presupuestos.valor_presupuesto">
         </div>
         <div class="form-group">
           <label for="">Area solicitante</label>
           <input type="text" name="area_solicitante" class="form-control" [(ngModel)]="presupuestos.area_solicitante">
         </div>
         <div class="form-group">
-          <label for="">Estado</label>
-          <input type="text" name="cod_estado" class="form-control" [(ngModel)]="presupuestos.cod_estado">
-        </div>
-        <div class="form-group">
           <label for="">Cuenta</label>
-          <input type="text" name="cod_cuenta" class="form-control" [(ngModel)]="presupuestos.cod_cuenta">
+          <select class="form-control" [(ngModel)]="presupuestos.cod_cuenta" name="cod_cuenta" ngDefaultControl>
+            <option *ngFor="let cuenta of cuentas" value="{{cuenta.cod_cuenta}}">{{cuenta.nom_cuenta}}</option>
+          </select>
         </div>
         <button (click)="editar ? editPF() : createPF()" class="btn btn-danger">Guardar</button>
       </form>

@@ -47,7 +47,7 @@ children:[
   {path: 'agregar', component: FormFuncionarioComponent},
   {path: 'listado', component: PrincipalRrhhComponent},
   {path: 'dashboard', component: DashboardRrhhComponent},
-  {path: 'editar/:cedula', component: FormFuncionarioComponent}
+  {path: 'update/:cedula', component: FormFuncionarioComponent}
 ]},
 {path: 'produccion', 
 children:[

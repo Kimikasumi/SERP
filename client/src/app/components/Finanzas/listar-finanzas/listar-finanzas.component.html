@@ -21,11 +21,11 @@
           <tr *ngFor="let presupuesto of presupuestos">
             <td>{{presupuesto.cod_solicitud_presupuesto}}</td>
             <td>{{presupuesto.desc_solicitud_presupuesto}}</td>
-            <td>{{presupuesto.cod_repeticion_semanal}}</td>
+            <td>{{presupuesto.nom_repeticion_semanal}}</td>
             <td>{{presupuesto.valor_presupuesto}}</td>
             <td>{{presupuesto.area_solicitante}}</td>
-            <td>{{presupuesto.cod_estado}}</td>
-            <td>{{presupuesto.cod_cuenta}}</td>
+            <td>{{presupuesto.nom_estado_solicitud}}</td>
+            <td>{{presupuesto.nom_cuenta}}</td>
             <td><button [routerLink]="['/presupuesto/updateP', presupuesto.cod_solicitud_presupuesto]" class="btn btn-warning">Editar</button>
               <button (click)="eliminarP(presupuesto.cod_solicitud_presupuesto)" class="btn btn-danger">Eliminar</button></td>
           </tr>

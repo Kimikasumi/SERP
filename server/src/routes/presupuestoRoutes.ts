@@ -16,6 +16,12 @@ class PresupuestoRoutes {
         this.router.post('/createP', presupuestoController.create);
         this.router.put('/updateP/:id', presupuestoController.update);
         this.router.delete('/deleteP/:id', presupuestoController.delete);
+        this.router.get('/getSolicitudes', presupuestoController.getSolicitudes)
+        this.router.get('/getPresupuestoAreas', presupuestoController.getPresupuestoAreas)
+        this.router.get('/getPresupuestoTotal', presupuestoController.getPresupuestoTotal)
+        this.router.get('/getEstados',presupuestoController.getEstados)
+        this.router.get('/getRepeticion',presupuestoController.getRepeticion)
+        this.router.get('/getCuenta',presupuestoController.getCuenta)
     }
 }
 const presupuestoRoutes = new PresupuestoRoutes();

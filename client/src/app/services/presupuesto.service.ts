@@ -42,4 +42,16 @@ export class PresupuestoService {
   getPresupuestoTotal() {
     return this.http.get(`${this.API_URI}/presupuesto/getPresupuestoTotal`)
   }
+
+  getEstados() {
+    return this.http.get(`${this.API_URI}/presupuesto/getEstados`)
+  }
+
+  getRepeticion() {
+    return this.http.get(`${this.API_URI}/presupuesto/getRepeticion`)
+  }
+
+  getCuenta() {
+    return this.http.get(`${this.API_URI}/presupuesto/getCuenta`)
+  }
 }

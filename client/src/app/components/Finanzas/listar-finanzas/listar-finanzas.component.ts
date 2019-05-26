@@ -19,7 +19,6 @@ export class ListarFinanzasComponent implements OnInit {
   mostrarP() {
     this.presupuestoService.getPresupuesto().subscribe(
       res => {
-        console.log(res)
         this.presupuestos = res;
       },
       err => console.log(err)
@@ -30,8 +29,6 @@ export class ListarFinanzasComponent implements OnInit {
     console.log(cod_presupuesto);
     this.presupuestoService.deletePresupuesto(cod_presupuesto).subscribe(
       res => {
-        console.log("se elimino " + cod_presupuesto);
-        console.log(res);
         this.mostrarP();
       },
       err => console.log(err)
