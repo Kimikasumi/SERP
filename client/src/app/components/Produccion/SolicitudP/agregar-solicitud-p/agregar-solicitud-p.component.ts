@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SolicitudProd } from 'src/app/models/SolicitudProd';
+import { SolicitudProd2 } from 'src/app/models/SolicitudProd';
 import { Router, ActivatedRoute } from '@angular/router';
 import { SolicitudService } from 'src/app/services/solicitudP.service';
 
@@ -12,13 +12,14 @@ export class AgregarSolicitudPComponent implements OnInit {
 
   constructor(private servicioSolicitudP: SolicitudService, private router: Router, private activedRoute: ActivatedRoute) { }
 
-  solicitud: SolicitudProd = {
-    cod_solicitud_presupuesto: 1,
+  solicitud: SolicitudProd2 = {
+    cod_solicitud_presupuesto: 0,
     cod_repeticion_semanal: 0,
     desc_solicitud_presupuesto: '',
     valor_presupuesto: 0,
     area_solicitante: 'Producción',
-    cod_estado: 1
+    cod_estado: 1,
+    cod_cuenta:1
   }
 
   ngOnInit() {
@@ -40,7 +41,7 @@ export class AgregarSolicitudPComponent implements OnInit {
     this.servicioSolicitudP.saveSolicitudP(this.solicitud).subscribe(
       res=>{
         console.log(res);
-        this.router.navigate(['/produccion/agregarSolicitudP'])
+       
       },
       err => console.error(err)
     )

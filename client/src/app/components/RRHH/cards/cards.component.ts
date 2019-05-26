@@ -76,8 +76,8 @@ export class CardsComponent implements OnInit {
                 res => {
                     this.aux2Nom = res
                     if(this.auxNom <= this.aux2Nom.saldo){
-                      let total = this.auxNom - this.aux2Nom.saldo
-                      this.cuentaService.update("4",total).subscribe(
+                      let total =   this.aux2Nom.saldo - this.auxNom
+                      this.cuentaService.update("3",total).subscribe(
                         res=>{
                             alert("Nomina pagada con exito")
                             location.reload(); 
@@ -108,9 +108,9 @@ export class CardsComponent implements OnInit {
             res => {
                 this.aux2 = res
                 if(this.aux.salario <= this.aux2.saldo){
-                  let total = this.aux.salario - this.aux2.saldo
+                  let total =this.aux2.saldo- this.aux.salario
                   console.log(total)
-                  this.cuentaService.update("4",total).subscribe(
+                  this.cuentaService.update("3",total).subscribe(
                     res=>{
                         this.funcionariosService.deleteFuncionario(cedula).subscribe(
                         res => {

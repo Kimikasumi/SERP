@@ -1,0 +1,69 @@
+<nav class="navbar navbar-expand-lg navbar-dark " style="background-color: #ca0d0d;">
+  <a class="navbar-brand" [routerLink]="['/login']">S.E.R.P</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+
+      <button (click)="logout()" mat-icon-button>
+          <mat-icon aria-label="Example icon-button with a heart icon" style="align-self: right;" >settings_power</mat-icon>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-5"></div>
+    <div class="col-md-3">
+      <h1 class="pb-5">
+        Gerencia
+      </h1>
+    </div>
+  </div>
+  <!--Dashboard Recursos Humanos-->
+  <h1 ><p class="text-center">Área de Recursos Humanos</p></h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-9"><app-FporArea></app-FporArea></div>
+      <div class="col-4"><app-absentismo></app-absentismo></div>
+      <div class="col-6"><app-alcance-o></app-alcance-o></div>
+    </div>
+  </div>
+  <h1 ><p class="text-center">Área de Producción</p></h1>
+  <div class="row pt-3 pb-3">
+    <div class="col-md-2"></div>
+ 
+    <!--Dashboard Produccion-->
+
+
+    <div class="col-md-5"><app-prom-prod></app-prom-prod></div>
+    <div class="col-md-5"><app-plazo-prod></app-plazo-prod></div>
+  </div>
+  <div class="row  pt-3 pb-3">
+    <div class="col-md-2"></div>
+    
+    <!--Dashboard Produccion-->
+
+    <div class="col-md-5"><app-mp-anio></app-mp-anio></div>
+    <div class="col-md-5"><app-mayor-prod></app-mayor-prod></div>
+  </div>
+</div>
+<h1 ><p class="text-center">Área de Finanzas</p></h1>
+<div class="container">
+
+  <!--Dashboard Finanzas-->
+
+ 
+  <div class="row">
+    <div class="col-9"><app-solicitudes-finanzas></app-solicitudes-finanzas></div>
+    <div class="col-4"><app-presupuesto-areas-finanzas></app-presupuesto-areas-finanzas></div>
+    <div class="col-4"><app-presupuesto-total-finanzas></app-presupuesto-total-finanzas></div>
+  </div>  
+</div>
+  <!--Puntos de Venta-->
+<h1 ><p class="text-center">Área de Puntos de Venta</p></h1>
+
+
+
