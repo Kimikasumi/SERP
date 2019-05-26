@@ -20,6 +20,34 @@ class ProduccionController {
         });
     }
     ;
+    prom(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const consulta = yield database_1.default.query('SELECT AVG(precio_unitario*cantidad) as prom FROM PRODUCTO');
+            res.json(consulta);
+        });
+    }
+    ;
+    plazos1(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const consulta = yield database_1.default.query('SELECT COUNT(cod_solicitud) as total FROM solicitud_inv');
+            res.json(consulta);
+        });
+    }
+    ;
+    plazos2(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const consulta = yield database_1.default.query('SELECT COUNT(cod_solicitud) as parcial FROM solicitud_inv WHERE cod_estado=2');
+            res.json(consulta);
+        });
+    }
+    ;
+    mayor(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const consulta = yield database_1.default.query('SELECT nom_m_prima FROM materia_prima ORDER BY cantidad DESC');
+            res.json(consulta);
+        });
+    }
+    ;
     getOne(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             const { cod_producto } = req.params;

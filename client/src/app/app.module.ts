@@ -42,9 +42,11 @@ import { AbsentismoComponent } from '../app/components/RRHH/absentismo/absentism
 import { MatDialogModule } from '@angular/material';
 
 
-
-
-
+import {MatCardModule} from '@angular/material/card'; 
+import { PromProd } from './components/Produccion/prom-productos/prom-prod.component'
+import { MpAnio } from './components/Produccion/mp-anio/mp-anio.component'
+import { MayorProd } from './components/Produccion/mayor-prod/mayor-prod.component'
+import { PlazoProd } from './components/Produccion/plazo-prod/plazo-prod.component'
 import { ChartsModule} from 'ng2-charts';
 import { FporArea } from './components/RRHH/FporArea/FporArea.component';
 import { FusionChartsModule } from 'angular-fusioncharts';
@@ -94,6 +96,10 @@ FusionChartsModule.fcRoot(FusionCharts, Column2D);
     ListarSolicitudPComponent,
     PrincipalSolicitudPComponent,
     FporArea,
+    PromProd,
+    PlazoProd,
+    MpAnio,
+    MayorProd,
     AlcanceOComponent,
     NavbarPvComponent,
     PrincipalPvComponent,
@@ -127,6 +133,7 @@ FusionChartsModule.fcRoot(FusionCharts, Column2D);
     AmexioDashBoardModule,
     AmexioEnterpriseModule,
     AmexioMapModule,
+    MatCardModule,
     NgxGaugeModule,
     NgxPaginationModule,
     RecaptchaModule.forRoot()

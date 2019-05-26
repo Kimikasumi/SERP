@@ -10,6 +10,7 @@ class MPrimaRoutes {
 
     config(): void {
         this.router.get('/', MPrimaController.list);
+        this.router.get('/mpAnio', MPrimaController.mpAnio);
         this.router.get('/:cod_m_prima', MPrimaController.getOne);
         this.router.post('/', MPrimaController.create);
         this.router.delete('/:cod_m_prima', MPrimaController.delete);

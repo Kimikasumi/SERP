@@ -9,11 +9,8 @@
       <a class="nav-item nav-link" [routerLink]="['/retail/dashboard']">Dashboard <span
           class="sr-only">(current)</span></a>
       <a class="nav-item nav-link" [routerLink]="['/retail/listadoPV']">Puntos de venta</a>
-      <button mat-icon-button>
-        <mat-icon aria-label="Example icon-button with a heart icon">person</mat-icon>
-      </button>
-      <button mat-icon-button>
-        <mat-icon aria-label="Example icon-button with a heart icon">settings_power</mat-icon>
+      <button (click)="logout()" mat-icon-button>
+          <mat-icon aria-label="Example icon-button with a heart icon" style="align-self: right;" >settings_power</mat-icon>
       </button>
     </div>
   </div>

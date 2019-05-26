@@ -21,20 +21,35 @@ export class LoginComponent implements OnInit {
   };
 
   ngOnInit() {
+    
     if(localStorage.getItem("user")){
-      this.navigate()
+      var ced = localStorage.getItem("user");
+      if(ced === "1234"){
+        this.navigate('/workers/listado')
+      }else if(ced === "1235"){
+        this.navigate('/produccion/principal')
+      }else if(ced === "1236"){
+        this.navigate('/retail/principal')
+      }
     }
   }
   clicked(){
     this.usuarioService.login(this.usuario.cedula,this.usuario.contrasenia).subscribe(
       res => {
         localStorage.setItem("user",this.usuario.cedula.toString())
-        this.navigate()
+        var ced = this.usuario.cedula.toString()
+        if(ced === "1234"){
+          this.navigate('/workers/listado')
+        }else if(ced === "1235"){
+          this.navigate('/produccion/principal')
+        }else if(ced === "1236"){
+          this.navigate('/retail/principal')
+        }
       },
       err => console.log(err)
     )
   }
-  navigate() {    
-    this.router.navigateByUrl('/workers/listado');
+  navigate(path) {    
+    this.router.navigateByUrl(path);
   }
 }
