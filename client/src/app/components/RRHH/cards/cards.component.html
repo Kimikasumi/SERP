@@ -1,3 +1,4 @@
+<div><button type="button" class="btn btn-primary mb-5" (click)=pagarNomina()>Pagar nomina</button></div>
 
 <div class="col-md-3" *ngFor="let funcionario of funcionarios | paginate: {itemsPerPage: 12, currentPage: pageActual}">
     <br>
@@ -29,7 +30,7 @@
                 </tr>
 
             </table>
-            <a class="btn btn-info btn-block" style="font-family: cursive;" [routerLink]="['/workers/update', funcionario.cedula]">Editar</a>
+            <a class="btn btn-info btn-block" style="font-family: cursive;" [routerLink]="['/workers/editar', funcionario.cedula]">Editar</a>
             
         </div>
     </div>

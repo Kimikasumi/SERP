@@ -34,6 +34,9 @@ import { SolicitarInvPvComponent } from './components/PV/solicitar-inv-pv/solici
 import { ListarInvPvComponent } from './components/PV/listar-inv-pv/listar-inv-pv.component';
 import { SucursalesComponent } from './components/PV/sucursales/sucursales.component';
 
+import { AgregarSolicitudComponent } from './components/RRHH/SolicitudPrestamo/agregar-solicitud/agregar-solicitud.component';
+import { ListarSolicitudComponent } from './components/RRHH/SolicitudPrestamo/listar-solicitud/listar-solicitud.component';
+
 import { AgregarSolicitudPComponent } from './components/Produccion/SolicitudP/agregar-solicitud-p/agregar-solicitud-p.component';
 import { ListarSolicitudPComponent } from './components/Produccion/SolicitudP/listar-solicitud-p/listar-solicitud-p.component';
 import { PrincipalSolicitudPComponent } from './components/Produccion/principal-solicitud-p/principal-solicitud-p.component';
@@ -102,6 +105,8 @@ FusionChartsModule.fcRoot(FusionCharts, Column2D);
     DashboardRrhhComponent,
     LoginComponent,
     AbsentismoComponent,
+    AgregarSolicitudComponent,
+    ListarSolicitudComponent,
     AgregarSolicitudPComponent,
     ListarSolicitudPComponent,
     PrincipalSolicitudPComponent,
