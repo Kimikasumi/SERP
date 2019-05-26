@@ -1,6 +1,7 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
 import { FuncionariosService } from '../../../services/funcionarios.service';
 import { Funcionario, Funcionario2 } from 'src/app/models/Funcionario';
+import { CuentaService } from '../../../services/cuenta.service'
 import { MatDialog } from '@angular/material';
 @Component({
   selector: 'app-cards',
@@ -26,11 +27,22 @@ export class CardsComponent implements OnInit {
     }
 
   @HostBinding('class') classes = 'row';
-
-  funcionarios: any = [];
-  constructor(private funcionariosService: FuncionariosService, public dialog: MatDialog) {
-
+  aux:any = {
+    salario:0
   }
+  aux2:any = {
+    saldo:0
+  }
+  auxNom:any
+  aux2Nom:any = {
+    saldo:0
+  }
+  funcionarios: any = [];
+  constructor(
+    private funcionariosService: FuncionariosService, 
+    public dialog: MatDialog,
+    private cuentaService: CuentaService
+    ) {}
 
   ngOnInit() {
     this.getFuncionarios();
@@ -53,15 +65,75 @@ export class CardsComponent implements OnInit {
     )
   }
 
+  pagarNomina(){
+    if(confirm("Desea pagar la nomina para todos los empleados")){
+        this.cuentaService.nomina().subscribe(
+          res =>{
+            this.auxNom = res[0].nomina
+            //if(!this.auxNom.nomina){this.auxNom.nomina=0}
+            if(confirm("Se removera " + this.auxNom + " de su cuenta")){
+              this.cuentaService.saldo("4").subscribe(
+                res => {
+                    this.aux2Nom = res
+                    if(this.auxNom <= this.aux2Nom.saldo){
+                      let total = this.auxNom - this.aux2Nom.saldo
+                      this.cuentaService.update("4",total).subscribe(
+                        res=>{
+                            alert("Nomina pagada con exito")
+                            location.reload(); 
+                        },
+                        err => alert("Error al restar la plata de la cuenta")
+                      )
+                    }else{
+                      alert("No posee saldo suficiente en la cuenta")
+                    }
+                },
+                err=>console.log("Cannot get saldo")
+              )
+            }
+          },
+          err => console.log(err)
+        )
+    }
+  }
 
   deleteFuncionario(cedula: string) {
-    this.funcionariosService.deleteFuncionario(cedula).subscribe(
-      res => {
-        console.log(res);
-        this.getFuncionarios();
+    if(confirm("Seguro que desea despedir al empleado?")){
+    this.cuentaService.liquidacion(cedula).subscribe(
+      res =>{
+        this.aux = res
+        if(!this.aux.salario){this.aux.salario=0}
+        if(confirm("Se removera " + this.aux.salario + " de su cuenta")){
+          this.cuentaService.saldo("4").subscribe(
+            res => {
+                this.aux2 = res
+                if(this.aux.salario <= this.aux2.saldo){
+                  let total = this.aux.salario - this.aux2.saldo
+                  console.log(total)
+                  this.cuentaService.update("4",total).subscribe(
+                    res=>{
+                        this.funcionariosService.deleteFuncionario(cedula).subscribe(
+                        res => {
+                          console.log(res);
+                          this.getFuncionarios();
+                        },
+                        err => console.log(err)
+                      )
+                    },
+                    err => alert("Error al restar la plata de la cuenta")
+                  )
+                }else{
+                  alert("No posee saldo suficiente en la cuenta")
+                }
+            },
+            err=>console.log("Cannot get saldo")
+          )
+        }
       },
       err => console.log(err)
     )
+    
+  }
   }
 
   openDialog(): void {

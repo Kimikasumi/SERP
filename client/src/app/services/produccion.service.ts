@@ -32,4 +32,17 @@ export class ProduccionService {
   updateProducto(cod_producto: string|number, updatedProducto: Producto): Observable<Producto>{
     return this.http.put(`${this.API_URI}/Produccion/${cod_producto}`, updatedProducto);
   }
+
+  getPromedio(){
+    return this.http.get(`${this.API_URI}/Produccion/Promedio`);
+  }
+  getPlazos1(){
+    return this.http.get(`${this.API_URI}/Produccion/Plazos1`);
+  }
+  getPlazos2(){
+    return this.http.get(`${this.API_URI}/Produccion/Plazos2`);
+  }
+  getMayorProducto(){
+    return this.http.get(`${this.API_URI}/Produccion/Mayor`);
+  }
 }

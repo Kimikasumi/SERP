@@ -7,6 +7,11 @@ class MPrimaController{
         res.json(consulta);
     };
 
+    public async mpAnio (req:Request,res: Response): Promise<void>{
+        const consulta = await db.query('SELECT YEAR(fecha_compra) as fecha,COUNT(cod_m_prima) as cantidad FROM materia_prima GROUP BY YEAR(fecha_compra)');
+        res.json(consulta);
+    };
+
     public async getOne(req:Request,res: Response): Promise<any>{
         const {cod_m_prima} = req.params;
         console.log(req.params)

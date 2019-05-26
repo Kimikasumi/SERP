@@ -1,0 +1,11 @@
+<script src="vendor/angular/angular.min.js"></script> 
+<script src="vendor/angularjs-gauge/dist/angularjs-gauge.min.js"></script> 
+<p>Porcentaje de cumplimiento de plazos</p>
+<ngx-gauge [type]="gaugeType" 
+           [value]="gaugeValue" 
+           [label]="gaugeLabel"  
+           [append]="gaugeAppendText"
+           [thresholds]="thresholdConfig"
+           [animate]=false
+           [duration]=2000>
+</ngx-gauge>

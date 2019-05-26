@@ -1,0 +1,32 @@
+<app-navbar-rrhh></app-navbar-rrhh>
+<div class="container">
+    <div class="card">
+      <div class="card-header">
+        <h3>Solicitudes</h3>
+      </div>
+      <div class="card-body">
+          <div class="table-wrapper-scroll-y my-custom-scrollbar">
+          <table class="table table-bordered table-striped mb-0">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Repetición</th>
+              <th scope="col">Descripción</th>
+              <th scope="col">Valor del presupuesto</th>
+              <th scope="col">Estado de solicitud</th>
+            </tr>
+          </thead>
+          <tbody >
+            <tr *ngFor="let sol of solicitudes">
+              <td>{{sol.cod_solicitud_presupuesto}}</td>
+              <td>{{sol.nom_repeticion_semanal}}</td>
+              <td>{{sol.desc_solicitud_presupuesto}}</td>
+              <td>{{sol.valor_presupuesto}}</td>
+              <td>{{sol.nom_estado_solicitud}}</td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+    </div>
+  </div>

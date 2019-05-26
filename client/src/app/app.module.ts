@@ -34,17 +34,34 @@ import { SolicitarInvPvComponent } from './components/PV/solicitar-inv-pv/solici
 import { ListarInvPvComponent } from './components/PV/listar-inv-pv/listar-inv-pv.component';
 import { SucursalesComponent } from './components/PV/sucursales/sucursales.component';
 
+import { AgregarSolicitudComponent } from './components/RRHH/SolicitudPrestamo/agregar-solicitud/agregar-solicitud.component';
+import { ListarSolicitudComponent } from './components/RRHH/SolicitudPrestamo/listar-solicitud/listar-solicitud.component';
+
 import { AgregarSolicitudPComponent } from './components/Produccion/SolicitudP/agregar-solicitud-p/agregar-solicitud-p.component';
 import { ListarSolicitudPComponent } from './components/Produccion/SolicitudP/listar-solicitud-p/listar-solicitud-p.component';
 import { PrincipalSolicitudPComponent } from './components/Produccion/principal-solicitud-p/principal-solicitud-p.component';
 import { AbsentismoComponent } from '../app/components/RRHH/absentismo/absentismo.component';
 
+import { PrincipalFinanzasComponent } from './components/Finanzas/principal-finanzas/principal-finanzas.component'
+import { ListarFinanzasComponent } from './components/Finanzas/listar-finanzas/listar-finanzas.component'
+import { AddPresupuestoComponent } from './components/Finanzas/add-finanzas/add-finanzas.component'
+import { EditFinanzasComponent } from './components/Finanzas/edit-finanzas/edit-finanzas.component'
+import { NavbarFinanzasComponent } from './components/Finanzas/navbar-finanzas/navbar-finanzas.component'
+
 import { MatDialogModule } from '@angular/material';
+
+
+import {MatCardModule} from '@angular/material/card'; 
+import { PromProd } from './components/Produccion/prom-productos/prom-prod.component'
+import { MpAnio } from './components/Produccion/mp-anio/mp-anio.component'
+import { MayorProd } from './components/Produccion/mayor-prod/mayor-prod.component'
+import { PlazoProd } from './components/Produccion/plazo-prod/plazo-prod.component'
 import { ChartsModule} from 'ng2-charts';
 import { FporArea } from './components/RRHH/FporArea/FporArea.component';
 import { FusionChartsModule } from 'angular-fusioncharts';
 import FusionCharts from 'fusioncharts/core';
 import Column2D from 'fusioncharts/viz/column2d';
+
 import { AmexioWidgetModule } from "amexio-ng-extensions"; // Import Amexio library
 //Dashboard,Charts & Maps are available as seperate module (not in AmexioWidgetModule)
 import {
@@ -53,10 +70,21 @@ import {
   AmexioEnterpriseModule,
   AmexioMapModule
 } from "amexio-ng-extensions";
+
+import { DashBoardProdComponent } from './components/Produccion/dash-board-prod/dash-board-prod.component';
+import { ListarSRecibidasComponent } from './components/Produccion/SolicitudP/listar-srecibidas/listar-srecibidas.component';
+
+
+
 import { NgxGaugeModule } from 'ngx-gauge';
 import { AlcanceOComponent } from '../app/components/RRHH/alcance-o/alcance-o.component';
 import {NgxPaginationModule} from 'ngx-pagination';
+import { SolicitudesFinanzasComponent } from './components/Finanzas/solicitudes-finanzas/solicitudes-finanzas.component';
+import { DashboardFinanzasComponent } from './components/Finanzas/dashboard-finanzas/dashboard-finanzas.component';
+import { PresupuestoAreasFinanzasComponent } from './components/Finanzas/presupuesto-areas-finanzas/presupuesto-areas-finanzas.component';
+import { PresupuestoTotalFinanzasComponent } from './components/Finanzas/presupuesto-total-finanzas/presupuesto-total-finanzas.component';
 FusionChartsModule.fcRoot(FusionCharts, Column2D);
+
 
 @NgModule({
   declarations: [
@@ -77,10 +105,16 @@ FusionChartsModule.fcRoot(FusionCharts, Column2D);
     DashboardRrhhComponent,
     LoginComponent,
     AbsentismoComponent,
+    AgregarSolicitudComponent,
+    ListarSolicitudComponent,
     AgregarSolicitudPComponent,
     ListarSolicitudPComponent,
     PrincipalSolicitudPComponent,
     FporArea,
+    PromProd,
+    PlazoProd,
+    MpAnio,
+    MayorProd,
     AlcanceOComponent,
     NavbarPvComponent,
     PrincipalPvComponent,
@@ -94,7 +128,19 @@ FusionChartsModule.fcRoot(FusionCharts, Column2D);
     ListarInvPvComponent,
     AgregarSolicitudPComponent,
     ListarSolicitudPComponent,
-    PrincipalSolicitudPComponent
+    PrincipalSolicitudPComponent,
+    DashBoardProdComponent,
+    ListarSRecibidasComponent,
+    PrincipalSolicitudPComponent,
+    PrincipalFinanzasComponent, 
+    ListarFinanzasComponent,
+    AddPresupuestoComponent,
+    EditFinanzasComponent,
+    NavbarFinanzasComponent,
+    SolicitudesFinanzasComponent,
+    DashboardFinanzasComponent,
+    PresupuestoAreasFinanzasComponent,
+    PresupuestoTotalFinanzasComponent
   ],
   imports: [
     BrowserModule,
@@ -104,14 +150,13 @@ FusionChartsModule.fcRoot(FusionCharts, Column2D);
     FormsModule,
     HttpClientModule,
     MatDialogModule,
-    ChartsModule,
-    FusionChartsModule,
     AmexioWidgetModule,
     FormsModule,
     AmexioChartsModule,
     AmexioDashBoardModule,
     AmexioEnterpriseModule,
     AmexioMapModule,
+    MatCardModule,
     NgxGaugeModule,
     NgxPaginationModule,
     RecaptchaModule.forRoot()

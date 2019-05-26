@@ -1,0 +1,36 @@
+<app-principal-finanzas></app-principal-finanzas>
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <h3>Solicitudes de Presupuestos</h3>
+    </div>
+    <div class="card-body">
+      <table class="table table-dark">
+        <thead>
+          <tr>
+            <th scope="col">Codigo de la Solicitud</th>
+            <th scope="col">Descripcion</th>
+            <th scope="col">Repeticion Semanal</th>
+            <th scope="col">Valor</th>
+            <th scope="col">Area Solicitante</th>
+            <th scope="col">Estado</th>
+            <th scope="col">Cuenta</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let presupuesto of presupuestos">
+            <td>{{presupuesto.cod_solicitud_presupuesto}}</td>
+            <td>{{presupuesto.desc_solicitud_presupuesto}}</td>
+            <td>{{presupuesto.nom_repeticion_semanal}}</td>
+            <td>{{presupuesto.valor_presupuesto}}</td>
+            <td>{{presupuesto.area_solicitante}}</td>
+            <td>{{presupuesto.nom_estado_solicitud}}</td>
+            <td>{{presupuesto.nom_cuenta}}</td>
+            <td><button [routerLink]="['/presupuesto/updateP', presupuesto.cod_solicitud_presupuesto]" class="btn btn-warning">Editar</button>
+              <button (click)="eliminarP(presupuesto.cod_solicitud_presupuesto)" class="btn btn-danger">Eliminar</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

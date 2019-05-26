@@ -15,6 +15,9 @@ export class MPrimaService {
   getMPrimas(){
     return this.http.get(`${this.API_URI}/MPrima`);
   }
+  getMPrimasAnio(){
+    return this.http.get(`${this.API_URI}/MPrima/mpAnio`);
+  }
 
   getMPrima(cod_m_prima: string){
     return this.http.get(`${this.API_URI}/MPrima/${cod_m_prima}`)
