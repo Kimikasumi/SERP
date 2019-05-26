@@ -6,10 +6,7 @@
     </div>
     <div class="card-body">
       <form action="">
-          <div class="form-group">
-              <label for="">Codigo Solicitud:</label>
-              <input type="text" name="cod_solicitud_presupuesto" class="form-control" [(ngModel)]="solicitud.cod_solicitud_presupuesto">
-          </div>
+
         <div class="form-group">
             <label for="">Repetición:</label><br>
             <select name="repeticionSemanal" [(ngModel)]="solicitud.cod_repeticion_semanal">
@@ -27,7 +24,7 @@
             <label for="">Valor:</label>
             <input type="text" name="cantidad" class="form-control" [(ngModel)]="solicitud.valor_presupuesto">
           </div>
-        <button (click)="GuardarSolicitud()" class="btn btn-danger">Enviar Solicitud</button>
+        <button (click)="GuardarSolicitud()" class="btn btn-danger" [routerLink]="['/produccion/listarSolicitudP']">Enviar Solicitud</button>
       </form>
     </div>
   </div>

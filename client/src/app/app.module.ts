@@ -34,6 +34,7 @@ import { SolicitarInvPvComponent } from './components/PV/solicitar-inv-pv/solici
 import { ListarInvPvComponent } from './components/PV/listar-inv-pv/listar-inv-pv.component';
 import { SucursalesComponent } from './components/PV/sucursales/sucursales.component';
 
+
 import { AgregarSolicitudComponent } from './components/RRHH/SolicitudPrestamo/agregar-solicitud/agregar-solicitud.component';
 import { ListarSolicitudComponent } from './components/RRHH/SolicitudPrestamo/listar-solicitud/listar-solicitud.component';
 
@@ -83,6 +84,7 @@ import { SolicitudesFinanzasComponent } from './components/Finanzas/solicitudes-
 import { DashboardFinanzasComponent } from './components/Finanzas/dashboard-finanzas/dashboard-finanzas.component';
 import { PresupuestoAreasFinanzasComponent } from './components/Finanzas/presupuesto-areas-finanzas/presupuesto-areas-finanzas.component';
 import { PresupuestoTotalFinanzasComponent } from './components/Finanzas/presupuesto-total-finanzas/presupuesto-total-finanzas.component';
+import { DashboardsGerenteComponent } from './components/Gerente/dashboards-gerente/dashboards-gerente.component';
 FusionChartsModule.fcRoot(FusionCharts, Column2D);
 
 
@@ -140,7 +142,8 @@ FusionChartsModule.fcRoot(FusionCharts, Column2D);
     SolicitudesFinanzasComponent,
     DashboardFinanzasComponent,
     PresupuestoAreasFinanzasComponent,
-    PresupuestoTotalFinanzasComponent
+    PresupuestoTotalFinanzasComponent,
+    DashboardsGerenteComponent
   ],
   imports: [
     BrowserModule,

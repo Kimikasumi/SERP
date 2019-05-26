@@ -18,7 +18,7 @@ export class AgregarSolicitudComponent implements OnInit {
     valor_presupuesto: 0,
     area_solicitante: 'RRHH',
     cod_estado: 1,
-    cod_cuenta: 4
+    cod_cuenta: 3
   }
 
   ngOnInit() {

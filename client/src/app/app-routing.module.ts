@@ -34,6 +34,7 @@ import { ListarFinanzasComponent } from './components/Finanzas/listar-finanzas/l
 import { AddPresupuestoComponent } from './components/Finanzas/add-finanzas/add-finanzas.component'
 import { EditFinanzasComponent } from './components/Finanzas/edit-finanzas/edit-finanzas.component'
 import { DashboardFinanzasComponent } from './components/Finanzas/dashboard-finanzas/dashboard-finanzas.component';
+import {DashboardsGerenteComponent} from './components/Gerente/dashboards-gerente/dashboards-gerente.component';
 
 const routes: Routes = [
 {
@@ -45,6 +46,11 @@ const routes: Routes = [
   path: 'login',
   component: LoginComponent
 },
+{
+  path:'gerente',
+  component:DashboardsGerenteComponent
+},
+
 {path: 'workers',
 children:[
   {path: 'agregar', component: FormFuncionarioComponent},
