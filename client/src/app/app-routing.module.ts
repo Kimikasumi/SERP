@@ -22,6 +22,9 @@ import { SolicitarInvPvComponent } from './components/PV/solicitar-inv-pv/solici
 import { ListarInvPvComponent } from './components/PV/listar-inv-pv/listar-inv-pv.component';
 import { SucursalesComponent } from './components/PV/sucursales/sucursales.component';
 
+import { AgregarSolicitudComponent } from './components/RRHH/SolicitudPrestamo/agregar-solicitud/agregar-solicitud.component';
+import { ListarSolicitudComponent } from './components/RRHH/SolicitudPrestamo/listar-solicitud/listar-solicitud.component';
+
 import { AgregarSolicitudPComponent } from './components/Produccion/SolicitudP/agregar-solicitud-p/agregar-solicitud-p.component';
 import { ListarSolicitudPComponent } from './components/Produccion/SolicitudP/listar-solicitud-p/listar-solicitud-p.component';
 import {ListarSRecibidasComponent} from './components/Produccion/SolicitudP/listar-srecibidas/listar-srecibidas.component';
@@ -47,7 +50,9 @@ children:[
   {path: 'agregar', component: FormFuncionarioComponent},
   {path: 'listado', component: PrincipalRrhhComponent},
   {path: 'dashboard', component: DashboardRrhhComponent},
-  {path: 'editar/:cedula', component: FormFuncionarioComponent}
+  {path: 'editar/:cedula', component: FormFuncionarioComponent},
+  {path: 'crearSolicitud', component: AgregarSolicitudComponent},
+  {path: 'listarSolicitud', component: ListarSolicitudComponent}
 ]},
 {path: 'produccion', 
 children:[
