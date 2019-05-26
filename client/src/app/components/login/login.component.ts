@@ -11,10 +11,11 @@ import { UsuarioService } from '../../services/usuario.service'
 export class LoginComponent implements OnInit {
 
   resolved(captchaResponse: string) {
+    this.cap=true;
     console.log(`Resolved captcha with response ${captchaResponse}:`);
   }
   constructor(private usuarioService:UsuarioService,private router: Router) { }
-
+  cap=false;
   usuario: Usuario={
     cedula:0,
     contrasenia:""
@@ -34,6 +35,9 @@ export class LoginComponent implements OnInit {
     }
   }
   clicked(){
+    if(this.cap){
+
+    
     this.usuarioService.login(this.usuario.cedula,this.usuario.contrasenia).subscribe(
       res => {
         localStorage.setItem("user",this.usuario.cedula.toString())
@@ -46,8 +50,15 @@ export class LoginComponent implements OnInit {
           this.navigate('/retail/principal')
         }
       },
-      err => console.log(err)
+      err => {
+        this.usuario.cedula=0,
+        this.usuario.contrasenia=""
+        alert("Cedula o contraseña incorrecta")
+      }
     )
+  }else{
+    alert("Debe confirmar el captcha para continuar")
+  }
   }
   navigate(path) {    
     this.router.navigateByUrl(path);
