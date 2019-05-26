@@ -18,7 +18,7 @@
           <input type="password" [(ngModel)]="usuario.contrasenia" placeholder="Contraseña" name="password" required />
           <span class="fa fa-unlock"></span>
         </div>
-        <re-captcha (resolved)="resolved($event)" siteKey="6LeoxJ8UAAAAAK42RDjXU3GHAgH69DYity9o48iu"></re-captcha>
+        <re-captcha (resolved)="resolved($event)" required siteKey="6LeoxJ8UAAAAAK42RDjXU3GHAgH69DYity9o48iu"></re-captcha>
         <button (click)="clicked()" class="btn submit">
           <span class="fa fa-sign-in"></span>
         </button>
@@ -27,10 +27,12 @@
   </div>
   <!-- //content -->
   <!-- copyright -->
+  <!--
   <div class="copyright">
     <h2>&copy; 2019 Latest Login Form. All rights reserved | Design by
       <a href="http://w3layouts.com" target="_blank">W3layouts</a>
     </h2>
   </div>
+  -->
   <!-- //copyright -->
 </div>

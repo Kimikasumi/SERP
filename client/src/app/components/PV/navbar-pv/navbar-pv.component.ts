@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-navbar-pv',
   templateUrl: './navbar-pv.component.html',
@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarPvComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
-
+  logout(){
+    localStorage.removeItem('user')
+    this.navigate()
+  }
+  navigate() {    
+    this.router.navigateByUrl('/login');
+  }
 }

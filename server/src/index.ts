@@ -11,8 +11,7 @@ import MPrimaRoutes from './routes/MPrimaRoutes';
 import retailersRoutes from './routes/retailersRoutes';
 import solicitudPRoutes from './routes/solicitudPRoutes';
 import presupuestoRoutes from './routes/presupuestoRoutes'
-
-
+import cuentaRoutes from './routes/cuentaRoutes'
 
 import usuarioRoutes from './routes/UsuarioRoutes'
 
@@ -43,6 +42,7 @@ class Server {
         this.app.use('/SolicitudInventario', solicitudInventarioRoutes);
         this.app.use('/Usuario',usuarioRoutes);
         this.app.use('/presupuesto', presupuestoRoutes)
+        this.app.use('/cuenta',cuentaRoutes)
     }
 
     start(): void {

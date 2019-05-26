@@ -34,6 +34,9 @@ import { SolicitarInvPvComponent } from './components/PV/solicitar-inv-pv/solici
 import { ListarInvPvComponent } from './components/PV/listar-inv-pv/listar-inv-pv.component';
 import { SucursalesComponent } from './components/PV/sucursales/sucursales.component';
 
+import { AgregarSolicitudComponent } from './components/RRHH/SolicitudPrestamo/agregar-solicitud/agregar-solicitud.component';
+import { ListarSolicitudComponent } from './components/RRHH/SolicitudPrestamo/listar-solicitud/listar-solicitud.component';
+
 import { AgregarSolicitudPComponent } from './components/Produccion/SolicitudP/agregar-solicitud-p/agregar-solicitud-p.component';
 import { ListarSolicitudPComponent } from './components/Produccion/SolicitudP/listar-solicitud-p/listar-solicitud-p.component';
 import { PrincipalSolicitudPComponent } from './components/Produccion/principal-solicitud-p/principal-solicitud-p.component';
@@ -48,9 +51,11 @@ import { NavbarFinanzasComponent } from './components/Finanzas/navbar-finanzas/n
 import { MatDialogModule } from '@angular/material';
 
 
-
-
-
+import {MatCardModule} from '@angular/material/card'; 
+import { PromProd } from './components/Produccion/prom-productos/prom-prod.component'
+import { MpAnio } from './components/Produccion/mp-anio/mp-anio.component'
+import { MayorProd } from './components/Produccion/mayor-prod/mayor-prod.component'
+import { PlazoProd } from './components/Produccion/plazo-prod/plazo-prod.component'
 import { ChartsModule} from 'ng2-charts';
 import { FporArea } from './components/RRHH/FporArea/FporArea.component';
 import { FusionChartsModule } from 'angular-fusioncharts';
@@ -100,10 +105,16 @@ FusionChartsModule.fcRoot(FusionCharts, Column2D);
     DashboardRrhhComponent,
     LoginComponent,
     AbsentismoComponent,
+    AgregarSolicitudComponent,
+    ListarSolicitudComponent,
     AgregarSolicitudPComponent,
     ListarSolicitudPComponent,
     PrincipalSolicitudPComponent,
     FporArea,
+    PromProd,
+    PlazoProd,
+    MpAnio,
+    MayorProd,
     AlcanceOComponent,
     NavbarPvComponent,
     PrincipalPvComponent,
@@ -145,6 +156,7 @@ FusionChartsModule.fcRoot(FusionCharts, Column2D);
     AmexioDashBoardModule,
     AmexioEnterpriseModule,
     AmexioMapModule,
+    MatCardModule,
     NgxGaugeModule,
     NgxPaginationModule,
     RecaptchaModule.forRoot()

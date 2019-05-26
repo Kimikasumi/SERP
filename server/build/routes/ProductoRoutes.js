@@ -12,6 +12,10 @@ class ProduccionRoutes {
     }
     config() {
         this.router.get('/', ProductoController_1.default.list);
+        this.router.get('/Promedio', ProductoController_1.default.prom);
+        this.router.get('/Plazos1', ProductoController_1.default.plazos1);
+        this.router.get('/Plazos2', ProductoController_1.default.plazos2);
+        this.router.get('/Mayor', ProductoController_1.default.mayor);
         this.router.get('/:cod_producto', ProductoController_1.default.getOne);
         this.router.post('/', ProductoController_1.default.create);
         this.router.delete('/:cod_producto', ProductoController_1.default.delete);

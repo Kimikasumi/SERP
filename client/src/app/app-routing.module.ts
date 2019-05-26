@@ -13,7 +13,7 @@ import { FormFuncionarioComponent } from './components/RRHH/form-funcionario/for
 import { PrincipalRrhhComponent } from './components/RRHH/principal-rrhh/principal-rrhh.component'
 import { DashboardRrhhComponent } from './components/RRHH/dashboard-rrhh/dashboard-rrhh.component';
 import { LoginComponent } from './components/login/login.component';
-
+import { DashBoardProdComponent } from './components/Produccion/dash-board-prod/dash-board-prod.component'
 import { PrincipalPvComponent } from './components/PV/principal-pv/principal-pv.component';
 import { ListarPvComponent } from './components/PV/listar-pv/listar-pv.component';
 import { AddPvComponent } from './components/PV/add-pv/add-pv.component';
@@ -21,6 +21,9 @@ import { DashboardPvComponent } from './components/PV/dashboard-pv/dashboard-pv.
 import { SolicitarInvPvComponent } from './components/PV/solicitar-inv-pv/solicitar-inv-pv.component';
 import { ListarInvPvComponent } from './components/PV/listar-inv-pv/listar-inv-pv.component';
 import { SucursalesComponent } from './components/PV/sucursales/sucursales.component';
+
+import { AgregarSolicitudComponent } from './components/RRHH/SolicitudPrestamo/agregar-solicitud/agregar-solicitud.component';
+import { ListarSolicitudComponent } from './components/RRHH/SolicitudPrestamo/listar-solicitud/listar-solicitud.component';
 
 import { AgregarSolicitudPComponent } from './components/Produccion/SolicitudP/agregar-solicitud-p/agregar-solicitud-p.component';
 import { ListarSolicitudPComponent } from './components/Produccion/SolicitudP/listar-solicitud-p/listar-solicitud-p.component';
@@ -47,7 +50,9 @@ children:[
   {path: 'agregar', component: FormFuncionarioComponent},
   {path: 'listado', component: PrincipalRrhhComponent},
   {path: 'dashboard', component: DashboardRrhhComponent},
-  {path: 'update/:cedula', component: FormFuncionarioComponent}
+  {path: 'editar/:cedula', component: FormFuncionarioComponent},
+  {path: 'crearSolicitud', component: AgregarSolicitudComponent},
+  {path: 'listarSolicitud', component: ListarSolicitudComponent}
 ]},
 {path: 'produccion', 
 children:[
@@ -60,17 +65,17 @@ children:[
   {path: 'agregarMP', component: AgregarMPComponent},
   {path: 'principalMP', component: PrincipalMPComponent},
   {path: 'editarMP/:id', component: AgregarMPComponent},
-
+  
   {path: 'agregarSolicitudP', component: AgregarSolicitudPComponent},
   {path: 'listarSolicitudP', component: ListarSolicitudPComponent},
   {path: 'editarSolicitudP/:id', component: AgregarMPComponent},
-  {path: 'listarSRecibidas', component:ListarSRecibidasComponent },
+  {path: 'listarSRecibidas', component: ListarSRecibidasComponent },
 
       { path: 'listarMP', component: ListarMPComponent },
       { path: 'agregarMP', component: AgregarMPComponent },
       { path: 'principalMP', component: PrincipalMPComponent },
       { path: 'editarMP/:id', component: AgregarMPComponent }, 
-
+      { path: 'dashboard',component: DashBoardProdComponent},
       {path: 'agregarSolicitudP', component: AgregarSolicitudPComponent},
       {path: 'listarSolicitudP', component: ListarSolicitudPComponent},
       {path: 'editarSolicitudP/:id', component: AgregarMPComponent}

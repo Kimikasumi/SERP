@@ -17,10 +17,20 @@
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" [routerLink]="['/workers/agregar']">Agregar</a>
             </div>
+            
           </li>
-                <button mat-icon-button>
-        <mat-icon aria-label="Example icon-button with a heart icon" id="2" >person</mat-icon>
-      </button>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Solicitud de presupuesto
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" [routerLink]="['/workers/listarSolicitud']">Listado</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" [routerLink]="['/workers/crearSolicitud']">Agregar</a>
+            </div>
+            
+          </li>
+          <span class="nav-link navbar-text">Saldo de la cuenta de RRHH {{total}}</span>
       <button (click)="logout()" mat-icon-button>
         <mat-icon aria-label="Example icon-button with a heart icon" style="align-self: right;" >settings_power</mat-icon>
       </button>

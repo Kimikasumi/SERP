@@ -14,6 +14,7 @@ const MPrimaRoutes_1 = __importDefault(require("./routes/MPrimaRoutes"));
 const retailersRoutes_1 = __importDefault(require("./routes/retailersRoutes"));
 const solicitudPRoutes_1 = __importDefault(require("./routes/solicitudPRoutes"));
 const presupuestoRoutes_1 = __importDefault(require("./routes/presupuestoRoutes"));
+const cuentaRoutes_1 = __importDefault(require("./routes/cuentaRoutes"));
 const UsuarioRoutes_1 = __importDefault(require("./routes/UsuarioRoutes"));
 class Server {
     constructor() {
@@ -38,6 +39,7 @@ class Server {
         this.app.use('/SolicitudInventario', solicitudInventarioRoutes_1.default);
         this.app.use('/Usuario', UsuarioRoutes_1.default);
         this.app.use('/presupuesto', presupuestoRoutes_1.default);
+        this.app.use('/cuenta', cuentaRoutes_1.default);
     }
     start() {
         this.app.listen(this.app.get('port'), () => {
