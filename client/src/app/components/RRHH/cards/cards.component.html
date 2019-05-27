@@ -1,6 +1,5 @@
-<div><button type="button" class="btn btn-primary mb-5" (click)=pagarNomina()>Pagar nomina</button></div>
-
-<div class="col-md-3" *ngFor="let funcionario of funcionarios | paginate: {itemsPerPage: 12, currentPage: pageActual}">
+<div><button type="button"  class="btn btn-primary mb-5" (click)=pagarNomina()><i class="fas fa-money-bill-wave"></i>Pagar nomina</button></div>
+<div class="col-md-3" *ngFor="let funcionario of funcionarios | paginate: {itemsPerPage:7, currentPage: pageActual}">
     <br>
     <div class="card text-center">
         <div class="card-header bg-dark text-white d-flex justify-content-between aling-items-center">
