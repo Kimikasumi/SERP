@@ -37,8 +37,7 @@ class RetailersController {
             if (retailers.length > 0) {
                 return res.json(retailers);
             }
-            console.log('xdx2');
-            res.status(404).json({ text: 'sucursal no encontrada' });
+            res.status(404).json({ text: 'No hay este producto en la sucursal' });
         });
     }
     create(req, res) {
@@ -91,13 +90,30 @@ class RetailersController {
         return __awaiter(this, void 0, void 0, function* () {
             const p = yield database_1.default.query('SELECT ciudad.nom_ciudad as Ciudad,  sum(inventario.cantidad * producto.precio_unitario) as Valor FROM ciudad, sucursal, inventario, producto WHERE ciudad.cod_ciudad = sucursal.cod_ciudad and sucursal.cod_sucursal = inventario.cod_sucursal and inventario.cod_producto = producto.cod_producto GROUP BY ciudad.nom_ciudad');
             if (p.length > 0) {
-                console.log(p);
                 return res.json(p);
             }
             res.status(404).json({ text: 'Hubo un error en las sucursales' });
         });
     }
     ;
+    getCiudades(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const p = yield database_1.default.query('SELECT * FROM CIUDAD');
+            res.json(p);
+        });
+    }
+    getSucursales(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const p = yield database_1.default.query('SELECT SUCURSAL.cod_sucursal, SUCURSAL.nom_sucursal FROM SUCURSAL');
+            res.json(p);
+        });
+    }
+    getProducto(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const p = yield database_1.default.query('SELECT PRODUCTO.cod_producto, PRODUCTO.nom_producto FROM PRODUCTO');
+            res.json(p);
+        });
+    }
 }
 const retailersController = new RetailersController();
 exports.default = retailersController;

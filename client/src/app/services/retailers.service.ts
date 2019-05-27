@@ -51,4 +51,16 @@ export class RetailersService {
   getValorInventarioCiudad() {
     return this.http.get(`${this.API_URI}/retail/dashboard/getValorInventarioCiudad`);
   }
+
+  getCiudades() {
+    return this.http.get(`${this.API_URI}/retail/ux/getCiudades`);
+  }
+  
+  getSucursalesUX() {
+    return this.http.get(`${this.API_URI}/retail/ux/getSucursales`);
+  }
+
+  getProducto() {
+    return this.http.get(`${this.API_URI}/retail/ux/getProducto`);
+  }
 }

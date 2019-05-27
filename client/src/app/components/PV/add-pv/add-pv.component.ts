@@ -13,9 +13,8 @@ export class AddPvComponent implements OnInit {
   constructor(private retailerService: RetailersService, private router: Router, private activedRoute: ActivatedRoute) { }
 
   editar: boolean = false;
-
+  ciudades: any
   sucur: Sucursal = {
-    cod_sucursal: 0,
     nom_sucursal: '',
     cod_ciudad: 0,
     direc: ''
@@ -27,13 +26,20 @@ export class AddPvComponent implements OnInit {
       this.retailerService.getOneSucursal(params.id).subscribe(
         res => {
           console.log(res)
-
           this.sucur = res;
           this.editar = true;
         },
         err => console.error(err)
       )
     }
+
+    this.retailerService.getCiudades().subscribe(
+      res => {
+        console.log(res)
+        this.ciudades = res;
+      },
+      err => console.log(err)
+    )
   }
 
   createPV() {

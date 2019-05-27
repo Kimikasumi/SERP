@@ -9,15 +9,19 @@
 
         <div class="form-group">
           <label for="">Sucursal:</label>
-          <input type="text" name="cod_sucursal" class="form-control" [(ngModel)]="solici.cod_sucursal">
+          <select class="form-control" [(ngModel)]="solici.cod_sucursal" name="cod_sucursal" ngDefaultControl>
+            <option *ngFor="let sucursal of sucursales" value="{{sucursal.cod_sucursal}}">{{sucursal.nom_sucursal}}</option>
+          </select>
         </div>
         <div class="form-group">
           <label for="">Producto</label>
-          <input type="text" name="cod_producto" class="form-control" [(ngModel)]="solici.cod_producto">
+          <select class="form-control" [(ngModel)]="solici.cod_producto" name="cod_producto" ngDefaultControl>
+            <option *ngFor="let producto of productos" value="{{producto.cod_producto}}">{{producto.nom_producto}}</option>
+          </select>
         </div>
         <div class="form-group">
           <label for="">Cantidad</label>
-          <input type="text" name="Cantidad" class="form-control" [(ngModel)]="solici.cantidad">
+          <input type="number" name="Cantidad" class="form-control" [(ngModel)]="solici.cantidad">
         </div>
         <button (click)="createSolici()" class="btn btn-danger">Guardar</button>
       </form>

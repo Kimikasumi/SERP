@@ -7,16 +7,14 @@
     <div class="card-body">
       <form action="">
         <div class="form-group">
-          <label for="">Codigo:</label>
-          <input type="text" name="cod_sucursal" class="form-control" [(ngModel)]="sucur.cod_sucursal">
-        </div>
-        <div class="form-group">
           <label for="">Nombre:</label>
           <input type="text" name="nom_sucursal" class="form-control" [(ngModel)]="sucur.nom_sucursal">
         </div>
         <div class="form-group">
           <label for="">Ciudad</label>
-          <input type="text" name="cod_ciudad" class="form-control" [(ngModel)]="sucur.cod_ciudad">
+          <select class="form-control" [(ngModel)]="sucur.cod_ciudad" name="cod_ciudad" ngDefaultControl>
+            <option *ngFor="let ciudad of ciudades" value="{{ciudad.cod_ciudad}}">{{ciudad.nom_ciudad}}</option>
+          </select>
         </div>
         <div class="form-group">
           <label for="">Direccion</label>

@@ -27,8 +27,7 @@ class RetailersController {
         if (retailers.length > 0) {
             return res.json(retailers);
         }
-        console.log('xdx2')
-        res.status(404).json({ text: 'sucursal no encontrada' });
+        res.status(404).json({ text: 'No hay este producto en la sucursal' });
     }
 
     public async create(req: Request, res: Response): Promise<void> {
@@ -74,11 +73,25 @@ class RetailersController {
     public async getValorInventarioCiudad (req: Request,res: Response): Promise<any>{
         const p = await pool.query('SELECT ciudad.nom_ciudad as Ciudad,  sum(inventario.cantidad * producto.precio_unitario) as Valor FROM ciudad, sucursal, inventario, producto WHERE ciudad.cod_ciudad = sucursal.cod_ciudad and sucursal.cod_sucursal = inventario.cod_sucursal and inventario.cod_producto = producto.cod_producto GROUP BY ciudad.nom_ciudad');
         if (p.length >0){
-            console.log(p)
             return res.json(p);
         }
         res.status(404).json({text: 'Hubo un error en las sucursales'});
     };
+
+    public async getCiudades(req: Request, res: Response): Promise<void> {
+        const p = await pool.query('SELECT * FROM CIUDAD');
+        res.json(p);
+    }
+    
+    public async getSucursales(req: Request, res: Response): Promise<void> {
+        const p = await pool.query('SELECT SUCURSAL.cod_sucursal, SUCURSAL.nom_sucursal FROM SUCURSAL');
+        res.json(p);
+    }
+
+    public async getProducto(req: Request, res: Response): Promise<void> {
+        const p = await pool.query('SELECT PRODUCTO.cod_producto, PRODUCTO.nom_producto FROM PRODUCTO');
+        res.json(p);
+    }
 
 }
 

@@ -21,6 +21,9 @@ class RetailersRoutes {
         this.router.get('/dashboard/getCantidadProductoSucursal', retailersControllers.getCantidadProductoSucursal)
         this.router.get('/dashboard/getValorInventarioSucursal', retailersControllers.getValorInventarioSucursal)
         this.router.get('/dashboard/getValorInventarioCiudad', retailersControllers.getValorInventarioCiudad)
+        this.router.get('/ux/getCiudades', retailersControllers.getCiudades)
+        this.router.get('/ux/getSucursales', retailersControllers.getSucursales)
+        this.router.get('/ux/getProducto', retailersControllers.getProducto)
     }
 }
 

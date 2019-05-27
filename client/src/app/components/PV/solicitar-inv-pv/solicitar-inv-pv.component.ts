@@ -13,9 +13,9 @@ export class SolicitarInvPvComponent implements OnInit {
   constructor(private retailerService: RetailersService, private router: Router, private activedRoute: ActivatedRoute) { }
 
   editar: boolean = false;
-
+  sucursales: any
+  productos: any
   solici: SolicitudInv = {
-    cod_solicitud: 0,
     cod_sucursal: 0,
     cod_producto: 0,
     cantidad: 1,
@@ -24,13 +24,32 @@ export class SolicitarInvPvComponent implements OnInit {
 
   ngOnInit() {
     const params = this.activedRoute.snapshot.params;
+
+    this.retailerService.getSucursalesUX().subscribe(
+      res => {
+        this.sucursales = res;
+      },
+      err => console.log(err)
+    )
+
+    this.retailerService.getProducto().subscribe(
+      res => {
+        this.productos = res;
+      },
+      err => console.log(err)
+    )
   }
 
   createSolici() {
     this.retailerService.solicitarInv(this.solici).subscribe(
       res => {
-        console.log(res);
-        this.router.navigate(['/retail/listadoPV']);
+        if(this.solici.cantidad > 0) {
+          this.router.navigate(['/retail/listadoPV']);
+        }
+
+        else {
+          alert('La cantidad no puede ser negativa')
+        }
       },
       err => console.log(err)
     )
