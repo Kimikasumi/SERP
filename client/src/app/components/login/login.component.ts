@@ -31,6 +31,10 @@ export class LoginComponent implements OnInit {
         this.navigate('/produccion/principal')
       }else if(ced === "1236"){
         this.navigate('/retail/principal')
+      }else if(ced === "1237"){
+        this.navigate('/presupuesto/listadoP')
+      }else if(ced === "1238"){
+        this.navigate("/gerente")
       }
     }
   }
@@ -48,6 +52,10 @@ export class LoginComponent implements OnInit {
           this.navigate('/produccion/principal')
         }else if(ced === "1236"){
           this.navigate('/retail/principal')
+        }else if(ced === "1237"){
+          this.navigate('/presupuesto/listadoP')
+        }else if(ced === "1238"){
+          this.navigate("/gerente")
         }
       },
       err => {
