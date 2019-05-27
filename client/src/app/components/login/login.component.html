@@ -1,12 +1,11 @@
 <div class="main-bg">
   <!-- title -->
-  <h1>¡Bienvenido a S.E.R.P!</h1>
   <!-- //title -->
   <!-- content -->
   <div class="sub-main-w3">
     <div class="bg-content-w3pvt">
       <div class="top-content-style">
-        <img src="assets/ImgPerfil.jpg" alt="" />
+        <img src="../../../assets/logo.png" alt="" />
       </div>
       <form>
         <p class="legend">Iniciar Sesión</p>
@@ -19,8 +18,8 @@
           <span class="fa fa-unlock"></span>
         </div>
         <re-captcha (resolved)="resolved($event)" required siteKey="6LeoxJ8UAAAAAK42RDjXU3GHAgH69DYity9o48iu"></re-captcha>
-        <button (click)="clicked()" class="btn submit">
-          <span class="fa fa-sign-in"></span>
+        <button (click)="clicked()" class="btn btn-danger">
+            Entrar
         </button>
       </form>
     </div>
