@@ -244,7 +244,9 @@ h1 {
 
 .top-content-style {
     padding: 2vw 4vw 4vw;
-    background: #1cc7d0;
+    /*background: rgb(148, 148, 148);*/
+    background-image: url('../../../assets/fondoLogin.jpg');
+    opacity: 1;
 }
 
 .top-content-style img {
@@ -256,7 +258,7 @@ h1 {
 }
 
 .sub-main-w3 form {
-    background: #ffff;
+    background: rgb(151, 148, 148);
     padding: 2em;
     -webkit-box-shadow: 2px 5px 16px 2px rgba(16, 16, 16, 0.18);
     -moz-box-shadow: 2px 5px 16px 2px rgba(16, 16, 16, 0.18);
@@ -290,7 +292,7 @@ p.legend span {
 .input span {
     position: absolute;
     display: block;
-    color: #1cc7d0;
+    color: #202222;
     left: 10px;
     top: 12px;
     font-size: 16px;
@@ -301,7 +303,7 @@ p.legend span {
     padding: 13px 10px 13px 34px;
     display: block;
     border: none;
-    border: 1px solid #1cc7d0;
+    border: 1px solid #202222;
     color: #000;
     box-sizing: border-box;
     font-size: 13px;
