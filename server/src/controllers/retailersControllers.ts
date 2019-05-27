@@ -6,7 +6,7 @@ import { request } from 'https';
 class RetailersController {
 
     public async list(req: Request, res: Response) {
-        const retailers = await pool.query('SELECT * FROM sucursal');
+        const retailers = await pool.query('SELECT SUCURSAL.nom_sucursal, CIUDAD.nom_ciudad, SUCURSAL.direc FROM sucursal, ciudad WHERE ciudad.cod_ciudad = sucursal.cod_ciudad');
         res.json(retailers);
     };
 
@@ -22,17 +22,17 @@ class RetailersController {
 
     public async getPerProduct(req: Request, res: Response): Promise<any> {
         const { cod_producto } = req.params;
-        const retailers = await pool.query('SELECT nom_sucursal, cod_ciudad, direc, cantidad FROM INVENTARIO, SUCURSAL, PRODUCTO where PRODUCTO.cod_producto = INVENTARIO.cod_producto and INVENTARIO.cod_sucursal = SUCURSAL.cod_sucursal and PRODUCTO.cod_producto = ?',
+        const retailers = await pool.query('SELECT SUCURSAL.nom_sucursal, CIUDAD.nom_ciudad, SUCURSAL.direc, INVENTARIO.cantidad FROM INVENTARIO, SUCURSAL, PRODUCTO, CIUDAD where CIUDAD.cod_ciudad = SUCURSAL.cod_ciudad and PRODUCTO.cod_producto = INVENTARIO.cod_producto and INVENTARIO.cod_sucursal = SUCURSAL.cod_sucursal and PRODUCTO.cod_producto = ?',
             [cod_producto]);
         if (retailers.length > 0) {
             return res.json(retailers);
         }
+        console.log('xdx2')
         res.status(404).json({ text: 'sucursal no encontrada' });
     }
 
     public async create(req: Request, res: Response): Promise<void> {
         await pool.query('INSERT INTO sucursal set ?', [req.body]);
-        console.log(req.body);
         res.json({ text: 'sucursal guardada' });
     }
 
@@ -52,9 +52,34 @@ class RetailersController {
 
     public async solicitar(req: Request, res: Response): Promise<void> {
         await pool.query('INSERT INTO solicitud_inv set ?',[req.body]);
-        console.log(req.body);
         res.json({ text: 'Solicitud enviada' });
     }
+
+    public async getCantidadProductoSucursal (req: Request,res: Response): Promise<any>{
+        const p = await pool.query('SELECT sucursal.nom_sucursal as Nombre, sum(inventario.cantidad) as Cantidad FROM sucursal, inventario WHERE sucursal.cod_sucursal = inventario.cod_sucursal GROUP BY nom_sucursal');
+        if (p.length >0){
+            return res.json(p);
+        }
+        res.status(404).json({text: 'Hubo un error en las sucursales'});
+    };
+
+    public async getValorInventarioSucursal (req: Request,res: Response): Promise<any>{
+        const p = await pool.query('SELECT sucursal.nom_sucursal as Nombre,  sum(inventario.cantidad * producto.precio_unitario) as Valor FROM sucursal, inventario, producto WHERE sucursal.cod_sucursal = inventario.cod_sucursal and inventario.cod_producto = producto.cod_producto GROUP BY sucursal.nom_sucursal');
+        if (p.length >0){
+            return res.json(p);
+        }
+        res.status(404).json({text: 'Hubo un error en las sucursales'});
+    };
+
+    public async getValorInventarioCiudad (req: Request,res: Response): Promise<any>{
+        const p = await pool.query('SELECT ciudad.nom_ciudad as Ciudad,  sum(inventario.cantidad * producto.precio_unitario) as Valor FROM ciudad, sucursal, inventario, producto WHERE ciudad.cod_ciudad = sucursal.cod_ciudad and sucursal.cod_sucursal = inventario.cod_sucursal and inventario.cod_producto = producto.cod_producto GROUP BY ciudad.nom_ciudad');
+        if (p.length >0){
+            console.log(p)
+            return res.json(p);
+        }
+        res.status(404).json({text: 'Hubo un error en las sucursales'});
+    };
+
 }
 
 const retailersController = new RetailersController();

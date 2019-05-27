@@ -18,6 +18,9 @@ class RetailersRoutes {
         this.router.delete('/:cod_sucursal', retailersControllers_1.default.delete);
         this.router.put('/:cod_sucursal', retailersControllers_1.default.update);
         this.router.post('/solicitar', retailersControllers_1.default.solicitar);
+        this.router.get('/dashboard/getCantidadProductoSucursal', retailersControllers_1.default.getCantidadProductoSucursal);
+        this.router.get('/dashboard/getValorInventarioSucursal', retailersControllers_1.default.getValorInventarioSucursal);
+        this.router.get('/dashboard/getValorInventarioCiudad', retailersControllers_1.default.getValorInventarioCiudad);
     }
 }
 const retailersRoutes = new RetailersRoutes();

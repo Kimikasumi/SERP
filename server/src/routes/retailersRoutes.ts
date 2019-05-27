@@ -17,7 +17,10 @@ class RetailersRoutes {
         this.router.post('/', retailersControllers.create);
         this.router.delete('/:cod_sucursal', retailersControllers.delete);
         this.router.put('/:cod_sucursal', retailersControllers.update);
-        this.router.post('/solicitar',retailersControllers.solicitar);
+        this.router.post('/solicitar', retailersControllers.solicitar);
+        this.router.get('/dashboard/getCantidadProductoSucursal', retailersControllers.getCantidadProductoSucursal)
+        this.router.get('/dashboard/getValorInventarioSucursal', retailersControllers.getValorInventarioSucursal)
+        this.router.get('/dashboard/getValorInventarioCiudad', retailersControllers.getValorInventarioCiudad)
     }
 }
 

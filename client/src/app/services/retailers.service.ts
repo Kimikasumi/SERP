@@ -39,4 +39,16 @@ export class RetailersService {
   solicitarInv(solicitudInv: SolicitudInv) {
     return this.http.post(`${this.API_URI}/retail/solicitar`, solicitudInv);
   }
+
+  getCantidadProductoSucursal() {
+    return this.http.get(`${this.API_URI}/retail/dashboard/getCantidadProductoSucursal`);
+  }
+
+  getValorInventarioSucursal() {
+    return this.http.get(`${this.API_URI}/retail/dashboard/getValorInventarioSucursal`);
+  }
+
+  getValorInventarioCiudad() {
+    return this.http.get(`${this.API_URI}/retail/dashboard/getValorInventarioCiudad`);
+  }
 }
