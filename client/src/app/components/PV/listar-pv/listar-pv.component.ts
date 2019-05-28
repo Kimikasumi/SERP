@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RetailersService } from 'src/app/services/retailers.service';
+import { Sucursal } from 'src/app/models/Sucursal';
 
 @Component({
   selector: 'app-listar-pv',
@@ -8,8 +9,16 @@ import { RetailersService } from 'src/app/services/retailers.service';
 })
 export class ListarPvComponent implements OnInit {
 
+  sucur: Sucursal = {
+    cod_sucursal: 0,
+    nom_sucursal: '',
+    cod_ciudad: 0,
+    direc: ''}
   sucurs: any = []
-  constructor(private retailerService: RetailersService) { }
+  constructor(private retailerService: RetailersService) { 
+
+    
+  }
 
   ngOnInit() {
     this.mostrarSucursales();

@@ -22,7 +22,7 @@ class RetailersController {
 
     public async getPerProduct(req: Request, res: Response): Promise<any> {
         const { cod_producto } = req.params;
-        const retailers = await pool.query('SELECT SUCURSAL.nom_sucursal, CIUDAD.nom_ciudad, SUCURSAL.direc, INVENTARIO.cantidad FROM INVENTARIO, SUCURSAL, PRODUCTO, CIUDAD where CIUDAD.cod_ciudad = SUCURSAL.cod_ciudad and PRODUCTO.cod_producto = INVENTARIO.cod_producto and INVENTARIO.cod_sucursal = SUCURSAL.cod_sucursal and PRODUCTO.cod_producto = ?',
+        const retailers = await pool.query('SELECT nom_sucursal, cod_ciudad, direc, INVENTARIO.cantidad FROM INVENTARIO, SUCURSAL, PRODUCTO where PRODUCTO.cod_producto = INVENTARIO.cod_producto and INVENTARIO.cod_sucursal = SUCURSAL.cod_sucursal and PRODUCTO.cod_producto = ? GROUP BY SUCURSAL.nom_sucursal',
             [cod_producto]);
         if (retailers.length > 0) {
             return res.json(retailers);

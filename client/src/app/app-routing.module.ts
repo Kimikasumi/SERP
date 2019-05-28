@@ -95,7 +95,7 @@ children:[
       { path: 'listadoInvPv', component: ListarInvPvComponent},
       { path: 'sucursales/:cod_producto', component: SucursalesComponent},
       { path: 'agregarPV', component: AddPvComponent },
-      { path: 'editPV/:id', component: AddPvComponent },
+      { path: 'editPV/:cod_sucursal', component: AddPvComponent },
       { path: 'dashboard', component: DashboardPvComponent },
       { path: 'solicitar', component: SolicitarInvPvComponent }
     ]

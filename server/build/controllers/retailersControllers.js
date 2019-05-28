@@ -33,7 +33,7 @@ class RetailersController {
     getPerProduct(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             const { cod_producto } = req.params;
-            const retailers = yield database_1.default.query('SELECT SUCURSAL.nom_sucursal, CIUDAD.nom_ciudad, SUCURSAL.direc, INVENTARIO.cantidad FROM INVENTARIO, SUCURSAL, PRODUCTO, CIUDAD where CIUDAD.cod_ciudad = SUCURSAL.cod_ciudad and PRODUCTO.cod_producto = INVENTARIO.cod_producto and INVENTARIO.cod_sucursal = SUCURSAL.cod_sucursal and PRODUCTO.cod_producto = ?', [cod_producto]);
+            const retailers = yield database_1.default.query('SELECT nom_sucursal, cod_ciudad, direc, INVENTARIO.cantidad FROM INVENTARIO, SUCURSAL, PRODUCTO where PRODUCTO.cod_producto = INVENTARIO.cod_producto and INVENTARIO.cod_sucursal = SUCURSAL.cod_sucursal and PRODUCTO.cod_producto = ? GROUP BY SUCURSAL.nom_sucursal', [cod_producto]);
             if (retailers.length > 0) {
                 return res.json(retailers);
             }

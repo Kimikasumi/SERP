@@ -15,6 +15,7 @@ export class AddPvComponent implements OnInit {
   editar: boolean = false;
   ciudades: any
   sucur: Sucursal = {
+    cod_sucursal: 0,
     nom_sucursal: '',
     cod_ciudad: 0,
     direc: ''
