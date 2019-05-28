@@ -15,7 +15,7 @@ export class AddPvComponent implements OnInit {
   editar: boolean = false;
   ciudades: any
   sucur: Sucursal = {
-    cod_sucursal: 0,
+    cod_sucursal: 1,
     nom_sucursal: '',
     cod_ciudad: 0,
     direc: ''
@@ -23,8 +23,9 @@ export class AddPvComponent implements OnInit {
 
   ngOnInit() {
     const params = this.activedRoute.snapshot.params;
-    if (params.id) {
-      this.retailerService.getOneSucursal(params.id).subscribe(
+    console.log(params)
+    if (params.cod_sucursal) {
+      this.retailerService.getOneSucursal(params.cod_sucursal).subscribe(
         res => {
           console.log(res)
           this.sucur = res;

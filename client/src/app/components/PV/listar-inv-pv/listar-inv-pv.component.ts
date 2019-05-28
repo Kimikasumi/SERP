@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ProduccionService } from 'src/app/services/produccion.service';
+import { RetailersService } from 'src/app/services/retailers.service';
 
 @Component({
   selector: 'app-listar-inv-pv',
@@ -9,15 +9,16 @@ import { ProduccionService } from 'src/app/services/produccion.service';
 export class ListarInvPvComponent implements OnInit {
 
   products: any = []
-  constructor(private produccionService: ProduccionService) { }
+  constructor(private retailerService: RetailersService) { }
 
   ngOnInit() {
     this.mostrarProductos();
   }
 
   mostrarProductos() {
-    this.produccionService.getProductos().subscribe(
+    this.retailerService.getProductos().subscribe(
       res => {
+        console.log(res)
         this.products = res;
       },
       err => console.log(err)

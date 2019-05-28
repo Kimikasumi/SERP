@@ -16,6 +16,7 @@ export class SucursalesComponent implements OnInit {
     const params = this.activatedRoute.snapshot.params;
       this.retailerService.getSucursalesWithProduct(params.cod_producto).subscribe(
         res => {
+          console.log(res)
           this.sucurs = res;
         },
         err => console.log(err)

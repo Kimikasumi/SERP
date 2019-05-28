@@ -16,6 +16,10 @@ export class RetailersService {
     return this.http.get(`${this.API_URI}/retail`);
   }
 
+  getProductos() {
+    return this.http.get(`${this.API_URI}/retail/ux/products`);
+  }
+
   getSucursalesWithProduct(cod_product: string) {
     return this.http.get(`${this.API_URI}/retail/product/${cod_product}`);
   }

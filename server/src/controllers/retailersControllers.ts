@@ -6,7 +6,7 @@ import { request } from 'https';
 class RetailersController {
 
     public async list(req: Request, res: Response) {
-        const retailers = await pool.query('SELECT SUCURSAL.nom_sucursal, CIUDAD.nom_ciudad, SUCURSAL.direc FROM sucursal, ciudad WHERE ciudad.cod_ciudad = sucursal.cod_ciudad');
+        const retailers = await pool.query('SELECT SUCURSAL.cod_sucursal, SUCURSAL.nom_sucursal, CIUDAD.nom_ciudad, SUCURSAL.direc FROM sucursal, ciudad WHERE ciudad.cod_ciudad = sucursal.cod_ciudad');
         res.json(retailers);
     };
 
@@ -22,7 +22,7 @@ class RetailersController {
 
     public async getPerProduct(req: Request, res: Response): Promise<any> {
         const { cod_producto } = req.params;
-        const retailers = await pool.query('SELECT nom_sucursal, cod_ciudad, direc, INVENTARIO.cantidad FROM INVENTARIO, SUCURSAL, PRODUCTO where PRODUCTO.cod_producto = INVENTARIO.cod_producto and INVENTARIO.cod_sucursal = SUCURSAL.cod_sucursal and PRODUCTO.cod_producto = ? GROUP BY SUCURSAL.nom_sucursal',
+        const retailers = await pool.query('SELECT nom_sucursal, SUCURSAL.cod_ciudad, CIUDAD.nom_ciudad, direc, sum(INVENTARIO.cantidad) as cantidad FROM INVENTARIO, SUCURSAL, PRODUCTO, CIUDAD where CIUDAD.cod_ciudad = SUCURSAL.cod_ciudad and PRODUCTO.cod_producto = INVENTARIO.cod_producto and INVENTARIO.cod_sucursal = SUCURSAL.cod_sucursal and PRODUCTO.cod_producto = ? GROUP BY SUCURSAL.nom_sucursal',
             [cod_producto]);
         if (retailers.length > 0) {
             return res.json(retailers);
@@ -90,6 +90,11 @@ class RetailersController {
 
     public async getProducto(req: Request, res: Response): Promise<void> {
         const p = await pool.query('SELECT PRODUCTO.cod_producto, PRODUCTO.nom_producto FROM PRODUCTO');
+        res.json(p);
+    }
+
+    public async getProductos(req: Request, res: Response): Promise<void> {
+        const p = await pool.query('SELECT * FROM PRODUCTO');
         res.json(p);
     }
 

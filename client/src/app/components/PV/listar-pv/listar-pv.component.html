@@ -8,7 +8,6 @@
       <table class="table">
         <thead>
           <tr>
-            <th scope="col">ID</th>
             <th scope="col">Nombre</th>
             <th scope="col">Ciudad</th>
             <th scope="col">Direccion</th>
@@ -17,12 +16,10 @@
         </thead>
         <tbody>
           <tr *ngFor="let rt of sucurs">
-            <td>{{rt.cod_sucursal}}</td>
             <td>{{rt.nom_sucursal}}</td>
             <td>{{rt.nom_ciudad}}</td>
             <td>{{rt.direc}}</td>
             <td><button [routerLink]="['/retail/editPV', rt.cod_sucursal]" class="btn btn-primary">Editar</button>
-              <button (click)="eliminarPV(rt.cod_sucursal)" class="btn btn-success">Eliminar</button></td>
           </tr>
         </tbody>
       </table>

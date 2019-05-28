@@ -24,6 +24,7 @@ class RetailersRoutes {
         this.router.get('/ux/getCiudades', retailersControllers_1.default.getCiudades);
         this.router.get('/ux/getSucursales', retailersControllers_1.default.getSucursales);
         this.router.get('/ux/getProducto', retailersControllers_1.default.getProducto);
+        this.router.get('/ux/products', retailersControllers_1.default.getProductos);
     }
 }
 const retailersRoutes = new RetailersRoutes();

@@ -17,7 +17,7 @@
           <tr *ngFor="let rt of products">
             <td>{{rt.cod_producto}}</td>
             <td>{{rt.nom_producto}}</td>
-            <td>{{rt.precio}}</td>
+            <td>{{rt.precio_unitario}}</td>
             <td><button [routerLink]="['/retail/sucursales', rt.cod_producto]" class="btn btn-primary">Mostrar en sucursales</button></td>
           </tr>
         </tbody>

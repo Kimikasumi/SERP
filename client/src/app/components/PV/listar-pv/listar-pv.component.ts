@@ -10,7 +10,7 @@ import { Sucursal } from 'src/app/models/Sucursal';
 export class ListarPvComponent implements OnInit {
 
   sucur: Sucursal = {
-    cod_sucursal: 0,
+    cod_sucursal: 1,
     nom_sucursal: '',
     cod_ciudad: 0,
     direc: ''}
