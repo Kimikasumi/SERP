@@ -28,7 +28,7 @@
     "angularjs-gauge": "^2.2.0",
     "boostrap": "^2.0.0",
     "bootstrap": "^4.3.1",
-    "chart.js": "^2.8.0",
+    "chart.js": "^2.9.4",
     "chartjs-plugin-datalabels": "^0.6.0",
     "core-js": "^2.5.4",
     "fusioncharts": "^3.13.4",
